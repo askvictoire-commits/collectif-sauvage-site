@@ -11,16 +11,21 @@ export default function Home() {
     <div className="bg-[#171d3a] text-white">
       {/* Hero */}
       <section className="px-6 py-20 md:py-28">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <Image
-            src="/images/hero-headline.webp"
-            alt="Texte blanc sur fond noir avec un astérisque. Texte: “WE DO” suivi de “TOUT CE DONT VOUS AVEZ BESOIN POUR COMMUNIQUER, ACTIVER ET DÉVELOPPER VOTRE MARQUE.”"
-            width={695}
-            height={623}
-            className="h-auto w-full"
-            priority
-          />
-          <div className="relative flex aspect-square w-full flex-col items-start justify-center overflow-hidden rounded-2xl p-8 text-left md:p-10">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
+          {/* Colonne gauche : visuel "WE DO..." (object-fit contain, même hauteur que la colonne droite) */}
+          <div className="relative aspect-[657/542] w-full">
+            <Image
+              src="/images/hero-headline.webp"
+              alt="Texte blanc sur fond noir avec un astérisque. Texte: “WE DO” suivi de “TOUT CE DONT VOUS AVEZ BESOIN POUR COMMUNIQUER, ACTIVER ET DÉVELOPPER VOTRE MARQUE.”"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain object-left"
+              priority
+            />
+          </div>
+
+          {/* Colonne droite : visuel nuages, ratio réel 657:542 mesuré sur le site live */}
+          <div className="relative aspect-[657/542] w-full overflow-hidden rounded-2xl">
             <Image
               src="/images/hero-clouds.webp"
               alt="Nuages colorés dans un ciel rose et bleu, effet artistique."
@@ -29,21 +34,26 @@ export default function Home() {
               className="object-cover"
             />
             <Image
-              src="/images/ellipse-white.png"
+              src="/images/ellipse-blue.png"
               alt=""
               aria-hidden
               width={1907}
               height={1901}
-              className="pointer-events-none absolute -right-6 bottom-4 h-40 w-40 opacity-80 md:h-56 md:w-56"
+              className="pointer-events-none absolute opacity-90"
+              style={{ left: "42.3%", top: "32.3%", width: "23.7%", height: "21%" }}
             />
-            <h2 className="font-display relative text-3xl uppercase leading-[0.95] text-[#f598ff] drop-shadow md:text-5xl">
+            <h2
+              className="font-display absolute text-2xl uppercase leading-[0.95] text-[#f598ff] drop-shadow sm:text-3xl md:text-[clamp(1.6rem,4.6vw,3.3rem)]"
+              style={{ left: "11.3%", top: "24.9%", width: "40.2%" }}
+            >
               Plusieurs styles,
               <br />
               un seul esprit
             </h2>
             <Link
               href="/about"
-              className="relative mt-10 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-[#f598ff] hover:opacity-90"
+              className="absolute inline-flex items-center justify-center rounded-full border border-white px-5 py-4 text-sm font-normal uppercase tracking-wide text-white hover:bg-white hover:text-[#171d3a]"
+              style={{ left: "50.8%", top: "70.8%" }}
             >
               Découvrir nos frees
             </Link>

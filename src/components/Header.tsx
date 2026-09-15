@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 bg-transparent ${textColor}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-lg uppercase tracking-tight">
+        <Link href="/" className="font-display text-xl uppercase tracking-tight md:text-2xl">
           Collectif Sauvage
         </Link>
 
@@ -28,7 +28,7 @@ export default function Header() {
                 onMouseEnter={() => setExpertisesOpen(true)}
                 onMouseLeave={() => setExpertisesOpen(false)}
               >
-                <button className="font-display text-sm uppercase tracking-wide hover:opacity-70">
+                <button className="text-sm uppercase tracking-wide hover:opacity-70">
                   {item.label}
                 </button>
                 {expertisesOpen && (
@@ -49,7 +49,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-display text-sm uppercase tracking-wide hover:opacity-70"
+                className="text-sm uppercase tracking-wide hover:opacity-70"
               >
                 {item.label}
               </Link>
@@ -58,7 +58,7 @@ export default function Header() {
         </nav>
 
         <button
-          className="font-display text-sm uppercase md:hidden"
+          className="text-sm uppercase md:hidden"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? "Fermer" : "Menu"}
@@ -69,7 +69,7 @@ export default function Header() {
         <div className="border-t border-white/10 bg-[#181730] px-6 pb-6 text-white md:hidden">
           {nav.map((item) => (
             <div key={item.label} className="py-2">
-              <Link href={item.href} className="font-display block py-1 text-sm uppercase">
+              <Link href={item.href} className="block py-1 text-sm uppercase">
                 {item.label}
               </Link>
               {item.children && (
