@@ -23,65 +23,107 @@ export const contact = {
 
 export type LookingFor = {
   need: string;
-  freelances: string;
-  link: string;
+  body: string;
+  freelances: { name: string; href: string }[];
 };
 
 export const lookingFor: LookingFor[] = [
   {
     need: "Un site qui tourne pour dormir tranquille",
-    freelances: "Quentin, Sylvain, Apolline, Zoë, Victoire, Jeanne — développement, UX, design",
-    link: "/developpementweb",
+    body: "Un site web qui tourne : ils développent du solide, affinent l'expérience et les mots justes.",
+    freelances: [
+      { name: "Quentin", href: "https://quentinroussel.fr/" },
+      { name: "Sylvain", href: "https://www.linkedin.com/in/sylvainnascimento/" },
+      { name: "Apolline", href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/" },
+      { name: "Zoë", href: "https://www.salty-event.com/" },
+      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
+    ],
   },
   {
     need: "Arriver en première page sur Google",
-    freelances: "Thomas, Marie — SEO / Pinterest",
-    link: "/seo-ia-acquisition",
+    body: "Arriver en première page sur Google, c'est bien plus que cocher des cases : c'est être trouvé au bon moment.",
+    freelances: [
+      { name: "Thomas", href: "https://thomas-escot.fr/" },
+      { name: "Marie", href: "https://www.linkedin.com/in/marie-lain%C3%A9/" },
+    ],
   },
   {
     need: "De la réflexion avant l'action",
-    freelances: "Victoire, Zoë, Kathleen, Arnaud, Romain — stratégie",
-    link: "/strategie",
+    body: "On réfléchit avant d'agir : ils mènent la danse côté stratégie, chacun avec ses outils et ses angles.",
+    freelances: [
+      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Zoë", href: "https://www.salty-event.com/" },
+      { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
+      { name: "Arnaud", href: "https://e-flow.io/" },
+      { name: "Romain", href: "https://www.linkedin.com/in/romainferrand/" },
+    ],
   },
   {
     need: "Une identité qui vous ressemble",
-    freelances: "Zoë, Victoire, Jeanne, Emilien — identité de marque",
-    link: "/creation",
+    body: "Une identité qui vous ressemble : du logo à l'univers graphique étendu, chacun travaille dans son style.",
+    freelances: [
+      { name: "Zoë", href: "https://www.salty-event.com/" },
+      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
+      { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
+    ],
   },
   {
     need: "Un contenu photo & vidéo qui fait rêver",
-    freelances: "Pierre, Nicolas, Fred — tous formats visuels",
-    link: "/creation",
+    body: "Studio, outdoor, underwater, motion, lifestyle ou produit : ils couvrent tous les terrains.",
+    freelances: [
+      { name: "Pierre", href: "https://www.pierrefrechou.com/" },
+      { name: "Nicolas", href: "https://www.nicolas-bouriette.com/" },
+      { name: "Fred", href: "https://g-3.studio/" },
+    ],
   },
   {
     need: "Du Social Media qui envoie",
-    freelances: "Kathleen — stratégie & animation, Romain — contenu",
-    link: "/social-media",
+    body: "Du social media qui envoie : pilote la stratégie et l'animation quotidienne de vos réseaux.",
+    freelances: [
+      { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
+      { name: "Romain", href: "https://www.linkedin.com/in/romainferrand/" },
+    ],
   },
   {
     need: "Des pubs qui se voient",
-    freelances: "Équipe création + Arnaud — Meta / Google / Pinterest, Kathleen",
-    link: "/seo-ia-acquisition",
+    body: "Côté création, ils imaginent des visuels percutants et des messages qui accrochent. Côté achat média, on optimise.",
+    freelances: [
+      { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
+      { name: "Zoë", href: "https://www.salty-event.com/" },
+      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
+      { name: "Arnaud", href: "https://e-flow.io/" },
+      { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
+    ],
   },
   {
     need: "Un podcast pour raconter votre histoire",
-    freelances: "Romain — conception & réalisation",
-    link: "/social-media",
+    body: "Un podcast pour raconter votre histoire : il capte vos récits et donne vie à vos idées au micro.",
+    freelances: [{ name: "Romain", href: "https://www.linkedin.com/in/romainferrand/" }],
   },
   {
     need: "Un événement aux petits oignons",
-    freelances: "Zoë, Emilien — événementiel sport & outdoor",
-    link: "/strategie",
+    body: "Ils conçoivent et pilotent des événements tout terrain, aussi bien dans le sport de haut niveau que dans les festivals.",
+    freelances: [
+      { name: "Zoë", href: "https://www.salty-event.com/" },
+      { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
+    ],
   },
   {
-    need: "IA et créativité",
-    freelances: "Lionel — automatisation IA, Victoire — levier créatif",
-    link: "/seo-ia-acquisition",
+    need: "IA et créativité : libérer du temps, amplifier vos idées",
+    body: "Il met en place des automatisations IA pour fluidifier votre organisation et réduire les tâches répétitives.",
+    freelances: [
+      { name: "Lionel", href: "https://mister-anderson.ai/" },
+      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+    ],
   },
 ];
 
 export type Expertise = {
   slug: string;
+  icon: string;
   title: string;
   tagline: string;
   leitmotiv: string;
@@ -92,6 +134,7 @@ export type Expertise = {
 export const expertises: Expertise[] = [
   {
     slug: "strategie",
+    icon: "/pictos/strategie.svg",
     title: "Stratégie",
     tagline: "On cadre l'idée avant de la shooter",
     leitmotiv: "On cadre l'idée avant de la shooter",
@@ -131,6 +174,7 @@ export const expertises: Expertise[] = [
   },
   {
     slug: "creation",
+    icon: "/pictos/creation.svg",
     title: "Création",
     tagline: "La création est au cœur de ce qu'on fait",
     leitmotiv: "La création c'est des risques mesurés, pas des décisions molles",
@@ -156,6 +200,7 @@ export const expertises: Expertise[] = [
   },
   {
     slug: "seo-ia-acquisition",
+    icon: "/pictos/seo.svg",
     title: "SEO, IA & Acquisition",
     tagline: "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
     leitmotiv: "Investir oui, gaspiller non",
@@ -176,6 +221,7 @@ export const expertises: Expertise[] = [
   },
   {
     slug: "social-media",
+    icon: "/pictos/social.svg",
     title: "Social Media",
     tagline: "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
     leitmotiv: "Des réseaux qui font du lien, pas juste du bruit.",
@@ -192,6 +238,7 @@ export const expertises: Expertise[] = [
   },
   {
     slug: "ux-webdesign",
+    icon: "/pictos/ux.svg",
     title: "UX / Webdesign",
     tagline: "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
     leitmotiv: "Pensé pour l'utilisateur, nourri par ta marque, designé pour performer",
@@ -209,6 +256,7 @@ export const expertises: Expertise[] = [
   },
   {
     slug: "developpementweb",
+    icon: "/pictos/webdev.svg",
     title: "Développement Web",
     tagline: "On ne développe pas pour faire joli, on développe pour faire sens",
     leitmotiv: "Quand ça marche bien, ça ne se voit pas",
@@ -226,4 +274,65 @@ export const expertises: Expertise[] = [
       { name: "Nicolas Farolfi", role: "Développement Web" },
     ],
   },
+];
+
+export type TeamMember = {
+  name: string;
+  role: string;
+  href: string;
+  photo?: string;
+};
+
+export const team: TeamMember[] = [
+  { name: "Zoë Zadouroff", role: "Event Manager / Design / Webdesign", href: "https://www.salty-event.com/", photo: "/team/zoe-zadouroff.png" },
+  { name: "Thomas Escot", role: "Consultant SEO", href: "https://thomas-escot.fr/", photo: "/team/thomas-escot.png" },
+  { name: "Nicolas Bouriette", role: "Photographe", href: "https://www.nicolas-bouriette.com/", photo: "/team/nicolas-bouriette.png" },
+  { name: "Frédéric Lebrault", role: "Motion design / Design", href: "https://g-3.studio/", photo: "/team/frederic-lebrault.png" },
+  { name: "Victoire Ecoiffier", role: "Stratégie / Identité / Webdesign", href: "https://www.linkedin.com/in/victoireecoiffier/", photo: "/team/victoire-ecoiffier.png" },
+  { name: "Jeanne Beuvin", role: "Illustration / Design", href: "https://lesfillesdusurf.com/", photo: undefined },
+  { name: "Emilien Geney", role: "Event manager / Design", href: "https://www.linkedin.com/in/emiliengeney/", photo: "/team/emilien-geney.png" },
+  { name: "Cécile Lehoux", role: "Développeuse web et co-fondatrice", href: "https://www.linkedin.com/in/c%C3%A9cile-lehoux-363a6094/", photo: "/team/cecile-lehoux.png" },
+  { name: "Marie Lainé", role: "Consultant SEO et Pinterest manager", href: "https://www.laminuteseo.fr/", photo: "/team/marie-laine.png" },
+  { name: "Sylvain Nascimento", role: "Développeur web", href: "https://www.linkedin.com/in/sylvainnascimento/", photo: "/team/sylvain-nascimento.png" },
+  { name: "Romain Ferrand", role: "Journaliste / Stratégie contenu / Podcasts", href: "https://www.linkedin.com/in/romainferrand/", photo: "/team/romain-ferrand.png" },
+  { name: "Lionel Rocques", role: "Consultant IA & Automatisations", href: "https://mister-anderson.ai/", photo: "/team/lionel-rocques.png" },
+  { name: "Apolline Rouzé", role: "UX Writer", href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/", photo: "/team/apolline-rouze.png" },
+  { name: "Nicolas Farolfi", role: "Développeur web", href: "https://www.nico-pro.com/", photo: "/team/nicolas-farolfi.png" },
+  { name: "Pierre Frechou", role: "Filmmaker / Photographe / Drone", href: "https://www.pierrefrechou.com/", photo: "/team/pierre-frechou.png" },
+  { name: "Quentin Roussel", role: "Développeur web", href: "https://quentinroussel.fr/", photo: "/team/quentin-roussel.png" },
+  { name: "Arnaud Poullin", role: "SEA / Acquisition / Marketing automation", href: "https://e-flow.io/", photo: "/team/arnaud-poullin.png" },
+  { name: "Kathleen Van den Bril", role: "Social Media Manager", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/", photo: "/team/kathleen-van-den-bril.png" },
+  { name: "Valentine Rolaz", role: "Cheffe de projets", href: "https://valentinerolaz.squarespace.com/", photo: undefined },
+];
+
+export type Project = {
+  name: string;
+  tags: string;
+};
+
+export const projects: Project[] = [
+  { name: "Anglet Côte Basque", tags: "Stratégie / Design / Vidéo / Edition / Rédaction" },
+  { name: "Baiona Marine", tags: "Identité / Webdesign / Développement web / SEO" },
+  { name: "Eurosima Surf Summit", tags: "Événementiel / Design / Gestion de projet / Création de contenu" },
+  { name: "Decathlon", tags: "Photo produit et packshot" },
+  { name: "FFHG", tags: "Design / Motion design" },
+  { name: "Oxbow", tags: "Stratégie / Gestion de projet / Design / Management" },
+  { name: "ISA Surf", tags: "Événementiel" },
+  { name: "FFSurf", tags: "Stratégie / Identité" },
+  { name: "La Locomotive & Le Magnéto", tags: "Stratégie / Identité / Webdesign / Développement web" },
+  { name: "GIP Skate Parks de France", tags: "Identité / Webdesign / Développement web" },
+];
+
+export const brandNames = [
+  "EuroSIMA",
+  "Oxbow",
+  "Touring Pyrénées",
+  "Full Life",
+  "Decathlon",
+  "Red Bull",
+  "Quiksilver",
+  "FFHG",
+  "FFSurf",
+  "ISA Surf",
+  "GIP Skate Parks de France",
 ];

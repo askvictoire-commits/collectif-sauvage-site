@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import { lookingFor } from "@/lib/site-data";
 
@@ -35,13 +34,22 @@ export default function LookingForAccordion() {
               }`}
             >
               <div className="min-h-0">
-                <p className="text-black/70">{item.freelances}</p>
-                <Link
-                  href={item.link}
-                  className="mt-3 inline-block text-sm font-medium underline underline-offset-4 hover:opacity-70"
-                >
-                  Découvrir l&apos;expertise →
-                </Link>
+                <p className="max-w-2xl text-black/70">{item.body}</p>
+                <div className="mt-3 flex flex-wrap gap-x-2 gap-y-1 text-sm">
+                  {item.freelances.map((f, i) => (
+                    <span key={f.name + i}>
+                      <a
+                        href={f.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium underline underline-offset-4 hover:opacity-70"
+                      >
+                        {f.name}
+                      </a>
+                      {i < item.freelances.length - 1 ? "," : ""}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
