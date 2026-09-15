@@ -43,12 +43,6 @@ export default function Home() {
               Vous cherchez…
             </h2>
             <LookingForAccordion />
-            <Link
-              href="/about"
-              className="mt-8 inline-block text-sm font-medium underline underline-offset-4 hover:opacity-70"
-            >
-              Découvrez tous nos talents →
-            </Link>
           </div>
 
           <div className="lg:pt-16">
@@ -80,6 +74,12 @@ export default function Home() {
                 respectueuse d&apos;engagements professionnels et humains.
               </p>
             </div>
+            <Link
+              href="/about"
+              className="mt-8 inline-block bg-black px-6 py-3 text-sm font-medium uppercase text-white hover:opacity-80"
+            >
+              Découvrez tous nos talents →
+            </Link>
           </div>
         </div>
       </section>
