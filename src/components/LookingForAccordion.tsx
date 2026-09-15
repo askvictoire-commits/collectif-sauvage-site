@@ -7,13 +7,13 @@ export default function LookingForAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="mt-10 divide-y divide-black/10 border-t border-b border-black/10">
+    <div className="mt-10 divide-y divide-white/20 border-t border-b border-white/20">
       {lookingFor.map((item, index) => {
         const isOpen = openIndex === index;
         return (
           <div key={item.need}>
             <button
-              className="flex w-full items-center justify-between gap-4 py-6 text-left"
+              className="flex w-full items-center justify-between gap-4 py-6 text-left text-white"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
             >
@@ -34,10 +34,10 @@ export default function LookingForAccordion() {
               }`}
             >
               <div className="min-h-0">
-                <p className="max-w-2xl text-black/70">{item.body}</p>
+                <p className="max-w-2xl text-white/70">{item.body}</p>
                 <div className="mt-3 flex flex-wrap gap-x-2 gap-y-1 text-sm">
                   {item.freelances.map((f, i) => (
-                    <span key={f.name + i}>
+                    <span key={f.name + i} className="text-[#f598ff]">
                       <a
                         href={f.href}
                         target="_blank"

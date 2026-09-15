@@ -33,7 +33,7 @@ export default function Home() {
             </h2>
             <Link
               href="/about"
-              className="relative mt-8 inline-block rounded-full border border-white px-6 py-3 text-sm font-medium uppercase text-white hover:bg-white hover:text-black"
+              className="relative mt-8 inline-block rounded-full bg-white px-6 py-3 text-sm font-medium uppercase text-[#f598ff] hover:opacity-90"
             >
               Découvrir nos frees
             </Link>
@@ -139,46 +139,57 @@ export default function Home() {
       </section>
 
       {/* Brand collaborations */}
-      <section className="px-6 py-20">
-        <div className="mx-auto max-w-6xl text-center">
-          <h2 className="font-display text-2xl uppercase md:text-3xl">
-            <span className="text-transparent [-webkit-text-stroke:1px_#f598ff]">
-              Brand
-            </span>{" "}
-            <span className="text-[#f598ff]">Collaborations</span>
-          </h2>
-          <div className="mt-10">
-            <Image
-              src="/images/brand-collaborations-logos.png"
-              alt="Logos des marques partenaires du Collectif Sauvage"
-              width={1440}
-              height={330}
-              className="mx-auto h-auto w-full max-w-5xl"
-            />
-          </div>
-        </div>
+      <section className="relative w-full">
+        <Image
+          src="/images/brand-collaborations-logos.png"
+          alt="Brand Collaborations : logos des marques partenaires du Collectif Sauvage (EuroSIMA, Oxbow, Baiona Marine, fulllife, Anglet Côte Basque, Red Bull, Decathlon, Quiksilver…)"
+          width={1440}
+          height={330}
+          sizes="100vw"
+          className="h-auto w-full"
+        />
       </section>
 
       {/* CTA final */}
-      <section className="px-6 pb-24">
-        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-[#a6a6f0] px-6 py-24 text-center text-white">
-          <div
+      <section className="px-6 py-16 md:py-24">
+        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-[32px] bg-gradient-to-b from-[#a9b3f2] to-[#7b83e8] px-8 py-16 text-white md:px-14 md:py-20">
+          <svg
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-[#f598ff] opacity-70"
-          />
-          <h2 className="font-display relative text-3xl uppercase md:text-5xl">
+            viewBox="0 0 300 200"
+            className="pointer-events-none absolute right-6 top-1/2 h-44 w-64 -translate-y-1/2 opacity-90 md:right-10 md:h-56 md:w-80"
+          >
+            <ellipse
+              cx="150"
+              cy="100"
+              rx="110"
+              ry="55"
+              transform="rotate(-14 150 100)"
+              fill="none"
+              stroke="#f598ff"
+              strokeWidth="3"
+            />
+            <path
+              d="M95 65 L100 80 L115 85 L100 90 L95 105 L90 90 L75 85 L90 80 Z"
+              fill="#f598ff"
+            />
+            <path
+              d="M185 105 L189 117 L201 121 L189 125 L185 137 L181 125 L169 121 L181 117 Z"
+              fill="#f598ff"
+            />
+          </svg>
+          <h2 className="font-display relative text-3xl uppercase leading-tight md:text-6xl">
             Prêts à se lancer ?
           </h2>
-          <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="relative mt-10 flex flex-wrap items-center gap-4">
             <Link
               href="/contact"
-              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-black"
+              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-[#171d3a]"
             >
               Parlons en ensemble
             </Link>
             <Link
               href="/about"
-              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-black"
+              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-[#171d3a]"
             >
               Découvrir l&apos;équipe
             </Link>
