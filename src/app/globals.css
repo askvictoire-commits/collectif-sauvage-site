@@ -19,6 +19,7 @@ body {
 
 .font-display {
   font-family: var(--font-display), Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }
 
 @keyframes marquee {
