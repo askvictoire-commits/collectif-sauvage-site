@@ -34,14 +34,14 @@ export default function ProjectsCarousel() {
         <button
           onClick={() => scroll(-1)}
           aria-label="Précédent"
-          className="h-10 w-10 border border-black/20 hover:bg-black hover:text-white"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f598ff] text-[#171d3a] hover:opacity-80"
         >
           ←
         </button>
         <button
           onClick={() => scroll(1)}
           aria-label="Suivant"
-          className="h-10 w-10 border border-black/20 hover:bg-black hover:text-white"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f598ff] text-[#171d3a] hover:opacity-80"
         >
           →
         </button>

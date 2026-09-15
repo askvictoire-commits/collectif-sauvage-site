@@ -3,15 +3,15 @@ import { contact } from "@/lib/site-data";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-black text-white">
+    <footer className="mt-auto bg-[#f598ff] text-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
-        <p className="max-w-2xl text-2xl font-black uppercase leading-tight tracking-tight md:text-4xl">
+        <p className="font-display max-w-2xl text-2xl uppercase leading-tight tracking-tight md:text-4xl">
           Collectivement indépendants, indéfectiblement Sauvages !
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 border-t border-white/10 pt-8 text-sm md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 border-t border-white/30 pt-8 text-sm md:grid-cols-3">
           <div>
-            <p className="uppercase tracking-wide text-white/50">Contact</p>
+            <p className="uppercase tracking-wide text-white/70">Contact</p>
             <a href={`mailto:${contact.email}`} className="mt-2 block hover:underline">
               {contact.email}
             </a>
@@ -20,11 +20,11 @@ export default function Footer() {
             </a>
           </div>
           <div>
-            <p className="uppercase tracking-wide text-white/50">Adresse</p>
+            <p className="uppercase tracking-wide text-white/70">Adresse</p>
             <p className="mt-2">{contact.address}</p>
           </div>
           <div>
-            <p className="uppercase tracking-wide text-white/50">Navigation</p>
+            <p className="uppercase tracking-wide text-white/70">Navigation</p>
             <div className="mt-2 flex flex-col gap-1">
               <Link href="/about" className="hover:underline">
                 Freelances
@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-12 text-xs text-white/40">
+        <p className="mt-12 text-xs text-white/70">
           © {new Date().getFullYear()} Collectif Sauvage
         </p>
       </div>

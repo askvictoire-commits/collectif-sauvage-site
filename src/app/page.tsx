@@ -4,24 +4,36 @@ import { expertises, brandNames } from "@/lib/site-data";
 import LookingForAccordion from "@/components/LookingForAccordion";
 import Marquee from "@/components/Marquee";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
+import HighlightedTitle from "@/components/HighlightedTitle";
 
 export default function Home() {
   return (
-    <>
+    <div className="bg-[#171d3a] text-white">
       {/* Hero */}
-      <section className="border-b border-black/10 px-6 py-24 md:py-36">
+      <section className="px-6 py-24 md:py-32">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <h1 className="font-display text-4xl uppercase leading-[0.95] tracking-tight md:text-6xl">
-            We do tout ce dont vous avez besoin pour communiquer, activer et
-            développer votre marque
-          </h1>
-          <div className="relative flex aspect-4/3 flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-pink-300 via-sky-300 to-emerald-200 p-8 text-center">
-            <h2 className="font-display text-3xl uppercase leading-tight text-white drop-shadow md:text-4xl">
+          <Image
+            src="/images/hero-headline.webp"
+            alt="Texte blanc sur fond noir avec un astérisque. Texte: “WE DO” suivi de “TOUT CE DONT VOUS AVEZ BESOIN POUR COMMUNIQUER, ACTIVER ET DÉVELOPPER VOTRE MARQUE.”"
+            width={560}
+            height={502}
+            className="h-auto w-full max-w-md"
+            priority
+          />
+          <div className="relative flex aspect-4/3 flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center">
+            <Image
+              src="/images/hero-clouds.webp"
+              alt="Nuages colorés dans un ciel rose et bleu, effet artistique."
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+            <h2 className="font-display relative text-3xl uppercase leading-tight text-[#f598ff] drop-shadow md:text-4xl">
               Plusieurs styles, un seul esprit
             </h2>
             <Link
               href="/about"
-              className="mt-8 inline-block bg-white px-6 py-3 text-sm font-medium uppercase text-black hover:opacity-80"
+              className="relative mt-8 inline-block rounded-full border border-white px-6 py-3 text-sm font-medium uppercase text-white hover:bg-white hover:text-black"
             >
               Découvrir nos frees
             </Link>
@@ -32,24 +44,25 @@ export default function Home() {
       {/* Bandeau déroulant */}
       <Marquee
         text="Comme une agence mais en mieux."
-        className="border-b border-black/10 py-8 text-4xl md:text-6xl"
+        duration={40}
+        className="py-8 text-4xl text-[#f598ff] md:text-6xl"
       />
 
       {/* Vous cherchez... + Collectivement indépendants (colonne) */}
-      <section className="border-b border-black/10 px-6 py-24">
+      <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr]">
           <div>
-            <h2 className="font-display text-3xl uppercase md:text-5xl">
+            <h2 className="font-display text-3xl uppercase text-[#f598ff] md:text-5xl">
               Vous cherchez…
             </h2>
             <LookingForAccordion />
           </div>
 
           <div className="lg:pt-16">
-            <h2 className="font-display text-2xl uppercase md:text-3xl">
+            <h2 className="font-display text-2xl uppercase text-[#f598ff] md:text-3xl">
               Collectivement indépendants !
             </h2>
-            <div className="mt-6 space-y-4 text-black/70">
+            <div className="mt-6 space-y-4 text-white/70">
               <p>
                 Le Collectif Sauvage propose une méthode innovante de
                 travail, basée sur les collaborations, l&apos;agilité, le
@@ -76,7 +89,7 @@ export default function Home() {
             </div>
             <Link
               href="/about"
-              className="mt-8 inline-block bg-black px-6 py-3 text-sm font-medium uppercase text-white hover:opacity-80"
+              className="mt-8 inline-block bg-[#f598ff] px-6 py-3 text-sm font-medium uppercase text-[#171d3a] hover:opacity-80"
             >
               Découvrez tous nos talents →
             </Link>
@@ -85,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Expertises */}
-      <section className="border-b border-black/10 px-6 py-24">
+      <section className="px-6 py-24">
         <div className="mx-auto max-w-6xl">
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Nos expertises
@@ -95,17 +108,17 @@ export default function Home() {
               <Link
                 key={exp.slug}
                 href={`/${exp.slug}`}
-                className="group flex flex-col items-center gap-4 border border-black/10 p-6 text-center hover:border-black"
+                className="group flex flex-col items-center justify-center gap-6 bg-white p-6 text-center aspect-square hover:opacity-90"
               >
                 <Image
                   src={exp.icon}
                   alt=""
-                  width={48}
-                  height={48}
-                  className="h-12 w-12"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16"
                 />
-                <h3 className="font-display text-base uppercase leading-tight md:text-lg">
-                  {exp.title}
+                <h3 className="font-display text-base uppercase leading-tight text-black md:text-lg">
+                  <HighlightedTitle title={exp.title} highlight={exp.titleHighlight} />
                 </h3>
               </Link>
             ))}
@@ -116,21 +129,22 @@ export default function Home() {
       {/* Bandeau déroulant Projets */}
       <Marquee
         text="Nos Projets *"
-        className="border-b border-black/10 bg-black py-8 text-4xl text-white md:text-6xl"
+        duration={40}
+        className="py-8 text-4xl text-[#f598ff] md:text-6xl"
       />
 
       {/* Projets */}
-      <section className="border-b border-black/10 py-16">
+      <section className="py-16">
         <ProjectsCarousel />
       </section>
 
       {/* Brand collaborations */}
-      <section className="border-b border-black/10 px-6 py-20">
+      <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl text-center">
-          <p className="font-display text-sm uppercase tracking-[0.2em] text-black/50">
+          <p className="font-display text-sm uppercase tracking-[0.2em] text-[#f598ff]">
             Brand collaborations
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-black/40">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-white/50">
             {brandNames.map((name) => (
               <span key={name} className="font-display text-lg uppercase">
                 {name}
@@ -141,25 +155,31 @@ export default function Home() {
       </section>
 
       {/* CTA final */}
-      <section className="bg-black px-6 py-24 text-center text-white">
-        <h2 className="font-display text-3xl uppercase md:text-5xl">
-          Prêts à se lancer ?
-        </h2>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <Link
-            href="/contact"
-            className="bg-white px-6 py-3 text-sm font-medium uppercase text-black hover:opacity-80"
-          >
-            Parlons-en ensemble
-          </Link>
-          <Link
-            href="/about"
-            className="border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-black"
-          >
-            Découvrir l&apos;équipe
-          </Link>
+      <section className="px-6 pb-24">
+        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl bg-[#a6a6f0] px-6 py-24 text-center text-white">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute left-1/2 top-1/2 h-64 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-[#f598ff] opacity-70"
+          />
+          <h2 className="font-display relative text-3xl uppercase md:text-5xl">
+            Prêts à se lancer ?
+          </h2>
+          <div className="relative mt-8 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/contact"
+              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-black"
+            >
+              Parlons en ensemble
+            </Link>
+            <Link
+              href="/about"
+              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-black"
+            >
+              Découvrir l&apos;équipe
+            </Link>
+          </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

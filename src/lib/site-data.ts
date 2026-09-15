@@ -125,6 +125,8 @@ export type Expertise = {
   slug: string;
   icon: string;
   title: string;
+  /** substring of `title` rendered in the pink accent color on the home page grid */
+  titleHighlight: string;
   heroTitle: string;
   heroSubtitle?: string;
   banner: string;
@@ -137,6 +139,7 @@ export const expertises: Expertise[] = [
     slug: "strategie",
     icon: "/pictos/strategie.svg",
     title: "Stratégie",
+    titleHighlight: "égie",
     heroTitle: "Pas d'offre standard ni de formules magiques chez nous.",
     heroSubtitle:
       "Chaque stratégie est le fruit d'années de pratique, d'expérimentations, et d'outils éprouvés en consulting et design thinking.",
@@ -204,6 +207,7 @@ export const expertises: Expertise[] = [
     slug: "creation",
     icon: "/pictos/creation.svg",
     title: "Création",
+    titleHighlight: "Créa",
     heroTitle: "La création est au cœur de ce qu'on fait.",
     heroSubtitle:
       "On accompagne les marques et les projets à poser des bases solides, des messages clairs, et des visuels qui ont du sens.",
@@ -307,6 +311,7 @@ export const expertises: Expertise[] = [
     slug: "seo-ia-acquisition",
     icon: "/pictos/seo.svg",
     title: "SEO, IA & Acquisition",
+    titleHighlight: "IA",
     heroTitle:
       "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
     heroSubtitle:
@@ -371,6 +376,7 @@ export const expertises: Expertise[] = [
     slug: "social-media",
     icon: "/pictos/social.svg",
     title: "Social Media",
+    titleHighlight: "Media",
     heroTitle:
       "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
     heroSubtitle:
@@ -413,6 +419,7 @@ export const expertises: Expertise[] = [
     slug: "ux-webdesign",
     icon: "/pictos/ux.svg",
     title: "UX / Webdesign",
+    titleHighlight: "UX / Web",
     heroTitle:
       "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
     heroSubtitle:
@@ -480,6 +487,7 @@ export const expertises: Expertise[] = [
     slug: "developpementweb",
     icon: "/pictos/webdev.svg",
     title: "Développement Web",
+    titleHighlight: "Dév",
     heroTitle: "On ne développe pas pour faire joli, on développe pour faire sens.",
     heroSubtitle:
       "Ton site doit être utile, maniable, performant. Le reste, c'est du vernis.",
