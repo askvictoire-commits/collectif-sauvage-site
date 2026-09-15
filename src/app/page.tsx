@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { expertises, brandNames } from "@/lib/site-data";
+import { expertises } from "@/lib/site-data";
 import LookingForAccordion from "@/components/LookingForAccordion";
 import Marquee from "@/components/Marquee";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
@@ -141,15 +141,20 @@ export default function Home() {
       {/* Brand collaborations */}
       <section className="px-6 py-20">
         <div className="mx-auto max-w-6xl text-center">
-          <p className="font-display text-sm uppercase tracking-[0.2em] text-[#f598ff]">
-            Brand collaborations
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-white/50">
-            {brandNames.map((name) => (
-              <span key={name} className="font-display text-lg uppercase">
-                {name}
-              </span>
-            ))}
+          <h2 className="font-display text-2xl uppercase md:text-3xl">
+            <span className="text-transparent [-webkit-text-stroke:1px_#f598ff]">
+              Brand
+            </span>{" "}
+            <span className="text-[#f598ff]">Collaborations</span>
+          </h2>
+          <div className="mt-10">
+            <Image
+              src="/images/brand-collaborations-logos.png"
+              alt="Logos des marques partenaires du Collectif Sauvage"
+              width={1440}
+              height={330}
+              className="mx-auto h-auto w-full max-w-5xl"
+            />
           </div>
         </div>
       </section>
