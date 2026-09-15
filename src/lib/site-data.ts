@@ -21,6 +21,65 @@ export const contact = {
   address: "Olatu, 100 avenue de l'Adour, 64600 Anglet",
 };
 
+export type LookingFor = {
+  need: string;
+  freelances: string;
+  link: string;
+};
+
+export const lookingFor: LookingFor[] = [
+  {
+    need: "Un site qui tourne pour dormir tranquille",
+    freelances: "Quentin, Sylvain, Apolline, Zoë, Victoire, Jeanne — développement, UX, design",
+    link: "/developpementweb",
+  },
+  {
+    need: "Arriver en première page sur Google",
+    freelances: "Thomas, Marie — SEO / Pinterest",
+    link: "/seo-ia-acquisition",
+  },
+  {
+    need: "De la réflexion avant l'action",
+    freelances: "Victoire, Zoë, Kathleen, Arnaud, Romain — stratégie",
+    link: "/strategie",
+  },
+  {
+    need: "Une identité qui vous ressemble",
+    freelances: "Zoë, Victoire, Jeanne, Emilien — identité de marque",
+    link: "/creation",
+  },
+  {
+    need: "Un contenu photo & vidéo qui fait rêver",
+    freelances: "Pierre, Nicolas, Fred — tous formats visuels",
+    link: "/creation",
+  },
+  {
+    need: "Du Social Media qui envoie",
+    freelances: "Kathleen — stratégie & animation, Romain — contenu",
+    link: "/social-media",
+  },
+  {
+    need: "Des pubs qui se voient",
+    freelances: "Équipe création + Arnaud — Meta / Google / Pinterest, Kathleen",
+    link: "/seo-ia-acquisition",
+  },
+  {
+    need: "Un podcast pour raconter votre histoire",
+    freelances: "Romain — conception & réalisation",
+    link: "/social-media",
+  },
+  {
+    need: "Un événement aux petits oignons",
+    freelances: "Zoë, Emilien — événementiel sport & outdoor",
+    link: "/strategie",
+  },
+  {
+    need: "IA et créativité",
+    freelances: "Lionel — automatisation IA, Victoire — levier créatif",
+    link: "/seo-ia-acquisition",
+  },
+];
+
 export type Expertise = {
   slug: string;
   title: string;

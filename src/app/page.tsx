@@ -1,14 +1,6 @@
 import Link from "next/link";
 import { expertises } from "@/lib/site-data";
-
-const looking_for = [
-  { need: "Un site web qui convertit", link: "/developpementweb" },
-  { need: "Une identité visuelle qui marque", link: "/creation" },
-  { need: "Du référencement qui rapporte", link: "/seo-ia-acquisition" },
-  { need: "Une stratégie claire avant d'agir", link: "/strategie" },
-  { need: "Des réseaux sociaux qui vivent", link: "/social-media" },
-  { need: "Une UX qui guide l'utilisateur", link: "/ux-webdesign" },
-];
+import LookingForAccordion from "@/components/LookingForAccordion";
 
 export default function Home() {
   return (
@@ -58,20 +50,7 @@ export default function Home() {
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Vous cherchez…
           </h2>
-          <div className="mt-10 grid grid-cols-1 gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3">
-            {looking_for.map((item) => (
-              <Link
-                key={item.need}
-                href={item.link}
-                className="group flex items-center justify-between bg-white p-6 hover:bg-black hover:text-white"
-              >
-                <span className="text-base font-medium">{item.need}</span>
-                <span className="text-xl transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </Link>
-            ))}
-          </div>
+          <LookingForAccordion />
         </div>
       </section>
 
