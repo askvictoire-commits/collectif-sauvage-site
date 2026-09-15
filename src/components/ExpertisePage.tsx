@@ -20,7 +20,7 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
 
       <Marquee
         text={expertise.banner}
-        duration={40}
+        duration={60}
         className="bg-[#181730] py-8 text-4xl text-[#f472ff] md:text-6xl"
       />
 
