@@ -10,17 +10,17 @@ export default function Home() {
   return (
     <div className="bg-[#171d3a] text-white">
       {/* Hero */}
-      <section className="px-6 py-24 md:py-32">
+      <section className="px-6 py-20 md:py-28">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
           <Image
             src="/images/hero-headline.webp"
             alt="Texte blanc sur fond noir avec un astérisque. Texte: “WE DO” suivi de “TOUT CE DONT VOUS AVEZ BESOIN POUR COMMUNIQUER, ACTIVER ET DÉVELOPPER VOTRE MARQUE.”"
-            width={560}
-            height={502}
-            className="h-auto w-full max-w-md"
+            width={695}
+            height={623}
+            className="h-auto w-full"
             priority
           />
-          <div className="relative flex aspect-4/3 flex-col items-center justify-center overflow-hidden rounded-2xl p-8 text-center">
+          <div className="relative flex aspect-square w-full flex-col items-start justify-center overflow-hidden rounded-2xl p-8 text-left md:p-10">
             <Image
               src="/images/hero-clouds.webp"
               alt="Nuages colorés dans un ciel rose et bleu, effet artistique."
@@ -28,12 +28,30 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
-            <h2 className="font-display relative text-3xl uppercase leading-tight text-[#f598ff] drop-shadow md:text-4xl">
-              Plusieurs styles, un seul esprit
+            <svg
+              aria-hidden
+              viewBox="0 0 200 120"
+              className="pointer-events-none absolute bottom-16 right-6 h-28 w-44 opacity-70 md:bottom-20 md:right-8"
+            >
+              <ellipse
+                cx="100"
+                cy="60"
+                rx="90"
+                ry="35"
+                transform="rotate(-10 100 60)"
+                fill="none"
+                stroke="#ffffff"
+                strokeWidth="1"
+              />
+            </svg>
+            <h2 className="font-display relative text-3xl uppercase leading-[0.95] text-[#f598ff] drop-shadow md:text-5xl">
+              Plusieurs styles,
+              <br />
+              un seul esprit
             </h2>
             <Link
               href="/about"
-              className="relative mt-8 inline-block rounded-full bg-white px-6 py-3 text-sm font-medium uppercase text-[#f598ff] hover:opacity-90"
+              className="relative mt-10 inline-block rounded-full bg-white px-7 py-3.5 text-sm font-medium uppercase tracking-wide text-[#f598ff] hover:opacity-90"
             >
               Découvrir nos frees
             </Link>
