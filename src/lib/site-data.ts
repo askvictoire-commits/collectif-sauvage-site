@@ -125,10 +125,11 @@ export type Expertise = {
   slug: string;
   icon: string;
   title: string;
-  tagline: string;
-  leitmotiv: string;
+  heroTitle: string;
+  heroSubtitle?: string;
+  banner: string;
   sections: { title: string; body: string }[];
-  team: { name: string; role: string }[];
+  team: { name: string; role: string; href?: string; photo?: string }[];
 };
 
 export const expertises: Expertise[] = [
@@ -136,48 +137,75 @@ export const expertises: Expertise[] = [
     slug: "strategie",
     icon: "/pictos/strategie.svg",
     title: "Stratégie",
-    tagline: "On cadre l'idée avant de la shooter",
-    leitmotiv: "On cadre l'idée avant de la shooter",
+    heroTitle: "Pas d'offre standard ni de formules magiques chez nous.",
+    heroSubtitle:
+      "Chaque stratégie est le fruit d'années de pratique, d'expérimentations, et d'outils éprouvés en consulting et design thinking.",
+    banner: "On cadre l'idée avant de la shooter",
     sections: [
       {
         title: "Workshops",
-        body: "Des ateliers participatifs où on aligne les cerveaux, on décloisonne les idées, basés sur le design thinking.",
+        body: "Des ateliers participatifs où on aligne les cerveaux, on décloisonne les idées, et on fait émerger des solutions concrètes et activables : Pensés sur mesure, nos workshops s'appuient sur des méthodologies design thinking pour combiner réflexion, créativité et efficacité. Résultat : des idées concrètes, portées par l'équipe et prêtes à passer à l'action.",
       },
       {
         title: "Stratégie de marque",
-        body: "Clarification du positionnement et des valeurs de votre marque.",
+        body: "On clarifie ce que vous êtes et ce que vous voulez devenir. On définit votre positionnement, vos valeurs, votre promesse et votre personnalité de marque, pour que votre image soit cohérente et percutante à chaque point de contact.",
       },
       {
         title: "Stratégie d'acquisition",
-        body: "Optimisation des leviers (SEO, SEA, réseaux sociaux) pour la conversion.",
+        body: "Ici, on se concentre sur la performance. On identifie les leviers les plus efficaces (SEO, SEA, social ads, etc.), on optimise les parcours pour maximiser la conversion et on pilote vos investissements média pour booster votre visibilité et générer du trafic qualifié.",
       },
       {
         title: "Stratégie de contenu",
-        body: "Définition des sujets, formats et canaux de communication.",
+        body: "On pense vos prises de parole pour qu'elles résonnent avec votre audience. Quels sujets traiter ? Quels formats adopter ? Quels canaux activer ? L'objectif : créer des contenus qui nourrissent la relation avec vos clients et renforcent votre expertise.",
       },
       {
         title: "Stratégie de communication",
-        body: "Structuration des messages et du calendrier éditorial.",
+        body: "On structure votre communication globale pour que vos messages soient clairs, alignés et mémorables. Choix des canaux, ton de voix, calendrier éditorial : on vous aide à orchestrer vos prises de parole pour toucher juste, au bon moment.",
       },
       {
         title: "Stratégie UX",
-        body: "Conception de parcours utilisateurs, testés sur le terrain.",
+        body: "On conçoit des parcours utilisateurs clairs et efficaces pour vos sites, apps ou plateformes. Audit des usages, wireframes, prototypes, tests terrain : on challenge les idées, on valide avec du concret, on collabore avec les devs pour que l'intention survive jusqu'en prod. Résultat : une expérience fluide, intuitive et utile — qui donne envie de cliquer, de rester, et de revenir.",
       },
     ],
     team: [
-      { name: "Victoire Ecoiffier", role: "Stratégie de marque" },
-      { name: "Kathleen Van den Bril", role: "Stratégie social media" },
-      { name: "Zoë Zadouroff", role: "Stratégie & branding" },
-      { name: "Romain Ferrand", role: "Stratégie de contenu" },
-      { name: "Apolline Rouzé", role: "Stratégie UX" },
+      {
+        name: "Victoire Ecoiffier",
+        role: "Workshop / Stratégie de marque / Stratégie de communication",
+        href: "https://www.linkedin.com/in/victoireecoiffier/",
+        photo: "/team/victoire-ecoiffier.png",
+      },
+      {
+        name: "Kathleen Van den Bril",
+        role: "Stratégie Social Media / Social Media Manager",
+        href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/",
+        photo: "/team/kathleen-van-den-bril.png",
+      },
+      {
+        name: "Zoë Zadouroff",
+        role: "Stratégie de communication",
+        href: "https://www.salty-event.com/",
+        photo: "/team/zoe-zadouroff.png",
+      },
+      {
+        name: "Romain Ferrand",
+        role: "Stratégie de contenu / Journaliste / Réalisateur de podcast",
+        href: "https://www.linkedin.com/in/romainferrand/",
+        photo: "/team/romain-ferrand.png",
+      },
+      {
+        name: "Apolline Rouzé",
+        role: "UX Writer",
+        href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/",
+        photo: "/team/apolline-rouze.png",
+      },
     ],
   },
   {
     slug: "creation",
     icon: "/pictos/creation.svg",
     title: "Création",
-    tagline: "La création est au cœur de ce qu'on fait",
-    leitmotiv: "La création c'est des risques mesurés, pas des décisions molles",
+    heroTitle: "La création est au cœur de ce qu'on fait",
+    banner: "La création c'est des risques mesurés, pas des décisions molles",
     sections: [
       { title: "Illustration", body: "Traduction d'idées en images fortes : croquis, vectoriel, créations originales." },
       { title: "Motion Design", body: "Animations de logos, vidéos explicatives, storytelling animé." },
@@ -202,8 +230,8 @@ export const expertises: Expertise[] = [
     slug: "seo-ia-acquisition",
     icon: "/pictos/seo.svg",
     title: "SEO, IA & Acquisition",
-    tagline: "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
-    leitmotiv: "Investir oui, gaspiller non",
+    heroTitle: "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
+    banner: "Investir oui, gaspiller non",
     sections: [
       { title: "Acquisition web & marketing digital", body: "Campagnes multicanaux centrées sur les métriques pertinentes (coût d'acquisition, conversion, rétention), landing pages optimisées et tracking utilisateur." },
       { title: "Campagnes Ads", body: "Google Ads, Meta Ads et Pinterest Ads : structuration, création, tracking et tests A/B." },
@@ -223,8 +251,8 @@ export const expertises: Expertise[] = [
     slug: "social-media",
     icon: "/pictos/social.svg",
     title: "Social Media",
-    tagline: "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
-    leitmotiv: "Des réseaux qui font du lien, pas juste du bruit.",
+    heroTitle: "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
+    banner: "Des réseaux qui font du lien, pas juste du bruit.",
     sections: [
       { title: "Création de contenu", body: "Shootings photo, vidéos, illustrations, motion et podcasts avec une direction artistique affirmée." },
       { title: "Community management", body: "Animation quotidienne : posts, réponses aux commentaires, modération, storytelling live." },
@@ -240,8 +268,8 @@ export const expertises: Expertise[] = [
     slug: "ux-webdesign",
     icon: "/pictos/ux.svg",
     title: "UX / Webdesign",
-    tagline: "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
-    leitmotiv: "Pensé pour l'utilisateur, nourri par ta marque, designé pour performer",
+    heroTitle: "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
+    banner: "Pensé pour l'utilisateur, nourri par ta marque, designé pour performer",
     sections: [
       { title: "UI", body: "Une interface cohérente et des interactions naturelles, sans surcharge visuelle." },
       { title: "UX Writing", body: "Chaque mot compte : transformer un formulaire ennuyeux en convertisseur efficace." },
@@ -258,8 +286,8 @@ export const expertises: Expertise[] = [
     slug: "developpementweb",
     icon: "/pictos/webdev.svg",
     title: "Développement Web",
-    tagline: "On ne développe pas pour faire joli, on développe pour faire sens",
-    leitmotiv: "Quand ça marche bien, ça ne se voit pas",
+    heroTitle: "On ne développe pas pour faire joli, on développe pour faire sens",
+    banner: "Quand ça marche bien, ça ne se voit pas",
     sections: [
       { title: "WordPress personnalisé", body: "Développement sur mesure, sans accumulation de plugins." },
       { title: "Polyvalence technique", body: "HTML/CSS/JS, frameworks modernes, backend Python / Node.js / PHP." },
