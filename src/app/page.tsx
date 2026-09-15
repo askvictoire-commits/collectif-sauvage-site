@@ -62,24 +62,26 @@ export default function Home() {
       </section>
 
       {/* Bandeau déroulant */}
-      <Marquee
-        text="Comme une agence mais en mieux."
-        duration={40}
-        className="py-8 text-4xl text-[#f598ff] md:text-6xl"
-      />
+      <div className="mt-6 md:mt-12">
+        <Marquee
+          text="Comme une agence mais en mieux."
+          duration={40}
+          className="py-8 text-4xl text-[#f598ff] md:text-6xl"
+        />
+      </div>
 
       {/* Vous cherchez... + Collectivement indépendants (colonne) */}
       <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr]">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start lg:gap-x-[18rem]">
           <div>
-            <h2 className="font-display text-3xl uppercase text-[#f598ff] md:text-5xl">
+            <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] uppercase leading-[1.056] text-[#f598ff]">
               Vous cherchez…
             </h2>
             <LookingForAccordion />
           </div>
 
-          <div className="lg:pt-16">
-            <h2 className="font-display text-2xl uppercase text-[#f598ff] md:text-3xl">
+          <div>
+            <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] uppercase leading-[1.056] text-[#f598ff]">
               Collectivement indépendants !
             </h2>
             <div className="mt-6 space-y-4 text-white/70">
@@ -109,9 +111,9 @@ export default function Home() {
             </div>
             <Link
               href="/about"
-              className="mt-8 inline-block bg-[#f598ff] px-6 py-3 text-sm font-medium uppercase text-[#171d3a] hover:opacity-80"
+              className="mt-8 inline-flex items-center justify-center rounded-full border border-[#f598ff] px-5 py-3 text-sm font-normal uppercase tracking-wide text-[#f598ff] hover:bg-[#f598ff] hover:text-[#171d3a]"
             >
-              Découvrez tous nos talents →
+              Découvrez tous nos talents
             </Link>
           </div>
         </div>
