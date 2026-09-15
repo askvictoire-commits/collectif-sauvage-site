@@ -74,14 +74,14 @@ export default function Home() {
       <section className="px-6 py-24">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start lg:gap-x-[18rem]">
           <div>
-            <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] uppercase leading-[1.056] text-[#f598ff]">
+            <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] font-bold uppercase leading-[1.056] text-[#f598ff]">
               Vous cherchez…
             </h2>
             <LookingForAccordion />
           </div>
 
           <div>
-            <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] uppercase leading-[1.056] text-[#f598ff]">
+            <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] font-bold uppercase leading-[1.056] text-[#f598ff]">
               Collectivement indépendants !
             </h2>
             <div className="mt-6 space-y-4 text-white/70">
