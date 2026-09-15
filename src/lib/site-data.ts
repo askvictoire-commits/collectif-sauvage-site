@@ -30,7 +30,7 @@ export type LookingFor = {
 export const lookingFor: LookingFor[] = [
   {
     need: "Un site qui tourne pour dormir tranquille",
-    body: "Un site web qui tourne : ils développent du solide, affinent l'expérience et les mots justes.",
+    body: "Un site web qui tourne : Quentin et Sylvain développent du solide, Apolline affine l'expérience et les mots justes, Zoë, Victoire et Jeanne dessinent des interfaces qui font la différence. Résultat : un site rapide, beau et pensé pour vos utilisateurs.",
     freelances: [
       { name: "Quentin", href: "https://quentinroussel.fr/" },
       { name: "Sylvain", href: "https://www.linkedin.com/in/sylvainnascimento/" },
@@ -42,7 +42,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Arriver en première page sur Google",
-    body: "Arriver en première page sur Google, c'est bien plus que cocher des cases : c'est être trouvé au bon moment.",
+    body: "Arriver en première page sur Google, c'est bien plus que cocher des cases : c'est être trouvé au bon moment par les bonnes personnes. Thomas et Marie défrichent les terrains du SEO : Thomas, expert et formateur, vous aide à poser les bonnes fondations, pendant que Marie, experte Pinterest et SEO, booste votre visibilité jusque dans les moindres recoins du web.",
     freelances: [
       { name: "Thomas", href: "https://thomas-escot.fr/" },
       { name: "Marie", href: "https://www.linkedin.com/in/marie-lain%C3%A9/" },
@@ -50,7 +50,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "De la réflexion avant l'action",
-    body: "On réfléchit avant d'agir : ils mènent la danse côté stratégie, chacun avec ses outils et ses angles.",
+    body: "On réfléchit avant d'agir : Victoire, Zoë, Kathleen, Arnaud et Romain mènent la danse côté stratégie, chacun avec ses outils et ses terrains de jeu, pour coller au plus près des besoins des clients.",
     freelances: [
       { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
@@ -61,7 +61,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Une identité qui vous ressemble",
-    body: "Une identité qui vous ressemble : du logo à l'univers graphique étendu, chacun travaille dans son style.",
+    body: "Une identité qui vous ressemble : du logo à l'univers graphique étendu, chacun travaille dans son style et sur son terrain. Zoë, Victoire, Jeanne et Emilien mettent leur patte personnelle sur vos projets, pour créer des identités de marque singulières et sur-mesure.",
     freelances: [
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
@@ -71,7 +71,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Un contenu photo & vidéo qui fait rêver",
-    body: "Studio, outdoor, underwater, motion, lifestyle ou produit : ils couvrent tous les terrains.",
+    body: "Studio, outdoor, underwater, motion, lifestyle ou produit. Pierre, Nicolas et Fred couvrent tous les terrains pour créer des images qui claquent et qui marquent. Décors grandioses, détails soignés ou animations inspirantes, ils transforment vos idées en visuels percutants.",
     freelances: [
       { name: "Pierre", href: "https://www.pierrefrechou.com/" },
       { name: "Nicolas", href: "https://www.nicolas-bouriette.com/" },
@@ -80,7 +80,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Du Social Media qui envoie",
-    body: "Du social media qui envoie : pilote la stratégie et l'animation quotidienne de vos réseaux.",
+    body: "Du social media qui envoie : Kathleen pilote la stratégie et l'animation quotidienne de vos réseaux, alors que Romain affine la stratégie de contenu pour capter l'attention et donner du sens à chaque publication.",
     freelances: [
       { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
       { name: "Romain", href: "https://www.linkedin.com/in/romainferrand/" },
@@ -88,7 +88,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Des pubs qui se voient",
-    body: "Côté création, ils imaginent des visuels percutants et des messages qui accrochent. Côté achat média, on optimise.",
+    body: "Côté création, Jeanne, Zoë, Victoire et Emilien imaginent des visuels percutants et des messages qui accrochent. Côté achat média, Arnaud pilote vos campagnes Meta, Google et Pinterest, pendant que Kathleen affine vos ciblages et vos budgets social media. Chacun dans son domaine pour des campagnes qui claquent.",
     freelances: [
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
@@ -100,12 +100,12 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Un podcast pour raconter votre histoire",
-    body: "Un podcast pour raconter votre histoire : il capte vos récits et donne vie à vos idées au micro.",
+    body: "Un podcast pour raconter votre histoire : Romain capte vos récits et donne vie à vos idées au micro. Journaliste et réalisateur de podcasts, il construit des formats sur-mesure pour faire entendre votre voix et toucher votre audience.",
     freelances: [{ name: "Romain", href: "https://www.linkedin.com/in/romainferrand/" }],
   },
   {
     need: "Un événement aux petits oignons",
-    body: "Ils conçoivent et pilotent des événements tout terrain, aussi bien dans le sport de haut niveau que dans les festivals.",
+    body: "Zoë conçoit et pilote des événements tout terrain, aussi bien dans le sport de haut niveau que des formats B2B comme le Surf Summit. Emilien, event manager et régisseur, est spécialisé dans les univers sport et outdoor. Deux expertises complémentaires, chacun dans son élément, pour créer des expériences fortes et bien ficelées.",
     freelances: [
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
@@ -113,7 +113,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "IA et créativité : libérer du temps, amplifier vos idées",
-    body: "Il met en place des automatisations IA pour fluidifier votre organisation et réduire les tâches répétitives.",
+    body: "Lionel met en place des automatisations IA pour fluidifier votre organisation et réduire les tâches répétitives. Victoire s'appuie sur l'IA comme levier créatif afin de donner plus de force et de cohérence aux marques. L'IA optimise et prépare le terrain, mais c'est l'humain qui éclaire, incarne et fait la différence.",
     freelances: [
       { name: "Lionel", href: "https://mister-anderson.ai/" },
       { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
@@ -279,7 +279,7 @@ export const expertises: Expertise[] = [
 export type TeamMember = {
   name: string;
   role: string;
-  href: string;
+  href?: string;
   photo?: string;
 };
 
@@ -289,7 +289,7 @@ export const team: TeamMember[] = [
   { name: "Nicolas Bouriette", role: "Photographe", href: "https://www.nicolas-bouriette.com/", photo: "/team/nicolas-bouriette.png" },
   { name: "Frédéric Lebrault", role: "Motion design / Design", href: "https://g-3.studio/", photo: "/team/frederic-lebrault.png" },
   { name: "Victoire Ecoiffier", role: "Stratégie / Identité / Webdesign", href: "https://www.linkedin.com/in/victoireecoiffier/", photo: "/team/victoire-ecoiffier.png" },
-  { name: "Jeanne Beuvin", role: "Illustration / Design", href: "https://lesfillesdusurf.com/", photo: undefined },
+  { name: "Jeanne Beuvin", role: "Illustration / Design", href: "https://lesfillesdusurf.com/", photo: "/team/jeanne-beuvin.png" },
   { name: "Emilien Geney", role: "Event manager / Design", href: "https://www.linkedin.com/in/emiliengeney/", photo: "/team/emilien-geney.png" },
   { name: "Cécile Lehoux", role: "Développeuse web et co-fondatrice", href: "https://www.linkedin.com/in/c%C3%A9cile-lehoux-363a6094/", photo: "/team/cecile-lehoux.png" },
   { name: "Marie Lainé", role: "Consultant SEO et Pinterest manager", href: "https://www.laminuteseo.fr/", photo: "/team/marie-laine.png" },
@@ -302,6 +302,7 @@ export const team: TeamMember[] = [
   { name: "Quentin Roussel", role: "Développeur web", href: "https://quentinroussel.fr/", photo: "/team/quentin-roussel.png" },
   { name: "Arnaud Poullin", role: "SEA / Acquisition / Marketing automation", href: "https://e-flow.io/", photo: "/team/arnaud-poullin.png" },
   { name: "Kathleen Van den Bril", role: "Social Media Manager", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/", photo: "/team/kathleen-van-den-bril.png" },
+  { name: "Google", role: "RH / Chief Happiness", photo: "/team/google.png" },
   { name: "Valentine Rolaz", role: "Cheffe de projets", href: "https://valentinerolaz.squarespace.com/", photo: undefined },
 ];
 

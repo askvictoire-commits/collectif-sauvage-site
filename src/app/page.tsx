@@ -10,15 +10,18 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-black/10 px-6 py-24 md:py-36">
-        <div className="mx-auto max-w-5xl">
-          <h1 className="font-display text-4xl uppercase leading-[0.95] tracking-tight md:text-7xl">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2">
+          <h1 className="font-display text-4xl uppercase leading-[0.95] tracking-tight md:text-6xl">
             We do tout ce dont vous avez besoin pour communiquer, activer et
             développer votre marque
           </h1>
-          <div className="mt-10">
+          <div className="relative flex aspect-4/3 flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-pink-300 via-sky-300 to-emerald-200 p-8 text-center">
+            <h2 className="font-display text-3xl uppercase leading-tight text-white drop-shadow md:text-4xl">
+              Plusieurs styles, un seul esprit
+            </h2>
             <Link
               href="/about"
-              className="inline-block bg-black px-6 py-3 text-sm font-medium uppercase text-white hover:opacity-80"
+              className="mt-8 inline-block bg-white px-6 py-3 text-sm font-medium uppercase text-black hover:opacity-80"
             >
               Découvrir nos frees
             </Link>
@@ -26,63 +29,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Bandeau déroulant 1 */}
-      <Marquee
-        text="Plusieurs styles, un seul esprit"
-        className="border-b border-black/10 bg-black py-6 text-3xl text-white md:text-5xl"
-      />
-
-      {/* Bandeau déroulant 2 */}
+      {/* Bandeau déroulant */}
       <Marquee
         text="Comme une agence mais en mieux."
         className="border-b border-black/10 py-8 text-4xl md:text-6xl"
       />
 
-      {/* Vous cherchez... */}
+      {/* Vous cherchez... + Collectivement indépendants (colonne) */}
       <section className="border-b border-black/10 px-6 py-24">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="font-display text-3xl uppercase md:text-5xl">
-            Vous cherchez…
-          </h2>
-          <LookingForAccordion />
-          <Link
-            href="/about"
-            className="mt-8 inline-block text-sm font-medium underline underline-offset-4 hover:opacity-70"
-          >
-            Découvrez tous nos talents →
-          </Link>
-        </div>
-      </section>
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr]">
+          <div>
+            <h2 className="font-display text-3xl uppercase md:text-5xl">
+              Vous cherchez…
+            </h2>
+            <LookingForAccordion />
+            <Link
+              href="/about"
+              className="mt-8 inline-block text-sm font-medium underline underline-offset-4 hover:opacity-70"
+            >
+              Découvrez tous nos talents →
+            </Link>
+          </div>
 
-      {/* Philosophie */}
-      <section className="border-b border-black/10 px-6 py-24">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="font-display text-3xl uppercase md:text-5xl">
-            Collectivement indépendants !
-          </h2>
-          <div className="mt-6 space-y-4 text-lg text-black/70">
-            <p>
-              Le Collectif Sauvage propose une méthode innovante de travail,
-              basée sur les collaborations, l&apos;agilité, le conseil, la
-              pertinence et le respect afin de fournir une réponse sur mesure
-              à des problématiques de communication 360°.
-            </p>
-            <p>
-              Nous sommes convaincus que nous sommes plus efficaces dans
-              notre travail lorsqu&apos;il est respecté à sa juste valeur et
-              que nous nous y épanouissons.
-            </p>
-            <p>
-              Le Collectif Sauvage est avant tout une association qui a pour
-              vocation de créer un cadre d&apos;entraide et de collaboration
-              pour les freelances qui la constituent.
-            </p>
-            <p>
-              Fort de ce réseau aux ressources et aux compétences partagées,
-              nous proposons aux clients qui contactent nos freelances une
-              approche du travail agile, pertinente et respectueuse
-              d&apos;engagements professionnels et humains.
-            </p>
+          <div className="lg:pt-16">
+            <h2 className="font-display text-2xl uppercase md:text-3xl">
+              Collectivement indépendants !
+            </h2>
+            <div className="mt-6 space-y-4 text-black/70">
+              <p>
+                Le Collectif Sauvage propose une méthode innovante de
+                travail, basée sur les collaborations, l&apos;agilité, le
+                conseil, la pertinence et le respect afin de fournir une
+                réponse sur mesure à des problématiques de communication
+                360°.
+              </p>
+              <p>
+                Nous sommes convaincus que nous sommes plus efficaces dans
+                notre travail lorsqu&apos;il est respecté à sa juste valeur
+                et que nous nous y épanouissons.
+              </p>
+              <p>
+                Le Collectif Sauvage est avant tout une association qui a
+                pour vocation de créer un cadre d&apos;entraide et de
+                collaboration pour les freelances qui la constituent.
+              </p>
+              <p>
+                Fort de ce réseau aux ressources et aux compétences
+                partagées, nous proposons aux clients qui contactent nos
+                freelances une approche du travail agile, pertinente et
+                respectueuse d&apos;engagements professionnels et humains.
+              </p>
+            </div>
           </div>
         </div>
       </section>

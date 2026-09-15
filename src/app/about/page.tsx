@@ -16,14 +16,8 @@ export default function About() {
       <section className="border-b border-black/10 px-6 py-16">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-            {team.map((member) => (
-              <a
-                key={member.name}
-                href={member.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
+            {team.map((member) => {
+              const photoBlock = (
                 <div className="relative aspect-square w-full overflow-hidden bg-black/5">
                   {member.photo ? (
                     <Image
@@ -42,10 +36,30 @@ export default function About() {
                     </div>
                   )}
                 </div>
-                <p className="mt-3 font-medium">{member.name}</p>
-                <p className="text-sm text-black/60">{member.role}</p>
-              </a>
-            ))}
+              );
+              const content = (
+                <>
+                  {photoBlock}
+                  <p className="mt-3 font-medium">{member.name}</p>
+                  <p className="text-sm text-black/60">{member.role}</p>
+                </>
+              );
+              return member.href ? (
+                <a
+                  key={member.name}
+                  href={member.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  {content}
+                </a>
+              ) : (
+                <div key={member.name} className="group">
+                  {content}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
