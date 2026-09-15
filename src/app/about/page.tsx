@@ -42,10 +42,12 @@ export default function About() {
               const content = (
                 <>
                   {photoBlock}
-                  <p className="font-display mt-4 uppercase leading-tight">
+                  <p className="font-display mt-4 text-center text-[26px] uppercase leading-[31px] text-white">
                     {member.name}
                   </p>
-                  <p className="mt-1 text-sm text-white/60">{member.role}</p>
+                  <p className="text-center text-base leading-6 text-white">
+                    {member.role}
+                  </p>
                 </>
               );
               return member.href ? (
@@ -54,12 +56,12 @@ export default function About() {
                   href={member.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group"
+                  className="group flex flex-col items-center"
                 >
                   {content}
                 </a>
               ) : (
-                <div key={member.name} className="group">
+                <div key={member.name} className="group flex flex-col items-center">
                   {content}
                 </div>
               );
