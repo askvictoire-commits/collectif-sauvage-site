@@ -278,11 +278,6 @@ export const expertises: Expertise[] = [
         photo: "/team/pierre-frechou.png",
       },
       {
-        name: "Lucie Francini",
-        role: "Réalisatrice / Vidéo Photo outdoor & aqua",
-        href: "https://www.luciefrancini.com/",
-      },
-      {
         name: "Frederic Lebrault",
         role: "Motion design / Design",
         href: "https://g-3.studio/",
