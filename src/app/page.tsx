@@ -28,22 +28,14 @@ export default function Home() {
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
-            <svg
+            <Image
+              src="/images/ellipse-white.png"
+              alt=""
               aria-hidden
-              viewBox="0 0 200 120"
-              className="pointer-events-none absolute bottom-16 right-6 h-28 w-44 opacity-70 md:bottom-20 md:right-8"
-            >
-              <ellipse
-                cx="100"
-                cy="60"
-                rx="90"
-                ry="35"
-                transform="rotate(-10 100 60)"
-                fill="none"
-                stroke="#ffffff"
-                strokeWidth="1"
-              />
-            </svg>
+              width={1907}
+              height={1901}
+              className="pointer-events-none absolute -right-6 bottom-4 h-40 w-40 opacity-80 md:h-56 md:w-56"
+            />
             <h2 className="font-display relative text-3xl uppercase leading-[0.95] text-[#f598ff] drop-shadow md:text-5xl">
               Plusieurs styles,
               <br />
@@ -171,30 +163,14 @@ export default function Home() {
       {/* CTA final */}
       <section className="px-6 py-16 md:py-24">
         <div className="relative mx-auto max-w-3xl overflow-hidden rounded-[32px] bg-gradient-to-b from-[#a9b3f2] to-[#7b83e8] px-8 py-16 text-white md:px-14 md:py-20">
-          <svg
+          <Image
+            src="/images/ellipse-pink.png"
+            alt=""
             aria-hidden
-            viewBox="0 0 300 200"
-            className="pointer-events-none absolute right-6 top-1/2 h-44 w-64 -translate-y-1/2 opacity-90 md:right-10 md:h-56 md:w-80"
-          >
-            <ellipse
-              cx="150"
-              cy="100"
-              rx="110"
-              ry="55"
-              transform="rotate(-14 150 100)"
-              fill="none"
-              stroke="#f598ff"
-              strokeWidth="3"
-            />
-            <path
-              d="M95 65 L100 80 L115 85 L100 90 L95 105 L90 90 L75 85 L90 80 Z"
-              fill="#f598ff"
-            />
-            <path
-              d="M185 105 L189 117 L201 121 L189 125 L185 137 L181 125 L169 121 L181 117 Z"
-              fill="#f598ff"
-            />
-          </svg>
+            width={1907}
+            height={1901}
+            className="pointer-events-none absolute right-4 top-1/2 h-48 w-48 -translate-y-1/2 opacity-90 md:h-64 md:w-64"
+          />
           <h2 className="font-display relative text-3xl uppercase leading-tight md:text-6xl">
             Prêts à se lancer ?
           </h2>
