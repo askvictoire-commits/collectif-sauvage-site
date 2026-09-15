@@ -15,12 +15,12 @@ export default function About() {
       />
 
       {/* Grille des freelances */}
-      <section className="px-6 py-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="px-4 py-16">
+        <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
             {team.map((member) => {
               const photoBlock = (
-                <div className="relative aspect-square w-full overflow-hidden rounded-full bg-white/10">
+                <div className="relative aspect-square w-[82%] overflow-hidden rounded-full bg-white/10">
                   {member.photo ? (
                     <Image
                       src={member.photo}
