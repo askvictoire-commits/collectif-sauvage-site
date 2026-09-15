@@ -2,10 +2,12 @@ export default function Marquee({
   text,
   className = "",
   repeat = 8,
+  duration = 20,
 }: {
   text: string;
   className?: string;
   repeat?: number;
+  duration?: number;
 }) {
   const items = Array.from({ length: repeat });
   const group = (
@@ -20,7 +22,10 @@ export default function Marquee({
 
   return (
     <div className={`overflow-hidden whitespace-nowrap ${className}`}>
-      <div className="animate-marquee flex w-max">
+      <div
+        className="animate-marquee flex w-max"
+        style={{ animationDuration: `${duration}s` }}
+      >
         {group}
         {group}
       </div>

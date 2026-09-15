@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import type { Expertise } from "@/lib/site-data";
 import Marquee from "@/components/Marquee";
@@ -21,12 +20,13 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
 
       <Marquee
         text={expertise.banner}
+        duration={40}
         className="bg-[#181730] py-8 text-4xl text-[#f472ff] md:text-6xl"
       />
 
       <section className="bg-[#181730] px-6 py-24 text-white">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
             {expertise.sections.map((s) => (
               <div key={s.title} className="border-t border-white/10 pt-6">
                 <h3 className="font-display text-xl uppercase text-[#f472ff]">
@@ -83,15 +83,6 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="border-t border-black/10 bg-black px-6 py-20 text-center text-white">
-        <Link
-          href="/contact"
-          className="inline-block bg-white px-6 py-3 text-sm font-medium uppercase text-black hover:opacity-80"
-        >
-          Parlons-en ensemble
-        </Link>
       </section>
     </>
   );
