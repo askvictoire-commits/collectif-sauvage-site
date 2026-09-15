@@ -1,69 +1,136 @@
-import Image from "next/image";
+import Link from "next/link";
+import { expertises } from "@/lib/site-data";
+
+const looking_for = [
+  { need: "Un site web qui convertit", link: "/developpementweb" },
+  { need: "Une identité visuelle qui marque", link: "/creation" },
+  { need: "Du référencement qui rapporte", link: "/seo-ia-acquisition" },
+  { need: "Une stratégie claire avant d'agir", link: "/strategie" },
+  { need: "Des réseaux sociaux qui vivent", link: "/social-media" },
+  { need: "Une UX qui guide l'utilisateur", link: "/ux-webdesign" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <>
+      {/* Hero */}
+      <section className="border-b border-black/10 px-6 py-24 md:py-36">
+        <div className="mx-auto max-w-5xl">
+          <h1 className="font-display text-4xl uppercase leading-[0.95] tracking-tight md:text-7xl">
+            We do tout ce dont vous avez besoin pour communiquer, activer et
+            développer votre marque
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/about"
+              className="bg-black px-6 py-3 text-sm font-medium uppercase text-white hover:opacity-80"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Découvrir nos frees
+            </Link>
+            <Link
+              href="/contact"
+              className="border border-black px-6 py-3 text-sm font-medium uppercase hover:bg-black hover:text-white"
             >
-              Learning
-            </a>{" "}
-            center.
+              Parlons-en ensemble
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Positioning */}
+      <section className="border-b border-black/10 px-6 py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-display text-3xl uppercase md:text-5xl">
+            Comme une agence, mais en mieux
+          </h2>
+          <p className="mt-6 text-lg text-black/70">
+            Une proposition de valeur basée sur des collaborateurs seniors et
+            indépendants : l&apos;expertise d&apos;une agence, l&apos;agilité
+            et l&apos;implication de freelances qui choisissent leurs
+            missions.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Vous cherchez... */}
+      <section className="border-b border-black/10 px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-display text-3xl uppercase md:text-5xl">
+            Vous cherchez…
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-px bg-black/10 sm:grid-cols-2 lg:grid-cols-3">
+            {looking_for.map((item) => (
+              <Link
+                key={item.need}
+                href={item.link}
+                className="group flex items-center justify-between bg-white p-6 hover:bg-black hover:text-white"
+              >
+                <span className="text-base font-medium">{item.need}</span>
+                <span className="text-xl transition-transform group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Philosophie */}
+      <section className="border-b border-black/10 px-6 py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-display text-3xl uppercase md:text-5xl">
+            Collectivement indépendants
+          </h2>
+          <p className="mt-6 text-lg text-black/70">
+            Une association créant un cadre d&apos;entraide pour les
+            freelances : agilité, respect mutuel et exigence partagée, pour
+            des projets menés avec autant de liberté que de sérieux.
+          </p>
+        </div>
+      </section>
+
+      {/* Expertises */}
+      <section className="px-6 py-24">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="font-display text-3xl uppercase md:text-5xl">
+            Nos expertises
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {expertises.map((exp) => (
+              <Link
+                key={exp.slug}
+                href={`/${exp.slug}`}
+                className="group border border-black/10 p-6 hover:border-black"
+              >
+                <h3 className="font-display text-xl uppercase">{exp.title}</h3>
+                <p className="mt-2 text-sm text-black/60">{exp.tagline}</p>
+                <span className="mt-4 inline-block text-sm font-medium transition-transform group-hover:translate-x-1">
+                  Découvrir →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="border-t border-black/10 bg-black px-6 py-24 text-white">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="font-display text-3xl uppercase md:text-5xl">
+            Une idée derrière la tête ?
+          </h2>
+          <p className="mt-6 text-lg text-white/70">
+            Un projet qui mérite mieux qu&apos;un devis Excel ? Décrivez-nous
+            vos besoins, vos délais et votre budget.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-block bg-white px-6 py-3 text-sm font-medium uppercase text-black hover:opacity-80"
+          >
+            Découvrir l&apos;équipe
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
