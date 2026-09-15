@@ -44,9 +44,9 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
           <h2 className="font-display text-2xl uppercase md:text-4xl">
             Découvrez notre équipe
           </h2>
-          <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3">
+          <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-10">
             {expertise.team.map((member) => (
-              <div key={member.name} className="text-center">
+              <div key={member.name} className="w-32 text-center sm:w-36">
                 <div className="relative mx-auto aspect-square w-28 overflow-hidden rounded-full bg-black/5 md:w-32">
                   {member.photo ? (
                     <Image

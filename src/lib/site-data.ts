@@ -312,76 +312,228 @@ export const expertises: Expertise[] = [
     slug: "seo-ia-acquisition",
     icon: "/pictos/seo.svg",
     title: "SEO, IA & Acquisition",
-    heroTitle: "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
-    banner: "Investir oui, gaspiller non",
+    heroTitle:
+      "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
+    heroSubtitle:
+      "On pilote vos campagnes pour qu'elles fassent autre chose que tourner en boucle dans le vide. Et on mets en place les outils nécessaires pour que vous puissiez enfin refaire “juste” votre métier.",
+    banner: "Investir oui, gaspiller non.",
     sections: [
-      { title: "Acquisition web & marketing digital", body: "Campagnes multicanaux centrées sur les métriques pertinentes (coût d'acquisition, conversion, rétention), landing pages optimisées et tracking utilisateur." },
-      { title: "Campagnes Ads", body: "Google Ads, Meta Ads et Pinterest Ads : structuration, création, tracking et tests A/B." },
-      { title: "Automation & E-commerce", body: "Scénarios automatisés, segmentation, optimisation des fiches produits et tunnels d'achat." },
-      { title: "IA et Automatisations", body: "L'IA pour éliminer les tâches répétitives et libérer du temps pour la valeur ajoutée." },
-      { title: "Référencement Naturel (SEO)", body: "Contenu optimisé, technique (performance, Core Web Vitals) et maillage." },
+      {
+        title: "Acquisition web & marketing digital",
+        body: "Des campagnes publicitaires qui servent vos objectifs réels. Nous concevons et pilotons des dispositifs d'acquisition multicanaux avec un œil sur les métriques qui comptent : coût d'acquisition, taux de conversion, rétention. Cela inclut la création de landing pages efficaces, la mise en place de tunnels de conversion, la configuration du tracking, l'analyse des parcours utilisateurs et des recommandations d'optimisation. Notre approche est centrée sur l'efficacité, sans négliger la cohérence éditoriale et la clarté de l'expérience pour l'utilisateur final.",
+      },
+      {
+        title: "Campagnes Ads (Google, Meta, Pinterest)",
+        body: "Nous concevons, structurons et optimisons vos campagnes publicitaires sur les principales plateformes : Google Ads (réseau de recherche, display, YouTube), Meta Ads (Facebook, Instagram) et Pinterest Ads. Objectif : générer du trafic qualifié, capter l'attention au bon moment, et maximiser les conversions. Nous travaillons sur tout le cycle : définition des audiences, structuration des comptes et des campagnes, création des visuels et des textes, paramétrage du tracking (via Google Tag Manager, Pixel Meta ou Pinterest Tag), A/B testing, analyse des performances et ajustements réguliers. Chaque plateforme a ses spécificités, et on les utilise à bon escient — avec une approche ROIste, mais jamais au détriment de la cohérence de marque.",
+      },
+      {
+        title: "Automation & optimisation e-commerce",
+        body: "Automatiser intelligemment, pour mieux personnaliser. Nous mettons en place des scénarios automatisés qui renforcent la relation client : envoi de mails déclenchés (bienvenue, panier abandonné, relance inactive), segmentation de vos bases, scoring comportemental, synchronisation entre outils (CMS, CRM, analytics). Sur la partie e-commerce, nous intervenons sur l'optimisation des fiches produit (titre, description, médias, SEO), des tunnels d'achat (UX, rapidité, clarté), et de la conversion (test A/B, codes promo, fonctionnalités adaptées). Le tout avec une logique d'amélioration continue, alimentée par des données concrètes et une vraie attention portée à l'expérience client.",
+      },
+      {
+        title: "IA et automatisations",
+        body: "Arrêtez de perdre du temps à répéter des tâches sans valeur ajoutée. L'automatisation IA, c'est un outil intelligent qui prend en charge le travail rébarbatif pendant que vous vous concentrez sur l'essentiel. Plus besoin de copier-coller des données à l'infini, de gérer des mails qui s'empilent ou des process qui tournent en boucle : on met en place des workflows efficaces et intelligents qui fluidifient votre quotidien. Résultat ? Plus d'énergie pour créer, communiquer, vendre ou simplement souffler. L'IA n'efface pas l'humain, elle lui redonne de la place.",
+      },
+      {
+        title: "Référencement naturel (SEO)",
+        body: "Être visible au bon endroit, au bon moment, et pour les bonnes requêtes. Nos experts SEO interviennent sur trois piliers : le contenu (rédaction optimisée, structure des pages, sémantique), la technique (performance du site, indexation, balisage, Core Web Vitals) et le maillage (liens internes, backlinks, stratégie de netlinking). Nous réalisons audits SEO, recommandations concrètes, accompagnement éditorial et suivi des positions, pour améliorer votre visibilité de façon durable — sans black hat, sans miracle, mais avec méthode et précision.",
+      },
     ],
     team: [
-      { name: "Marie Lainé", role: "SEO / Pinterest" },
-      { name: "Arnaud Poullin", role: "SEA / Acquisition / Marketing automation" },
-      { name: "Thomas Escot", role: "SEO" },
-      { name: "Kathleen Van den Bril", role: "Social Media Manager" },
-      { name: "Lionel Rocques", role: "IA & Automatisation" },
+      {
+        name: "Marie Lainé",
+        role: "Consultant SEO et Pinterest manager",
+        href: "https://www.linkedin.com/in/marie-lain%C3%A9/",
+        photo: "/team/marie-laine.png",
+      },
+      {
+        name: "Arnaud Poullin",
+        role: "SEA / Acquisition / Marketing automation",
+        href: "https://e-flow.io/",
+        photo: "/team/arnaud-poullin.png",
+      },
+      {
+        name: "Thomas Escot",
+        role: "Consultant SEO",
+        href: "https://thomas-escot.fr/",
+        photo: "/team/thomas-escot.png",
+      },
+      {
+        name: "Kathleen Van den Bril",
+        role: "Social Media Manager",
+        href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/",
+        photo: "/team/kathleen-van-den-bril.png",
+      },
+      {
+        name: "Lionel Rocques",
+        role: "Consultant IA & Automatisation",
+        href: "https://mister-anderson.ai/",
+        photo: "/team/lionel-rocques.png",
+      },
     ],
   },
   {
     slug: "social-media",
     icon: "/pictos/social.svg",
     title: "Social Media",
-    heroTitle: "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
+    heroTitle:
+      "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
+    heroSubtitle:
+      "Et nous sommes là pour écrire les règles, orchestrer les temps forts et faire vibrer votre communauté.",
     banner: "Des réseaux qui font du lien, pas juste du bruit.",
     sections: [
-      { title: "Création de contenu", body: "Shootings photo, vidéos, illustrations, motion et podcasts avec une direction artistique affirmée." },
-      { title: "Community management", body: "Animation quotidienne : posts, réponses aux commentaires, modération, storytelling live." },
-      { title: "Multi-plateformes, multi-formats", body: "Adaptation du contenu selon Instagram, LinkedIn, TikTok, Pinterest et les autres canaux." },
-      { title: "Stratégie de contenu", body: "Structuration des piliers éditoriaux alignés avec vos objectifs business et votre personnalité de marque." },
+      {
+        title: "Création de contenu",
+        body: "Pas de stratégie sans bonnes munitions. Chez Sauvage, on produit en interne des contenus créatifs et originaux : shootings photo, vidéos, illustrations, interviews, motion, textes, reels, podcasts… On capte l'émotion, l'intention, et on donne à voir ce que tu fais de mieux, avec un œil esthétique et une vraie direction artistique. Studio intégré, équipe sauvage, effet waouh garanti.",
+      },
+      {
+        title: "Community management",
+        body: "Être présent, c'est bien. Être pertinent et vivant, c'est mieux. On t'accompagne dans l'animation quotidienne de tes réseaux : création des posts, réponse aux commentaires, modération, planification, storytelling en live ou en story. On prend soin de ta communauté, on lui parle vrai, et on crée un lien humain, durable, engagé. Pas de robot, pas de bullshit.",
+      },
+      {
+        title: "Multi-plateformes, multi-formats",
+        body: "Un bon contenu, c'est bien. Le bon contenu, au bon endroit, au bon moment, c'est encore mieux. On t'aide à naviguer entre Instagram, LinkedIn, Facebook, Pinterest, TikTok ou autre terrain d'expression – selon les cibles, les usages et les formats qui marchent. Pas de copier-coller : chaque plateforme a ses codes, on adapte à chaque fois. Le fond reste cohérent, la forme devient intelligente.",
+      },
+      {
+        title: "Stratégie de contenu",
+        body: "Avant de poster, on pense. On identifie les bons sujets, on clarifie les prises de parole, on structure les piliers éditoriaux qui vont raconter ta marque avec cohérence et envie. On aligne ta stratégie social media avec tes objectifs business, ta personnalité de marque et les attentes de tes audiences. C'est du fond, mais avec de la forme. Et surtout, une vraie direction.",
+      },
     ],
     team: [
-      { name: "Kathleen Van den Bril", role: "Social Media Manager" },
-      { name: "Romain Ferrand", role: "Rédacteur / Podcasts" },
+      {
+        name: "Kathleen Van den Bril",
+        role: "Social Media Manager",
+        href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/",
+        photo: "/team/kathleen-van-den-bril.png",
+      },
+      {
+        name: "Romain Ferrand",
+        role: "Rédacteur / Réalisateur de podcasts",
+        href: "https://www.linkedin.com/in/romainferrand/",
+        photo: "/team/romain-ferrand.png",
+      },
     ],
   },
   {
     slug: "ux-webdesign",
     icon: "/pictos/ux.svg",
     title: "UX / Webdesign",
-    heroTitle: "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
-    banner: "Pensé pour l'utilisateur, nourri par ta marque, designé pour performer",
+    heroTitle:
+      "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
+    heroSubtitle:
+      "On ne fait pas “juste un joli site”. On pense l'expérience de A à Z, pour que ça marche, que ce soit beau, et que ça serve vraiment.",
+    banner:
+      "Pensé pour l'utilisateur, nourri par ta marque, designé pour performer",
     sections: [
-      { title: "UI", body: "Une interface cohérente et des interactions naturelles, sans surcharge visuelle." },
-      { title: "UX Writing", body: "Chaque mot compte : transformer un formulaire ennuyeux en convertisseur efficace." },
-      { title: "Webdesign", body: "Déployer votre univers graphique sur l'ensemble du site, premier contact avec la marque." },
-      { title: "Stratégie UX", body: "Usage, navigation fluide et hiérarchie claire pour réduire les frictions." },
+      {
+        title: "UI",
+        body: "L'interface, c'est le terrain de jeu où l'on rend tout ça visible, lisible, agréable. On travaille les grilles, les composants, les interactions, les animations — pour que tout s'emboîte naturellement, sans forcer. Pas de surdesign, pas de pixel inutile. Juste un système visuel cohérent, vivant, et parfaitement aligné avec les usages.",
+      },
+      {
+        title: "UX Writing",
+        body: "Parce que chaque mot compte. Une bonne expérience passe aussi par les bons mots, aux bons endroits. On structure l'information, on clarifie les messages, on rédige des micro-textes qui orientent sans assommer. Moins de jargon, plus d'impact. L'UX writing, c'est ce qui transforme un “formulaire ennuyeux” en “formulaire qui convertit”. Et ça change tout.",
+      },
+      {
+        title: "Webdesign",
+        body: "Ici, le design ne s'arrête pas à votre charte graphique. On déploie votre univers graphique sur l'ensemble du site, on fait respirer votre identité, on enrichit vos codes visuels à travers chaque page. C'est un terrain d'expression, de cohérence et de puissance. Un site, c'est souvent le premier contact avec votre marque : autant qu'il dise clairement qui vous êtes, avec force. On ajuste, on étire, on densifie — toujours au service de votre message.",
+      },
+      {
+        title: "Stratégie UX",
+        body: "Avant de poser un bouton ou de choisir une typo, on pense usage. Navigation fluide, hiérarchie claire, parcours utilisateur optimisé : on creuse, on observe, on teste. Qu'il s'agisse d'un site vitrine, d'une plateforme ou d'un e-commerce, l'objectif reste le même : réduire les frictions, guider les actions, et transformer les visiteurs en utilisateurs satisfaits. On vous simplifie la vie (et celle de vos clients) avec des interfaces qui répondent à des besoins concrets et réfléchis.",
+      },
     ],
     team: [
-      { name: "Apolline Rouzé", role: "UX Writer" },
-      { name: "Nicolas Farolfi", role: "UI / Webdesign" },
-      { name: "Sylvain Nascimento", role: "UX / UI" },
+      {
+        name: "Apolline Rouzé",
+        role: "UX Writer",
+        href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/",
+        photo: "/team/apolline-rouze.png",
+      },
+      {
+        name: "Zoë Zadouroff",
+        role: "UI / Webdesign",
+        href: "https://www.salty-event.com/",
+        photo: "/team/zoe-zadouroff.png",
+      },
+      {
+        name: "Victoire Ecoiffier",
+        role: "UI / Webdesign",
+        href: "https://www.linkedin.com/in/victoireecoiffier/",
+        photo: "/team/victoire-ecoiffier.png",
+      },
+      {
+        name: "Sylvain Nascimento",
+        role: "UX / UI",
+        href: "https://www.linkedin.com/in/sylvainnascimento/",
+        photo: "/team/sylvain-nascimento.png",
+      },
+      {
+        name: "Quentin Roussel",
+        role: "UX / UI",
+        href: "https://quentinroussel.fr/",
+        photo: "/team/quentin-roussel.png",
+      },
+      {
+        name: "Nicolas Farolfi",
+        role: "UX / UI",
+        href: "https://www.nico-pro.com/",
+        photo: "/team/nicolas-farolfi.png",
+      },
     ],
   },
   {
     slug: "developpementweb",
     icon: "/pictos/webdev.svg",
     title: "Développement Web",
-    heroTitle: "On ne développe pas pour faire joli, on développe pour faire sens",
-    banner: "Quand ça marche bien, ça ne se voit pas",
+    heroTitle: "On ne développe pas pour faire joli, on développe pour faire sens.",
+    heroSubtitle:
+      "Ton site doit être utile, maniable, performant. Le reste, c'est du vernis.",
+    banner: "Quand ça marche bien, ça ne se voit pas.",
     sections: [
-      { title: "WordPress personnalisé", body: "Développement sur mesure, sans accumulation de plugins." },
-      { title: "Polyvalence technique", body: "HTML/CSS/JS, frameworks modernes, backend Python / Node.js / PHP." },
-      { title: "E-commerce", body: "WooCommerce et Shopify optimisés pour la conversion commerciale." },
-      { title: "Applications mobiles", body: "iOS / Android via Ionic, Capacitor, Cordova." },
-      { title: "Sites vitrines", body: "Des plateformes gérables en autonomie, sans dépendance technique." },
-      { title: "Solutions no-code", body: "Webflow, Bubble.io pour lancer rapidement." },
+      {
+        title: "Développement WordPress custom",
+        body: "Pas question d'empiler des plugins à l'aveugle. Les thèmes WordPress sont développés sur mesure, propres et optimisés, pensés pour l'identité de chaque marque et les usages concrets. Des fondations techniques solides, évolutives et calibrées pour durer.",
+      },
+      {
+        title: "Tous les langages, une seule équipe",
+        body: "Chaque langage a ses spécialistes. Du HTML/CSS/JS aux frameworks modernes (Angular, Typescript), en passant par le backend (Node.js, Python/Django, Flask, PHP, MongoDB, MySQL), les profils adaptés interviennent pour parler la langue technique nécessaire à chaque projet.",
+      },
+      {
+        title: "E-commerce",
+        body: "Les boutiques en ligne ne sont pas seulement là pour exister, elles sont faites pour vendre. Avec WooCommerce ou Shopify, chaque projet e-commerce est pensé pour la conversion : tunnel d'achat fluide, paiements sécurisés, intégrations CRM/ERP. Tout est construit pour soutenir la croissance d'un business, sans frictions.",
+      },
+      {
+        title: "Développement mobile",
+        body: "La présence digitale ne s'arrête pas au web. Des applications mobiles iOS et Android sont développées avec Ionic, Capacitor ou Cordova, connectées aux sites, APIs et back-offices existants. Une extension naturelle de l'écosystème digital, directement dans la poche des utilisateurs.",
+      },
+      {
+        title: "Sites vitrines",
+        body: "Faciles à prendre en main. Un site vitrine doit vivre par ceux qui le portent, pas uniquement par des développeurs. Les sites sont conçus pour être élégants, performants et surtout simples à administrer. L'autonomie est totale pour gérer le contenu sans dépendre d'une assistance technique constante.",
+      },
+      {
+        title: "No-code & plateformes agiles",
+        body: "La rapidité d'exécution compte parfois plus que la complexité technique. Avec des solutions comme Webflow, Shopify ou Bubble.io, il est possible de lancer rapidement des sites et plateformes no-code ou low-code, fiables et évolutives. Une approche idéale pour tester, accélérer ou ajuster un projet digital.",
+      },
     ],
     team: [
-      { name: "Sylvain Nascimento", role: "Web Dev / UI / UX" },
-      { name: "Quentin Roussel", role: "Développement Web" },
-      { name: "Nicolas Farolfi", role: "Développement Web" },
+      {
+        name: "Sylvain Nascimento",
+        role: "Web Dev / UI / UX",
+        href: "https://www.linkedin.com/in/sylvainnascimento/",
+        photo: "/team/sylvain-nascimento.png",
+      },
+      {
+        name: "Quentin Roussel",
+        role: "Web Dev / UI / UX",
+        href: "https://quentinroussel.fr/",
+        photo: "/team/quentin-roussel.png",
+      },
+      {
+        name: "Nicolas Farolfi",
+        role: "Web Dev / UI / UX",
+        href: "https://www.nico-pro.com/",
+        photo: "/team/nicolas-farolfi.png",
+      },
     ],
   },
 ];
