@@ -23,7 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="fr"
       className={`${anton.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-white text-black">
+      <body className="flex min-h-full flex-col bg-[#171d3a] text-white">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
