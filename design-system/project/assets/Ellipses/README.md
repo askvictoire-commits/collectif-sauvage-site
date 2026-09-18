@@ -1,0 +1,1 @@
+Quatre ellipses décoratives réelles du site source, chacune avec son propre dégradé/texture — pas de simples cercles de couleur unie. Utilisées comme élément graphique récurrent en arrière-plan de sections fortes (hero, CTA final). Toujours en `<img>`, jamais recréées en CSS pur : le rendu (flou, superposition de teintes) ne se reproduit pas fidèlement avec un dégradé simple.

@@ -1,0 +1,73 @@
+<!-- @dsCard height=288 -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 960px;
+    height: 288px;
+    background: var(--ink-900);
+    overflow: hidden;
+  }
+  .cover {
+    position: relative;
+    width: 960px;
+    height: 288px;
+  }
+  .cover svg {
+    position: absolute;
+    inset: 0;
+  }
+  .name {
+    position: absolute;
+    left: 48px;
+    bottom: 48px;
+    width: 440px;
+    font-family: var(--font-display);
+    color: var(--white);
+    font-size: 88px;
+    line-height: 0.92;
+    margin: 0;
+  }
+  .tagline {
+    position: absolute;
+    left: 48px;
+    bottom: 22px;
+    width: 440px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--periwinkle-soft);
+  }
+  .block-pink { fill: var(--pink); rx: var(--radius-card); }
+  .block-periwinkle { fill: var(--periwinkle); rx: var(--radius-card); }
+  .block-soft { fill: var(--periwinkle-soft); rx: var(--radius-card); }
+  .block-relief { fill: var(--white); opacity: 0.14; rx: var(--radius-card); }
+  .cutout { fill: var(--ink-900); }
+</style>
+</head>
+<body>
+  <div class="cover">
+    <!--
+      Derivation:
+      blocks: pink (560,0,260x150) full value = accent primaire du système ; periwinkle (480,170,200x118) et periwinkle-soft (700,170,170x118) = les deux accents secondaires distincts (home / Freelances) ; block-relief (900,30,90x90, white 14%) = tint de respiration qui déborde du bord droit.
+      arrangement: pile décalée à droite de x=480, un bloc plein en haut, deux blocs plus bas côte à côte, un tint qui déborde le coin — reprend la composition asymétrique visuel gauche/droite du hero, jamais une grille de carrés égaux.
+      pattern: ellipses découpées dans les blocs (fill ink-900) + une ellipse pleine blanche — le README note que le site source utilise des ellipses décoratives comme motif récurrent sur le hero et le CTA final, jamais de grille ou de traits.
+      scales: rx = radius-card (26px) sur tous les blocs (jamais radius-pill, réservé aux boutons) ; cercles/ellipses = radius-circle (50%).
+    -->
+    <svg viewBox="0 0 960 288" width="960" height="288">
+      <rect class="block-pink" x="560" y="0" width="260" height="150"></rect>
+      <rect class="block-periwinkle" x="480" y="170" width="200" height="118"></rect>
+      <rect class="block-soft" x="700" y="170" width="170" height="118"></rect>
+      <rect class="block-relief" x="900" y="30" width="90" height="90"></rect>
+      <ellipse class="cutout" cx="660" cy="60" rx="34" ry="34"></ellipse>
+      <ellipse class="cutout" cx="770" cy="230" rx="22" ry="22"></ellipse>
+      <circle cx="600" cy="255" r="14" fill="var(--white)"></circle>
+    </svg>
+    <p class="name">Collectif<br/>Sauvage</p>
+    <p class="tagline">Collectivement indépendants, indéfectiblement Sauvages !</p>
+  </div>
+</body>
+</html>

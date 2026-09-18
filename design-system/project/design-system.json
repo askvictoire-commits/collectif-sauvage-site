@@ -1,0 +1,133 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": { "v": 1, "at": "2026-09-18T00:00:00Z" },
+  "title": "Collectif Sauvage",
+  "namespace": "CollectifSauvage",
+  "libraries": [],
+  "sections": {},
+  "groups": ["Pictos", "Ellipses", "Equipe", "Marque", "Projets", "Logos"],
+  "assetGroups": {
+    "Pictos": {
+      "name": "Pictos",
+      "tile": "m",
+      "order": ["creation.svg", "seo-acquisition.svg", "social-media.svg", "strategie.svg", "ux-webdesign.svg", "web-dev.svg"],
+      "files": {
+        "creation.svg": { "name": "creation.svg", "blob": "d7e96ae927ecec22237ea5406601f920", "size": 1801, "type": "image/svg+xml" },
+        "seo-acquisition.svg": { "name": "seo-acquisition.svg", "blob": "d99ad9fa951c58df42bc52d4902a15d6", "size": 1192, "type": "image/svg+xml" },
+        "social-media.svg": { "name": "social-media.svg", "blob": "df686dca7b96229ab42d9b421b233bd8", "size": 437, "type": "image/svg+xml" },
+        "strategie.svg": { "name": "strategie.svg", "blob": "b1f254c603a717f045c318788ef6ba6a", "size": 4819, "type": "image/svg+xml" },
+        "ux-webdesign.svg": { "name": "ux-webdesign.svg", "blob": "31da455294bd71566001fb246e242871", "size": 675, "type": "image/svg+xml" },
+        "web-dev.svg": { "name": "web-dev.svg", "blob": "d08e27542a523f145a32b3167f49b5dc", "size": 1228, "type": "image/svg+xml" }
+      }
+    },
+    "Ellipses": {
+      "name": "Ellipses",
+      "tile": "m",
+      "order": ["ellipse-20.png", "ellipse-65.png", "ellipse-66.png", "ellipse-67.png"],
+      "files": {
+        "ellipse-20.png": { "name": "ellipse-20.png", "blob": "62d33cb0c82fdd6124e74692a8c24a73", "size": 227092, "type": "image/png" },
+        "ellipse-65.png": { "name": "ellipse-65.png", "blob": "23c735db961af4977223b7b4883a3b56", "size": 188441, "type": "image/png" },
+        "ellipse-66.png": { "name": "ellipse-66.png", "blob": "439b072dad9b2ae7cb60eff960c2bbdd", "size": 194763, "type": "image/png" },
+        "ellipse-67.png": { "name": "ellipse-67.png", "blob": "a6b44794657505a832b7dbe771c82db7", "size": 216309, "type": "image/png" }
+      }
+    },
+    "Equipe": {
+      "name": "Equipe",
+      "tile": "s",
+      "order": ["apolline-rouze.png", "arnaud-poullin.png", "cecile-lehoux.png", "emilien-geney.png", "frederic-lebrault.png", "google.png", "jeanne-beuvin.png", "kathleen-van-den-bril.png", "lionel-rocques.png", "marie-laine.png", "nicolas-bouriette.png", "nicolas-farolfi.png", "pierre-frechou.png", "quentin-roussel.png", "romain-ferrand.png", "sylvain-nascimento.png", "thomas-escot.png", "victoire-ecoiffier.png", "zoe-zadouroff.png"],
+      "files": {
+        "apolline-rouze.png": { "name": "apolline-rouze.png", "blob": "4ae27bc37d3c7b19091128f79626d6fa", "size": 1550836, "type": "image/png" },
+        "arnaud-poullin.png": { "name": "arnaud-poullin.png", "blob": "c1463521cde152c5475d7aaf6928ab96", "size": 293017, "type": "image/png" },
+        "cecile-lehoux.png": { "name": "cecile-lehoux.png", "blob": "044c34bcbcca65883f36b4df9773cc08", "size": 234018, "type": "image/png" },
+        "emilien-geney.png": { "name": "emilien-geney.png", "blob": "04d9c1a196e9c571b9c54399d1ad970b", "size": 193247, "type": "image/png" },
+        "frederic-lebrault.png": { "name": "frederic-lebrault.png", "blob": "6962074c36ecfeaa7de80d8f2e84e253", "size": 180253, "type": "image/png" },
+        "google.png": { "name": "google.png", "blob": "690a436b76e4d7d3e7142cfd24b163b0", "size": 896624, "type": "image/png" },
+        "jeanne-beuvin.png": { "name": "jeanne-beuvin.png", "blob": "f26bd33a685b319cf6c21dc8c2ef6966", "size": 220253, "type": "image/png" },
+        "kathleen-van-den-bril.png": { "name": "kathleen-van-den-bril.png", "blob": "b364f1b499d9ba8a4ac1378072056bc5", "size": 1438026, "type": "image/png" },
+        "lionel-rocques.png": { "name": "lionel-rocques.png", "blob": "b12776d789bb49461b74cfe7a550bc1b", "size": 1020092, "type": "image/png" },
+        "marie-laine.png": { "name": "marie-laine.png", "blob": "b3bf8beae7af1fbb35b5c9563527af47", "size": 1684305, "type": "image/png" },
+        "nicolas-bouriette.png": { "name": "nicolas-bouriette.png", "blob": "c1f7363565f9d4ff68af353f9821588c", "size": 220524, "type": "image/png" },
+        "nicolas-farolfi.png": { "name": "nicolas-farolfi.png", "blob": "ccfacce445ccb509a4d7e9264f145c3e", "size": 713150, "type": "image/png" },
+        "pierre-frechou.png": { "name": "pierre-frechou.png", "blob": "efb425e2f7e5d6b615dd1e4ac2900ae3", "size": 211636, "type": "image/png" },
+        "quentin-roussel.png": { "name": "quentin-roussel.png", "blob": "23a26dede2767d665bfa1cd30a26cedd", "size": 230183, "type": "image/png" },
+        "romain-ferrand.png": { "name": "romain-ferrand.png", "blob": "7bc0cd51eafb90c56f6240e0482ce5ba", "size": 208663, "type": "image/png" },
+        "sylvain-nascimento.png": { "name": "sylvain-nascimento.png", "blob": "e7761d2a3512d843d5eeb4639416f00b", "size": 213547, "type": "image/png" },
+        "thomas-escot.png": { "name": "thomas-escot.png", "blob": "120d5a4904816c119294428ad436c351", "size": 227732, "type": "image/png" },
+        "victoire-ecoiffier.png": { "name": "victoire-ecoiffier.png", "blob": "c302a140dcf8faefd2f14e03bd7fea2f", "size": 300396, "type": "image/png" },
+        "zoe-zadouroff.png": { "name": "zoe-zadouroff.png", "blob": "64d110ab26f17cea018eb91290d37825", "size": 201707, "type": "image/png" }
+      }
+    },
+    "Marque": {
+      "name": "Marque",
+      "tile": "m",
+      "order": ["partenaires.png", "brand-collaborations.png"],
+      "files": {
+        "partenaires.png": { "name": "partenaires.png", "blob": "644604c676e2a6668ff6de83c76e7fc5", "size": 92916, "type": "image/png" },
+        "brand-collaborations.png": { "name": "brand-collaborations.png", "blob": "d32aa14a86d1228b9dcb5b3533264617", "size": 119751, "type": "image/png" }
+      }
+    },
+    "Projets": {
+      "name": "Projets",
+      "tile": "m",
+      "order": ["anglet-cote-basque.png", "baiona-marine.png", "be-the-change-oxbow.png", "decathlon.png", "eurosima-surf-summit.png", "ffhg.png", "ffsurf.png", "flammarion-et-johanna-le-pape.png", "fulllife.png", "gip-skatepark.png", "haute-route.png", "hemen-biarritz.png", "isa-surf.png", "laboratoires-de-biarritz.png", "le-magneto.png", "leoo.png", "nunti-sunya.png", "okaidi.png", "olatu-jus.png", "oxbow.png", "quiksilver-festival.png", "red-bull.png", "stackinsat.png"],
+      "files": {
+        "anglet-cote-basque.png": { "name": "anglet-cote-basque.png", "blob": "204b92f6cb65696fca162d2e55982604", "size": 1287794, "type": "image/png" },
+        "baiona-marine.png": { "name": "baiona-marine.png", "blob": "5042f8ef96a8191545de2dc01f0a81fe", "size": 332412, "type": "image/png" },
+        "be-the-change-oxbow.png": { "name": "be-the-change-oxbow.png", "blob": "77c43c90ce5170e34438fd4c42bdc100", "size": 1141073, "type": "image/png" },
+        "decathlon.png": { "name": "decathlon.png", "blob": "98da85b03cc73a5f88c8aa564356e2f6", "size": 309399, "type": "image/png" },
+        "eurosima-surf-summit.png": { "name": "eurosima-surf-summit.png", "blob": "241227836874005123fc7d9da3e74172", "size": 846273, "type": "image/png" },
+        "ffhg.png": { "name": "ffhg.png", "blob": "e78413356b0010df98750ad4904adf12", "size": 1336754, "type": "image/png" },
+        "ffsurf.png": { "name": "ffsurf.png", "blob": "681a28a1e638e73c3dd8eeff4af81064", "size": 1413895, "type": "image/png" },
+        "flammarion-et-johanna-le-pape.png": { "name": "flammarion-et-johanna-le-pape.png", "blob": "5a3b8211fc73a23157869bacbffb7c8f", "size": 785454, "type": "image/png" },
+        "fulllife.png": { "name": "fulllife.png", "blob": "48c60edc138332896b0f99778b8143bd", "size": 1407272, "type": "image/png" },
+        "gip-skatepark.png": { "name": "gip-skatepark.png", "blob": "769b108a45e018c2c0554977c45cf456", "size": 623358, "type": "image/png" },
+        "haute-route.png": { "name": "haute-route.png", "blob": "8bc41ecb42ef17b4f4aebf7cd5b6f29f", "size": 930472, "type": "image/png" },
+        "hemen-biarritz.png": { "name": "hemen-biarritz.png", "blob": "9cf789bd24cf29080ad31a57cea60a4b", "size": 1067441, "type": "image/png" },
+        "isa-surf.png": { "name": "isa-surf.png", "blob": "07b83ee5bfcac0154f48b81eb35ef78f", "size": 1102987, "type": "image/png" },
+        "laboratoires-de-biarritz.png": { "name": "laboratoires-de-biarritz.png", "blob": "d106c68f8787cd591195778806d78601", "size": 866041, "type": "image/png" },
+        "le-magneto.png": { "name": "le-magneto.png", "blob": "aa839fb6fe9dcc9c8146fa005ac2f4f3", "size": 533714, "type": "image/png" },
+        "leoo.png": { "name": "leoo.png", "blob": "5d71c2b27b85e1882e1fff03404c1ad4", "size": 994016, "type": "image/png" },
+        "nunti-sunya.png": { "name": "nunti-sunya.png", "blob": "7f8d8df6b98e2d57ffa49bcd0955b403", "size": 1261680, "type": "image/png" },
+        "okaidi.png": { "name": "okaidi.png", "blob": "c94274efb207850db6052058ab0e1d4f", "size": 789966, "type": "image/png" },
+        "olatu-jus.png": { "name": "olatu-jus.png", "blob": "8a663ca44aabf1701d9cbc859d75dcd3", "size": 392949, "type": "image/png" },
+        "oxbow.png": { "name": "oxbow.png", "blob": "2a54b0eba88f225195e48a7a7a9072d1", "size": 275441, "type": "image/png" },
+        "quiksilver-festival.png": { "name": "quiksilver-festival.png", "blob": "28818fd9255b26afacc2e97ab748b058", "size": 993357, "type": "image/png" },
+        "red-bull.png": { "name": "red-bull.png", "blob": "535bb6d5889ed2d2071b3d280ea801ef", "size": 995154, "type": "image/png" },
+        "stackinsat.png": { "name": "stackinsat.png", "blob": "3075aa0487e01a9bf09c2f4c29402f87", "size": 338632, "type": "image/png" }
+      }
+    },
+    "Logos": {
+      "name": "Logos",
+      "tile": "s",
+      "order": ["auzou.png", "decathlon.png", "eurosima.png", "eurosima-noir.jpg", "ffhg.png", "haute-route.png", "isa-surf.png", "leoo.png", "surfin-bitcoin-tour-de-france.png", "decathlon-ag2r.png", "nunti-sunya.webp", "oxbow.png", "fulllife.png", "quiksilver-logo-1.png", "wis.png", "enara.png", "monzeo.png", "gip-skatepark.png", "pyreneance.png", "red-bull.png", "quiksilver-logo-2.png", "swing-city.png"],
+      "files": {
+        "auzou.png": { "name": "auzou.png", "blob": "7f9a92d53a6809e5dc2c241e9bd6a4c3", "size": 52103, "type": "image/png" },
+        "decathlon.png": { "name": "decathlon.png", "blob": "1ab9830c78f83d9a7c6d87fa05d4de9c", "size": 19077, "type": "image/png" },
+        "eurosima.png": { "name": "eurosima.png", "blob": "f9d563925cb00bd02848ab4b671cb1b0", "size": 11822, "type": "image/png" },
+        "eurosima-noir.jpg": { "name": "eurosima-noir.jpg", "blob": "c4c5e5a1ded3ec296f33a69ec4fcea45", "size": 7289, "type": "image/jpeg" },
+        "ffhg.png": { "name": "ffhg.png", "blob": "39ad640f1703d161f751d152b5d2dfc2", "size": 23554, "type": "image/png" },
+        "haute-route.png": { "name": "haute-route.png", "blob": "c658aab17e2d8afa20b19b1b937cba50", "size": 12805, "type": "image/png" },
+        "isa-surf.png": { "name": "isa-surf.png", "blob": "042f4485df5fb5460676e2f0505fcb16", "size": 32701, "type": "image/png" },
+        "leoo.png": { "name": "leoo.png", "blob": "761a3ca727327aee8f7e6886ca30a46b", "size": 27347, "type": "image/png" },
+        "surfin-bitcoin-tour-de-france.png": { "name": "surfin-bitcoin-tour-de-france.png", "blob": "c0b7228fbf2a1ac52792d132f3ba2265", "size": 98132, "type": "image/png" },
+        "decathlon-ag2r.png": { "name": "decathlon-ag2r.png", "blob": "710b32a1ff96220b9fa8a6962ce957a8", "size": 90638, "type": "image/png" },
+        "nunti-sunya.webp": { "name": "nunti-sunya.webp", "blob": "35f6f7d5d65bfd3adf4e47b6c37a9145", "size": 11078, "type": "image/webp" },
+        "oxbow.png": { "name": "oxbow.png", "blob": "df980027d505710329d50eab4312e3ce", "size": 120714, "type": "image/png" },
+        "fulllife.png": { "name": "fulllife.png", "blob": "ac23856a8d73635b5b2cb0df3fb59f58", "size": 9563, "type": "image/png" },
+        "quiksilver-logo-1.png": { "name": "quiksilver-logo-1.png", "blob": "387f5079d393fb59890f1fbda79de614", "size": 98118, "type": "image/png" },
+        "wis.png": { "name": "wis.png", "blob": "64f85207bea054a4ba74d21751e20fdf", "size": 96488, "type": "image/png" },
+        "enara.png": { "name": "enara.png", "blob": "c8820d8fe4d66641f0781cd0a7c25844", "size": 16084, "type": "image/png" },
+        "monzeo.png": { "name": "monzeo.png", "blob": "9e45224eb4631c0a855cee324602b67f", "size": 6688, "type": "image/png" },
+        "gip-skatepark.png": { "name": "gip-skatepark.png", "blob": "69daeed08c3f759348786eb94d1878eb", "size": 10371, "type": "image/png" },
+        "pyreneance.png": { "name": "pyreneance.png", "blob": "93496b54c904f03261b4148c707198e6", "size": 84619, "type": "image/png" },
+        "red-bull.png": { "name": "red-bull.png", "blob": "6a7595e0304445c669aab43566876792", "size": 81830, "type": "image/png" },
+        "quiksilver-logo-2.png": { "name": "quiksilver-logo-2.png", "blob": "22fdbfc0d7605652930fdebf3b365e08", "size": 98118, "type": "image/png" },
+        "swing-city.png": { "name": "swing-city.png", "blob": "045c2f78af4031ec9caa6c994c96ce7d", "size": 22617, "type": "image/png" }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": { "readme": "project/README.md", "sections": [] },
+  "lastChange": { "by": "Victoire", "via": "Cowork", "at": "2026-09-18T06:00:00Z", "note": "Ajout des 22 logos clients individuels N&B (dossier Logo Clients collectif/NB du Drive)." }
+}

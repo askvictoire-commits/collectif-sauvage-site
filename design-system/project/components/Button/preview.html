@@ -1,0 +1,57 @@
+<!-- @dsCard group="Actions" height=180 subtitle="Bouton pilule — contour au repos, rempli au survol (passez la souris dessus)" -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body {
+    margin: 0;
+    padding: 32px;
+    background: var(--ink-900);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 400;
+    border-radius: var(--radius-pill);
+    background: transparent;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    padding: var(--space-2) 20.8px;
+    transition: background-color 0.1s linear, color 0.1s linear;
+  }
+  .btn--primary { color: var(--white); border-color: var(--white); }
+  .btn--primary:hover { background: var(--white); color: var(--pink); }
+  .btn--secondary-pink { color: var(--pink); border-color: var(--pink); }
+  .btn--secondary-pink:hover { background: var(--pink); color: var(--white); }
+  .btn--secondary-periwinkle { color: var(--periwinkle); border-color: var(--periwinkle); }
+  .btn--secondary-periwinkle:hover { background: var(--periwinkle); color: var(--white); }
+  .btn--submit { color: var(--pink); border-color: var(--pink); }
+  .btn--submit:hover { background: var(--pink); color: var(--white); }
+  .label {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--periwinkle-soft);
+  }
+</style>
+</head>
+<body>
+  <div class="label">Au repos (contour) — survolez un bouton pour voir l'état rempli</div>
+  <div class="row">
+    <button class="btn btn--primary">Découvrir nos frees</button>
+    <button class="btn btn--secondary-pink">Découvrez tous nos talents</button>
+    <button class="btn btn--secondary-periwinkle">Nous rejoindre</button>
+    <button class="btn btn--submit">Envoyer</button>
+  </div>
+</body>
+</html>
