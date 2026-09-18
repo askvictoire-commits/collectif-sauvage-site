@@ -3,11 +3,37 @@
 import { useState } from "react";
 import { lookingFor } from "@/lib/site-data";
 
+type Freelance = { name: string; href: string };
+
+function renderBodyWithLinks(body: string, freelances: Freelance[]) {
+  if (freelances.length === 0) return body;
+  const sorted = [...freelances].sort((a, b) => b.name.length - a.name.length);
+  const escaped = sorted.map((f) => f.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const pattern = new RegExp(`(${escaped.join("|")})`, "g");
+  const parts = body.split(pattern);
+
+  return parts.map((part, i) => {
+    const match = freelances.find((f) => f.name === part);
+    if (!match) return part;
+    return (
+      <a
+        key={`${match.name}-${i}`}
+        href={match.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-[#f598ff] underline underline-offset-4 hover:opacity-70"
+      >
+        {part}
+      </a>
+    );
+  });
+}
+
 export default function LookingForAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="mt-10 divide-y divide-white/20 border-t border-b border-white/20">
+    <div className="mt-10 divide-y-2 divide-white/20 border-t-2 border-b-2 border-white/20">
       {lookingFor.map((item, index) => {
         const isOpen = openIndex === index;
         return (
@@ -34,22 +60,9 @@ export default function LookingForAccordion() {
               }`}
             >
               <div className="min-h-0">
-                <p className="max-w-2xl text-white/70">{item.body}</p>
-                <div className="mt-3 flex flex-wrap gap-x-2 gap-y-1 text-sm">
-                  {item.freelances.map((f, i) => (
-                    <span key={f.name + i} className="text-[#f598ff]">
-                      <a
-                        href={f.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-medium underline underline-offset-4 hover:opacity-70"
-                      >
-                        {f.name}
-                      </a>
-                      {i < item.freelances.length - 1 ? "," : ""}
-                    </span>
-                  ))}
-                </div>
+                <p className="max-w-2xl text-white/70">
+                  {renderBodyWithLinks(item.body, item.freelances)}
+                </p>
               </div>
             </div>
           </div>

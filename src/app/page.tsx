@@ -77,7 +77,7 @@ export default function Home() {
 
       {/* Vous cherchez... + Collectivement indépendants (colonne) */}
       <section className="py-24">
-        <div className="container-ds grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start lg:gap-x-[18rem]">
+        <div className="container-ds grid grid-cols-1 gap-16 lg:grid-cols-[3fr_2fr] lg:items-start lg:gap-x-16">
           <div>
             <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] font-bold uppercase leading-[1.056] text-[#f598ff]">
               Vous cherchez…
@@ -127,22 +127,22 @@ export default function Home() {
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Nos expertises
           </h2>
-          <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
             {expertises.map((exp) => (
               <Link
                 key={exp.slug}
                 href={`/${exp.slug}`}
-                className="group flex flex-col items-center justify-center gap-6 bg-white p-6 text-center aspect-square hover:opacity-90"
+                className="group flex flex-col items-center justify-center gap-4 bg-white p-4 text-center aspect-square hover:opacity-90"
               >
-                <Image
-                  src={exp.icon}
-                  alt=""
-                  width={64}
-                  height={64}
-                  className="h-16 w-16"
-                />
-                <h3 className="font-display text-base uppercase leading-tight text-black md:text-lg">
-                  <HighlightedTitle title={exp.title} highlight={exp.titleHighlight} />
+                <div className="relative aspect-square w-[80%]">
+                  <Image src={exp.icon} alt="" fill className="object-contain" />
+                </div>
+                <h3 className="font-display text-[26px] font-normal uppercase leading-[31px] text-[#f598ff]">
+                  <HighlightedTitle
+                    title={exp.title}
+                    highlight={exp.titleHighlight}
+                    highlightClassName="text-black"
+                  />
                 </h3>
               </Link>
             ))}
