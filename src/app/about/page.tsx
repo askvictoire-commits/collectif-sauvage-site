@@ -2,6 +2,7 @@ import Image from "next/image";
 import { team } from "@/lib/site-data";
 import Marquee from "@/components/Marquee";
 import ContactForm from "@/components/ContactForm";
+import Button from "@/components/Button";
 
 export const metadata = { title: "Freelances — Collectif Sauvage" };
 
@@ -11,12 +12,12 @@ export default function About() {
       <Marquee
         text="Plusieurs styles, un seul esprit."
         duration={40}
-        className="py-8 text-4xl text-[#a9b3f2] md:text-6xl"
+        className="py-8 text-4xl text-periwinkle-soft md:text-6xl"
       />
 
       {/* Grille des freelances */}
-      <section className="px-4 py-16">
-        <div className="mx-auto max-w-7xl">
+      <section className="py-16">
+        <div className="container-ds">
           <div className="grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
             {team.map((member) => {
               const photoBlock = (
@@ -71,7 +72,7 @@ export default function About() {
       </section>
 
       {/* How to be Sauvage */}
-      <section className="relative overflow-hidden px-6 py-20 text-[#171d3a] md:py-28">
+      <section className="relative overflow-hidden py-20 text-ink-900 md:py-28">
         <Image
           src="/images/hero-clouds.webp"
           alt=""
@@ -80,7 +81,7 @@ export default function About() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row md:items-center md:justify-between md:gap-8">
+        <div className="container-ds relative flex flex-col items-center gap-12 md:flex-row md:items-center md:justify-between md:gap-8">
           <div className="shrink-0">
             <svg
               width="56"
@@ -127,20 +128,21 @@ export default function About() {
             </p>
           </div>
 
-          <a
+          <Button
             href="mailto:hello@collectifsauvage.fr"
-            className="inline-flex shrink-0 items-center justify-center rounded-full border border-[#a9b3f2] px-8 py-4 text-sm font-normal uppercase tracking-wide text-[#a9b3f2] hover:bg-[#a9b3f2] hover:text-[#171d3a]"
+            variant="secondary-periwinkle"
+            className="shrink-0"
           >
             Nous rejoindre
-          </a>
+          </Button>
         </div>
       </section>
 
       {/* Nous contacter */}
-      <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+      <section className="py-24">
+        <div className="container-ds grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
           <div>
-            <h2 className="font-display text-4xl uppercase text-[#f598ff] md:text-6xl">
+            <h2 className="font-display text-4xl uppercase text-pink md:text-6xl">
               Nous contacter
             </h2>
             <p className="mt-4 max-w-md text-white/70">

@@ -10,11 +10,11 @@ export default function Header() {
   const [expertisesOpen, setExpertisesOpen] = useState(false);
   const pathname = usePathname();
   const isPink = pathname === "/contact";
-  const textColor = isPink ? "text-white" : "text-[#f598ff]";
+  const textColor = isPink ? "text-white" : "text-pink";
 
   return (
     <header className={`sticky top-0 z-50 bg-transparent ${textColor}`}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="container-ds flex items-center justify-between py-4">
         <Link href="/" className="font-display text-xl uppercase tracking-tight md:text-2xl">
           Collectif Sauvage
         </Link>
@@ -32,7 +32,7 @@ export default function Header() {
                   {item.label}
                 </button>
                 {expertisesOpen && (
-                  <div className="absolute left-0 top-full w-64 border border-white/10 bg-[#181730] py-2 text-white shadow-xl">
+                  <div className="absolute left-0 top-full w-64 border border-white/10 bg-ink-900 py-2 text-white shadow-xl">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
@@ -66,7 +66,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#181730] px-6 pb-6 text-white md:hidden">
+        <div className="border-t border-white/10 bg-ink-900 px-6 pb-6 text-white md:hidden">
           {nav.map((item) => (
             <div key={item.label} className="py-2">
               <Link href={item.href} className="block py-1 text-sm uppercase">

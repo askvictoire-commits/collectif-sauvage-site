@@ -1,24 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
+  --background: #171d3a;
+  --foreground: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --color-ink-900: #171d3a;
+  --color-pink: #f598ff;
+  --color-periwinkle: #94abf9;
+  --color-periwinkle-soft: #a9b3f2;
+  --color-lavender: #8790d6;
+
+  --radius-pill: 300px;
+  --radius-card: 26px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .font-display {
   font-family: var(--font-display), Arial, Helvetica, sans-serif;
+}
+
+/* Conteneur de page du design system : page-max-width 1400px + site-margin 4vw */
+.container-ds {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: 4vw;
 }
 
 @keyframes marquee {

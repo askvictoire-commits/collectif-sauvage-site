@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Epilogue } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +9,13 @@ const anton = localFont({
   src: "../fonts/Anton-Regular.ttf",
   variable: "--font-display",
   weight: "400",
+  display: "swap",
+});
+
+const epilogue = Epilogue({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["400", "500", "700"],
   display: "swap",
 });
 
@@ -21,9 +29,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="fr"
-      className={`${anton.variable} h-full antialiased`}
+      className={`${anton.variable} ${epilogue.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-[#171d3a] text-white">
+      <body className="flex min-h-full flex-col bg-ink-900 text-white">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

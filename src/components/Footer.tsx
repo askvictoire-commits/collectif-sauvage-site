@@ -3,8 +3,8 @@ import { contact } from "@/lib/site-data";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto bg-[#f598ff] text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
+    <footer className="mt-auto bg-pink text-white">
+      <div className="container-ds py-16">
         <div className="flex flex-col justify-between gap-12 md:flex-row md:items-end">
           <div>
             <Link
@@ -28,13 +28,13 @@ export default function Footer() {
 
           <div className="flex gap-16">
             <div>
-              <p className="font-display text-lg uppercase text-[#171d3a]">
+              <p className="font-display text-lg uppercase text-ink-900">
                 Localisation
               </p>
               <p className="mt-2 max-w-[16ch] text-sm">{contact.address}</p>
             </div>
             <div>
-              <p className="font-display text-lg uppercase text-[#171d3a]">
+              <p className="font-display text-lg uppercase text-ink-900">
                 Contact
               </p>
               <a href={`mailto:${contact.email}`} className="mt-2 block text-sm hover:underline">

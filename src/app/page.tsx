@@ -5,13 +5,14 @@ import LookingForAccordion from "@/components/LookingForAccordion";
 import Marquee from "@/components/Marquee";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import HighlightedTitle from "@/components/HighlightedTitle";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
     <div className="bg-[#171d3a] text-white">
       {/* Hero */}
-      <section className="px-6 py-20 md:py-28">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
+      <section className="py-20 md:py-28">
+        <div className="container-ds grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-10">
           {/* Colonne gauche : visuel "WE DO..." (object-fit contain, même hauteur que la colonne droite) */}
           <div className="relative aspect-[657/542] w-full">
             <Image
@@ -50,13 +51,14 @@ export default function Home() {
               <br />
               un seul esprit
             </h2>
-            <Link
+            <Button
               href="/about"
-              className="absolute inline-flex items-center justify-center rounded-full border border-white px-5 py-4 text-sm font-normal uppercase tracking-wide text-white hover:bg-white hover:text-[#171d3a]"
+              variant="primary"
+              className="absolute"
               style={{ left: "50.8%", top: "70.8%" }}
             >
               Découvrir nos frees
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -66,13 +68,13 @@ export default function Home() {
         <Marquee
           text="Comme une agence mais en mieux."
           duration={40}
-          className="py-8 text-4xl text-[#f598ff] md:text-6xl"
+          className="py-8 text-4xl text-periwinkle md:text-6xl"
         />
       </div>
 
       {/* Vous cherchez... + Collectivement indépendants (colonne) */}
-      <section className="px-6 py-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start lg:gap-x-[18rem]">
+      <section className="py-24">
+        <div className="container-ds grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start lg:gap-x-[18rem]">
           <div>
             <h2 className="font-display text-[clamp(2rem,4.61vw,4.15rem)] font-bold uppercase leading-[1.056] text-[#f598ff]">
               Vous cherchez…
@@ -109,19 +111,16 @@ export default function Home() {
                 respectueuse d&apos;engagements professionnels et humains.
               </p>
             </div>
-            <Link
-              href="/about"
-              className="mt-8 inline-flex items-center justify-center rounded-full border border-[#f598ff] px-5 py-3 text-sm font-normal uppercase tracking-wide text-[#f598ff] hover:bg-[#f598ff] hover:text-[#171d3a]"
-            >
+            <Button href="/about" variant="secondary-pink" className="mt-8">
               Découvrez tous nos talents
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Expertises */}
-      <section className="px-6 py-24">
-        <div className="mx-auto max-w-6xl">
+      <section className="py-24">
+        <div className="container-ds">
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Nos expertises
           </h2>
@@ -152,7 +151,7 @@ export default function Home() {
       <Marquee
         text="Nos Projets *"
         duration={40}
-        className="py-8 text-4xl text-[#f598ff] md:text-6xl"
+        className="py-8 text-4xl text-periwinkle md:text-6xl"
       />
 
       {/* Projets */}
@@ -174,7 +173,7 @@ export default function Home() {
 
       {/* CTA final */}
       <section className="px-6 py-16 md:py-24">
-        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-[32px] bg-gradient-to-b from-[#a9b3f2] to-[#7b83e8] px-8 py-16 text-white md:px-14 md:py-20">
+        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-card bg-gradient-to-b from-periwinkle-soft to-lavender px-8 py-16 text-white md:px-14 md:py-20">
           <Image
             src="/images/ellipse-pink.png"
             alt=""
@@ -187,18 +186,12 @@ export default function Home() {
             Prêts à se lancer ?
           </h2>
           <div className="relative mt-10 flex flex-wrap items-center gap-4">
-            <Link
-              href="/contact"
-              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-[#171d3a]"
-            >
+            <Button href="/contact" variant="primary">
               Parlons en ensemble
-            </Link>
-            <Link
-              href="/about"
-              className="rounded-full border border-white px-6 py-3 text-sm font-medium uppercase hover:bg-white hover:text-[#171d3a]"
-            >
+            </Button>
+            <Button href="/about" variant="primary">
               Découvrir l&apos;équipe
-            </Link>
+            </Button>
           </div>
         </div>
       </section>

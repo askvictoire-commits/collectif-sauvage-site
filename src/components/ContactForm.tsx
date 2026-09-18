@@ -12,27 +12,27 @@ export default function ContactForm({
   const isPill = theme === "pill";
   const isSauvage = theme === "sauvage";
   const labelClass = isSauvage
-    ? "text-sm font-medium uppercase tracking-wide text-[#f598ff]"
+    ? "text-sm font-medium uppercase tracking-wide text-pink"
     : isPill
       ? "text-sm font-medium text-white"
       : "text-sm font-medium";
   const noteClass = isSauvage
-    ? "normal-case text-[#f598ff]/60"
+    ? "normal-case text-pink/60"
     : isPill
       ? "text-white/60"
       : "text-black/40";
   const inputClass = isSauvage
-    ? "rounded-full border-none bg-[#8790d6] px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#f598ff]"
+    ? "rounded-full border-none bg-lavender px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink"
     : isPill
       ? "rounded-full border-none bg-white px-5 py-3 text-black placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-white"
       : "border border-black/20 bg-transparent px-3 py-2 focus:border-black focus:outline-none";
   const textareaClass = isSauvage
-    ? "rounded-3xl border-none bg-[#8790d6] px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-[#f598ff]"
+    ? "rounded-3xl border-none bg-lavender px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink"
     : isPill
       ? "rounded-3xl border-none bg-white px-5 py-3 text-black placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-white"
       : "border border-black/20 bg-transparent px-3 py-2 focus:border-black focus:outline-none";
   const buttonClass = isSauvage
-    ? "rounded-full border border-[#f598ff] bg-transparent px-8 py-3 text-sm font-normal uppercase tracking-wide text-[#f598ff] hover:bg-[#f598ff] hover:text-[#171d3a]"
+    ? "rounded-full border border-pink bg-transparent px-8 py-3 text-sm font-normal uppercase tracking-wide text-pink hover:bg-pink hover:text-white"
     : isPill
       ? "rounded-full bg-black px-8 py-3 text-sm font-medium uppercase text-white hover:opacity-80"
       : "bg-black px-6 py-3 text-sm font-medium uppercase text-white hover:opacity-80";
