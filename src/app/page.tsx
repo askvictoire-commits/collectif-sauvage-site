@@ -12,21 +12,25 @@ export default function Home() {
     <div className="bg-[#171d3a] text-white">
       {/* Hero */}
       <section className="py-20 md:py-28">
-        <div className="container-ds grid grid-cols-1 gap-8 md:grid-cols-[4fr_6fr] md:gap-10">
-          {/* Colonne gauche : visuel "WE DO..." (object-fit contain, même hauteur que la colonne droite) */}
-          <div className="relative aspect-[657/542] w-full">
+        <div className="container-ds flex flex-col gap-8 md:flex-row md:items-center md:gap-8">
+          {/* Colonne gauche : visuel "WE DO..." — volontairement plus petite que l'encart nuages */}
+          <div
+            className="relative aspect-[657/542] w-full md:w-[35%]"
+          >
             <Image
               src="/images/hero-headline.webp"
               alt="Texte blanc sur fond noir avec un astérisque. Texte: “WE DO” suivi de “TOUT CE DONT VOUS AVEZ BESOIN POUR COMMUNIQUER, ACTIVER ET DÉVELOPPER VOTRE MARQUE.”"
               fill
-              sizes="(max-width: 768px) 100vw, 40vw"
+              sizes="(max-width: 768px) 100vw, 35vw"
               className="object-contain object-left"
               priority
             />
           </div>
 
-          {/* Colonne droite : visuel nuages, encart agrandi par rapport à la colonne gauche */}
-          <div className="relative aspect-[657/542] w-full overflow-hidden rounded-2xl">
+          {/* Colonne droite : encart visuel nuages, nettement plus large que la colonne gauche */}
+          <div
+            className="relative aspect-[657/542] w-full overflow-hidden rounded-2xl md:w-[65%]"
+          >
             <Image
               src="/images/hero-clouds.webp"
               alt="Nuages colorés dans un ciel rose et bleu, effet artistique."
@@ -46,7 +50,7 @@ export default function Home() {
             />
             <h2
               className="font-display absolute z-10 font-normal uppercase leading-[0.95] text-white drop-shadow sm:text-3xl md:text-[clamp(1.8rem,4.6vw,66px)] md:leading-[clamp(1.9rem,4.9vw,70px)]"
-              style={{ left: "9%", top: "23%", width: "48%" }}
+              style={{ left: "9%", top: "23%", width: "55%" }}
             >
               Plusieurs
               <br />
