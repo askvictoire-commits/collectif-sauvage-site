@@ -127,17 +127,17 @@ export default function Home() {
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Nos expertises
           </h2>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
             {expertises.map((exp) => (
               <Link
                 key={exp.slug}
                 href={`/${exp.slug}`}
-                className="group flex flex-col items-center justify-center gap-4 bg-white p-4 text-center aspect-square hover:opacity-90"
+                className="group flex aspect-square flex-col items-center justify-center gap-4 bg-white p-4 text-center hover:opacity-90 sm:p-6"
               >
-                <div className="relative aspect-square w-[80%]">
+                <div className="relative aspect-square w-[65%]">
                   <Image src={exp.icon} alt="" fill className="object-contain" />
                 </div>
-                <h3 className="font-display text-[26px] font-normal uppercase leading-[31px] text-[#f598ff]">
+                <h3 className="font-display text-[clamp(1rem,2.1vw,26px)] font-normal uppercase leading-[clamp(1.25rem,2.5vw,31px)] text-[#f598ff]">
                   <HighlightedTitle
                     title={exp.title}
                     highlight={exp.titleHighlight}
