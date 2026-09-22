@@ -6,6 +6,7 @@ import Marquee from "@/components/Marquee";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import HighlightedTitle from "@/components/HighlightedTitle";
 import Button from "@/components/Button";
+import ParallaxIcon from "@/components/ParallaxIcon";
 
 export default function Home() {
   return (
@@ -15,13 +16,13 @@ export default function Home() {
         <div className="container-ds flex flex-col gap-8 md:flex-row md:items-center md:gap-8">
           {/* Colonne gauche : visuel "WE DO..." — volontairement plus petite que l'encart nuages */}
           <div
-            className="relative aspect-[657/542] w-full md:w-[35%]"
+            className="relative aspect-[657/542] w-full md:flex-1"
           >
             <Image
               src="/images/hero-headline.webp"
               alt="Texte blanc sur fond noir avec un astérisque. Texte: “WE DO” suivi de “TOUT CE DONT VOUS AVEZ BESOIN POUR COMMUNIQUER, ACTIVER ET DÉVELOPPER VOTRE MARQUE.”"
               fill
-              sizes="(max-width: 768px) 100vw, 35vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-contain object-left"
               priority
             />
@@ -29,14 +30,44 @@ export default function Home() {
 
           {/* Colonne droite : encart visuel nuages, nettement plus large que la colonne gauche */}
           <div
-            className="relative aspect-[657/542] w-full overflow-hidden rounded-2xl md:w-[65%]"
+            className="cloud-card relative aspect-[657/542] w-full overflow-hidden rounded-2xl md:flex-1"
           >
+            <svg
+              aria-hidden="true"
+              style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }}
+            >
+              <defs>
+                <filter id="hero-liquid" x="-5%" y="-5%" width="110%" height="110%">
+                  <feTurbulence
+                    type="fractalNoise"
+                    baseFrequency="0.012"
+                    numOctaves="4"
+                    result="noise"
+                    seed="5"
+                  >
+                    <animate
+                      attributeName="baseFrequency"
+                      dur="16s"
+                      values="0.008;0.02;0.008"
+                      repeatCount="indefinite"
+                    />
+                  </feTurbulence>
+                  <feDisplacementMap
+                    in="SourceGraphic"
+                    in2="noise"
+                    scale="6"
+                    xChannelSelector="R"
+                    yChannelSelector="G"
+                  />
+                </filter>
+              </defs>
+            </svg>
             <Image
               src="/images/hero-clouds.webp"
               alt="Nuages colorés dans un ciel rose et bleu, effet artistique."
               fill
-              sizes="(max-width: 768px) 100vw, 60vw"
-              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="cloud-liquid-img object-cover"
             />
             {/* Ellipse décorative : doit rester derrière le mot "seul", donc z-index inférieur au texte */}
             <Image
@@ -46,11 +77,11 @@ export default function Home() {
               width={1907}
               height={1901}
               className="pointer-events-none absolute z-0 opacity-90"
-              style={{ left: "42.3%", top: "40%", width: "23.7%", height: "24%" }}
+              style={{ left: "49%", top: "28%", width: "23.7%", height: "24%" }}
             />
             <h2
-              className="font-display absolute z-10 font-normal uppercase leading-[0.95] text-white drop-shadow sm:text-3xl md:text-[clamp(1.8rem,4.6vw,66px)] md:leading-[clamp(1.9rem,4.9vw,70px)]"
-              style={{ left: "9%", top: "23%", width: "55%" }}
+              className="font-display absolute z-10 font-normal uppercase text-white drop-shadow text-3xl leading-9 md:text-[66px] md:leading-[70px]"
+              style={{ left: "9%", top: "20%", width: "72%" }}
             >
               Plusieurs
               <br />
@@ -131,17 +162,19 @@ export default function Home() {
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Nos expertises
           </h2>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6">
-            {expertises.map((exp) => (
+          <div className="expertise-grid mt-10 mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+            {expertises.map((exp, i) => (
               <Link
                 key={exp.slug}
                 href={`/${exp.slug}`}
-                className="group flex aspect-square flex-col items-center justify-center gap-4 bg-white p-4 text-center hover:opacity-90 sm:p-6"
+                className="group flex aspect-square flex-col items-center justify-center gap-4 overflow-hidden bg-white p-4 text-center hover:opacity-90 sm:p-6"
               >
-                <div className="relative aspect-square w-[65%]">
-                  <Image src={exp.icon} alt="" fill className="object-contain" />
+                <div className="relative aspect-square w-[42%]">
+                  <ParallaxIcon index={i}>
+                    <Image src={exp.icon} alt="" fill className="object-contain" />
+                  </ParallaxIcon>
                 </div>
-                <h3 className="font-display text-[clamp(1rem,2.1vw,26px)] font-normal uppercase leading-[clamp(1.25rem,2.5vw,31px)] text-[#f598ff]">
+                <h3 className="relative z-10 font-display text-[clamp(0.75rem,1.4vw,18px)] font-normal uppercase leading-tight text-[#f598ff]">
                   <HighlightedTitle
                     title={exp.title}
                     highlight={exp.titleHighlight}
@@ -167,32 +200,57 @@ export default function Home() {
       </section>
 
       {/* Brand collaborations */}
-      <section className="relative w-full">
+      <section className="relative w-full overflow-hidden py-10">
+        {/* Background nuages */}
         <Image
-          src="/images/brand-collaborations-logos.png"
-          alt="Brand Collaborations : logos des marques partenaires du Collectif Sauvage (EuroSIMA, Oxbow, Baiona Marine, fulllife, Anglet Côte Basque, Red Bull, Decathlon, Quiksilver…)"
-          width={1440}
-          height={330}
+          src="/images/fond-nuages-mid.png"
+          alt=""
+          aria-hidden
+          fill
           sizes="100vw"
-          className="h-auto w-full"
+          className="object-cover object-center"
         />
+        <div className="container-ds relative z-10 flex items-center gap-8 md:gap-12">
+          {/* Colonne gauche : visuel SVG Brand Collaborations */}
+          <div className="flex w-[22%] shrink-0 items-center">
+            <Image
+              src="/images/brand-collaborations-title.svg"
+              alt="Brand Collaborations"
+              width={320}
+              height={380}
+              className="h-auto w-full"
+            />
+          </div>
+          {/* Colonne droite : grille logos */}
+          <div className="flex-1">
+            <Image
+              src="/images/brand-collaborations-logos.png"
+              alt="Brand Collaborations : logos des marques partenaires du Collectif Sauvage (EuroSIMA, Oxbow, Baiona Marine, fulllife, Anglet Côte Basque, Red Bull, Decathlon, Quiksilver…)"
+              width={1440}
+              height={330}
+              sizes="(max-width: 768px) 100vw, 78vw"
+              className="h-auto w-full"
+            />
+          </div>
+        </div>
       </section>
 
       {/* CTA final */}
-      <section className="px-6 py-16 md:py-24">
-        <div className="relative mx-auto max-w-3xl overflow-hidden rounded-card bg-gradient-to-b from-periwinkle-soft to-lavender px-8 py-16 text-white md:px-14 md:py-20">
+      <section className="px-6 py-24 md:py-36">
+        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-card bg-[#94abf9] px-10 py-10 text-white md:px-14 md:py-12">
+          {/* Double ellipse decoration — fully visible, behind text */}
           <Image
-            src="/images/ellipse-pink.png"
+            src="/images/double-ellipse.webp"
             alt=""
             aria-hidden
-            width={1907}
-            height={1901}
-            className="pointer-events-none absolute right-4 top-1/2 h-48 w-48 -translate-y-1/2 opacity-90 md:h-64 md:w-64"
+            width={600}
+            height={500}
+            className="pointer-events-none absolute left-[50%] top-[8%] w-[44%] opacity-95"
           />
-          <h2 className="font-display relative text-3xl uppercase leading-tight md:text-6xl">
-            Prêts à se lancer ?
+          <h2 className="font-display relative z-10 whitespace-nowrap text-[clamp(2.8rem,5.8vw,5.2rem)] uppercase leading-[1] text-white">
+            Prêts à se lancer&nbsp;?
           </h2>
-          <div className="relative mt-10 flex flex-wrap items-center gap-4">
+          <div className="relative z-10 mt-12 flex flex-wrap items-center gap-4">
             <Button href="/contact" variant="primary">
               Parlons en ensemble
             </Button>

@@ -574,19 +574,20 @@ export const team: TeamMember[] = [
 export type Project = {
   name: string;
   tags: string;
+  image: string;
 };
 
 export const projects: Project[] = [
-  { name: "Anglet Côte Basque", tags: "Stratégie / Design / Vidéo / Edition / Rédaction" },
-  { name: "Baiona Marine", tags: "Identité / Webdesign / Développement web / SEO" },
-  { name: "Eurosima Surf Summit", tags: "Événementiel / Design / Gestion de projet / Création de contenu" },
-  { name: "Decathlon", tags: "Photo produit et packshot" },
-  { name: "FFHG", tags: "Design / Motion design" },
-  { name: "Oxbow", tags: "Stratégie / Gestion de projet / Design / Management" },
-  { name: "ISA Surf", tags: "Événementiel" },
-  { name: "FFSurf", tags: "Stratégie / Identité" },
-  { name: "La Locomotive & Le Magnéto", tags: "Stratégie / Identité / Webdesign / Développement web" },
-  { name: "GIP Skate Parks de France", tags: "Identité / Webdesign / Développement web" },
+  { name: "Anglet Côte Basque", tags: "Stratégie / Design / Vidéo / Edition / Rédaction", image: "/images/projects/anglet-cote-basque.png" },
+  { name: "Baiona Marine", tags: "Identité / Webdesign / Développement web / SEO", image: "/images/projects/baiona-marine.png" },
+  { name: "Eurosima Surf Summit", tags: "Événementiel / Design / Gestion de projet / Création de contenu", image: "/images/projects/eurosima-surf-summit.png" },
+  { name: "Decathlon", tags: "Photo produit et packshot", image: "/images/projects/decathlon.png" },
+  { name: "FFHG", tags: "Design / Motion design", image: "/images/projects/ffhg.png" },
+  { name: "Oxbow", tags: "Stratégie / Gestion de projet / Design / Management", image: "/images/projects/oxbow.png" },
+  { name: "ISA Surf", tags: "Événementiel", image: "/images/projects/isa-surf.png" },
+  { name: "FFSurf", tags: "Stratégie / Identité", image: "/images/projects/ffsurf.png" },
+  { name: "La Locomotive & Le Magnéto", tags: "Stratégie / Identité / Webdesign / Développement web", image: "/images/projects/le-magneto.png" },
+  { name: "GIP Skate Parks de France", tags: "Identité / Webdesign / Développement web", image: "/images/projects/gip-skatepark.png" },
 ];
 
 export const brandNames = [

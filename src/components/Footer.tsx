@@ -13,17 +13,6 @@ export default function Footer() {
             >
               Collectif Sauvage
             </Link>
-            <p className="mt-4 text-sm text-white/90">
-              Conçu avec{" "}
-              <a
-                href="https://www.squarespace.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:opacity-80"
-              >
-                Squarespace
-              </a>
-            </p>
           </div>
 
           <div className="flex gap-16">
@@ -32,10 +21,16 @@ export default function Footer() {
                 Offres
               </p>
               <Link
-                href="/lp-lancement-de-marque"
+                href="/lp-createur-de-contenu"
                 className="mt-2 block text-sm hover:underline"
               >
-                Offre lancement de marque
+                Créateur de contenu
+              </Link>
+              <Link
+                href="/lp-lancement-de-marque"
+                className="block text-sm hover:underline"
+              >
+                Lancement de marque
               </Link>
             </div>
             <div>

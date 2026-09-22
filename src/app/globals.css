@@ -65,3 +65,29 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+
+/*
+  Liquid hover — the image is always scale(1.08) so there are 8% extra pixels
+  on every side; the displacement filter never pulls in background/transparency.
+  The frame (overflow-hidden + rounded-2xl) stays perfectly still.
+*/
+@keyframes cloud-drift {
+  0%, 100% { transform: scale(1.08) translate(0%, 0%); }
+  25%       { transform: scale(1.10) translate(-1.2%, 1.5%); }
+  50%       { transform: scale(1.09) translate(1.5%, -1.2%); }
+  75%       { transform: scale(1.11) translate(-0.6%, -1.5%); }
+}
+
+.cloud-liquid-img {
+  transform-origin: center center;
+  filter: url(#hero-liquid);
+  animation: cloud-drift 16s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cloud-liquid-img {
+    filter: none;
+    animation: none;
+  }
+}
