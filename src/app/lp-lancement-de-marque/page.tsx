@@ -624,7 +624,7 @@ export default function LpLancementDeMarque() {
       <section
         id="appel"
         className="relative flex items-center overflow-hidden"
-        style={{ height: "966px" }}
+        style={{ height: "clamp(500px, 56.9vw, 820px)" }}
       >
         <Image src="/lp-lancement/cta-bg.png" alt="" fill className="object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "#171D3A", opacity: 0.3 }} />
