@@ -629,23 +629,25 @@ export default function LpLancementDeMarque() {
         <Image src="/lp-lancement/cta-bg.png" alt="" fill className="object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "#171D3A", opacity: 0.3 }} />
         <div
-          className="relative z-10 w-full py-24"
+          className="relative z-10 w-full py-24 text-center"
           style={{ paddingLeft: "clamp(1.5rem, 43.75vw, 630px)", paddingRight: "4vw" }}
         >
           <h2 className="font-display text-[clamp(2.5rem,5vw,4rem)] uppercase text-pink">
             On commence par parler.
           </h2>
-          <p className="mt-6 max-w-xl text-xl leading-relaxed text-white">
+          <p className="mx-auto mt-6 max-w-xl text-xl leading-relaxed text-white">
             Vingt minutes. Votre projet, vos contraintes, ce que vous voulez
             transmettre. On vous dit ce qu&apos;on peut faire et comment on
             travaille.
           </p>
-          <a
-            href={BOOKING_URL}
-            className="mt-10 inline-block rounded-full border-2 border-pink px-10 py-4 text-sm font-bold uppercase tracking-[2px] text-pink transition-colors hover:bg-pink hover:text-ink-900"
-          >
-            Réserver un appel découverte
-          </a>
+          <div className="mt-10">
+            <a
+              href={BOOKING_URL}
+              className="inline-block rounded-full border-2 border-pink px-10 py-4 text-sm font-bold uppercase tracking-[2px] text-pink transition-colors hover:bg-pink hover:text-ink-900"
+            >
+              Réserver un appel découverte
+            </a>
+          </div>
           <p className="mt-6 text-sm text-white/60">
             Pas de formulaire. Pas de pitch commercial. Une conversation.
           </p>
