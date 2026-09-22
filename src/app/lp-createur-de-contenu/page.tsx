@@ -373,7 +373,7 @@ export default function LpCreateurDeContenu() {
       </section>
 
       {/* ── CTA — ON COMMENCE PAR PARLER ─────────────────────────────────── */}
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden">
+      <section className="relative flex items-center overflow-hidden" style={{ height: "966px" }}>
         <Image src="/lp/cta-bg.png" alt="" fill className="object-cover" />
         <div className="absolute inset-0 bg-ink-900/20" />
         <div className="container-ds relative z-10 py-24 text-center">

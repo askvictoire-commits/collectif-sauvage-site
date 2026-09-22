@@ -50,7 +50,7 @@ const obstacles = [
     title: "Un collectif, pas une addition d'egos.",
     body: "Piloter des indépendants isolés est un métier à plein temps (incohérences, délais, briefing multiple). Nous sommes déjà synchronisés : un seul point de contact, une vision unique, zéro friction.",
     caption: "un interlocuteur · vision commune · zéro friction",
-    img: "/lp-lancement/obstacle2.jpg",
+    img: "/lp-lancement/obstacle2.png",
     reverse: true,
   },
   {
@@ -572,69 +572,49 @@ export default function LpLancementDeMarque() {
 
       {/* ── COMME UNE AGENCE / MAIS EN MIEUX ────────────────────────────── */}
       <section className="overflow-hidden py-24">
-        <div className="container-ds grid items-center gap-8 md:grid-cols-2">
-          {/* Left */}
+        <div className="container-ds grid items-center gap-16 md:grid-cols-2">
+          {/* Left — outlined text + body */}
           <div className="flex flex-col gap-6 py-12">
-            <Image
-              src="/lp-lancement/shape.svg"
-              alt=""
-              width={69}
-              height={69}
-            />
+            <Image src="/lp/shape.svg" alt="" width={69} height={69} />
             <p
               className="font-display text-[clamp(3rem,7vw,6rem)] uppercase leading-none"
               style={{ color: "transparent", WebkitTextStroke: "2px #f598ff" }}
             >
               Comme une agence
             </p>
-            <p className="max-w-lg text-lg leading-relaxed text-white/90">
-              Tout ce dont vous avez besoin pour lancer, activer et développer
-              votre marque. Un expert par discipline, disponible selon vos
-              besoins, coordonné par un référent qui connaît votre dossier.
+            <p className="max-w-lg capitalize text-lg leading-relaxed">
+              Tout ce dont vous avez besoin pour communiquer, activer et développer votre
+              marque. Un expert par discipline, disponible selon vos besoins, coordonné
+              par un référent qui connaît votre dossier.
             </p>
-            <div>
-              <a
-                href={BOOKING_URL}
-                className="inline-block rounded-full border-2 border-pink px-10 py-4 text-sm font-bold uppercase tracking-[2px] text-pink transition-colors hover:bg-pink hover:text-ink-900"
-              >
-                Réserver un appel découverte
-              </a>
-            </div>
           </div>
-          {/* Right */}
-          <div
-            className="relative overflow-hidden rounded-[51px]"
-            style={{ aspectRatio: "488/420" }}
-          >
+
+          {/* Right — card with background + "mais en mieux" */}
+          <div className="relative overflow-hidden rounded-[51px]" style={{ aspectRatio: "488/420" }}>
             <Image
-              src="/lp-lancement/mais-en-mieux-bg.png"
+              src="/lp/card-bg.png"
               alt=""
               fill
-              className="object-cover rounded-[51px]"
+              className="rounded-[51px] object-cover"
             />
             <div
-              className="absolute"
-              style={{
-                left: "38%",
-                top: "42%",
-                transform:
-                  "translate(-50%, -50%) rotate(-40.37deg) skewX(-6.13deg)",
-              }}
+              className="absolute left-[22%] top-[44%] md:left-[26%] md:top-[54%] pointer-events-none"
+              style={{ transform: "translate(-50%, -50%) rotate(-40.37deg) skewX(-6.13deg) scaleY(0.99)" }}
             >
-              <Image
-                src="/lp-lancement/ellipse.svg"
-                alt=""
-                width={120}
-                height={120}
-                className="opacity-90"
-              />
+              <Image src="/lp/ellipse.svg" alt="" width={240} height={144} className="opacity-90" />
             </div>
             <div className="absolute left-6 top-[20%]">
               <p className="font-display text-[clamp(3rem,11vw,6.5rem)] uppercase leading-[1.05] text-white">
-                MAIS EN
-                <br />
-                MIEUX !
+                MAIS EN<br />MIEUX !
               </p>
+            </div>
+            <div className="absolute bottom-6 right-6">
+              <a
+                href={BOOKING_URL}
+                className="inline-block rounded-full border-2 border-pink bg-white/60 px-6 py-3 text-xs font-bold uppercase tracking-[2px] text-pink transition-colors hover:bg-pink hover:text-ink-900"
+              >
+                Réserver un appel découverte
+              </a>
             </div>
           </div>
         </div>
