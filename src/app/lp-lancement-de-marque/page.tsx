@@ -628,11 +628,14 @@ export default function LpLancementDeMarque() {
       >
         <Image src="/lp-lancement/cta-bg.png" alt="" fill className="object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "#171D3A", opacity: 0.3 }} />
-        <div className="container-ds relative z-10 py-24 text-center">
+        <div
+          className="relative z-10 w-full py-24"
+          style={{ paddingLeft: "clamp(1.5rem, 43.75vw, 630px)", paddingRight: "4vw" }}
+        >
           <h2 className="font-display text-[clamp(2.5rem,5vw,4rem)] uppercase text-pink">
             On commence par parler.
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-xl leading-relaxed text-white">
+          <p className="mt-6 max-w-xl text-xl leading-relaxed text-white">
             Vingt minutes. Votre projet, vos contraintes, ce que vous voulez
             transmettre. On vous dit ce qu&apos;on peut faire et comment on
             travaille.
