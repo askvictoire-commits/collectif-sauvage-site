@@ -65,10 +65,10 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
                     </div>
                   )}
                 </div>
-                <p className="mt-4 font-display text-base uppercase text-pink">
+                <p className="mt-4 font-display uppercase text-pink" style={{ fontSize: "19px", lineHeight: "22px" }}>
                   {member.name}
                 </p>
-                <p className="mt-1 text-sm text-black/60">{member.role}</p>
+                <p className="mt-1 text-white" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: "21px" }}>{member.role}</p>
                 {member.href && (
                   <a
                     href={member.href}

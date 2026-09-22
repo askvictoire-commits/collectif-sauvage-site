@@ -30,11 +30,10 @@ export type LookingFor = {
 export const lookingFor: LookingFor[] = [
   {
     need: "Un site qui tourne pour dormir tranquille",
-    body: "Un site web qui tourne : Quentin et Sylvain développent du solide, Apolline affine l'expérience et les mots justes, Zoë, Victoire et Jeanne dessinent des interfaces qui font la différence. Résultat : un site rapide, beau et pensé pour vos utilisateurs.",
+    body: "Un site web qui tourne : Quentin et Sylvain développent du solide, Zoë, Victoire et Jeanne dessinent des interfaces qui font la différence. Résultat : un site rapide, beau et pensé pour vos utilisateurs.",
     freelances: [
       { name: "Quentin", href: "https://quentinroussel.fr/" },
       { name: "Sylvain", href: "https://www.linkedin.com/in/sylvainnascimento/" },
-      { name: "Apolline", href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
@@ -71,10 +70,9 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Un contenu photo & vidéo qui fait rêver",
-    body: "Studio, outdoor, underwater, motion, lifestyle ou produit. Pierre, Nicolas et Fred couvrent tous les terrains pour créer des images qui claquent et qui marquent. Décors grandioses, détails soignés ou animations inspirantes, ils transforment vos idées en visuels percutants.",
+    body: "Studio, outdoor, underwater, motion, lifestyle ou produit. Pierre et Fred couvrent tous les terrains pour créer des images qui claquent et qui marquent. Décors grandioses, détails soignés ou animations inspirantes, ils transforment vos idées en visuels percutants.",
     freelances: [
       { name: "Pierre", href: "https://www.pierrefrechou.com/" },
-      { name: "Nicolas", href: "https://www.nicolas-bouriette.com/" },
       { name: "Fred", href: "https://g-3.studio/" },
     ],
   },
@@ -195,12 +193,6 @@ export const expertises: Expertise[] = [
         href: "https://www.linkedin.com/in/romainferrand/",
         photo: "/team/romain-ferrand.png",
       },
-      {
-        name: "Apolline Rouzé",
-        role: "UX Writer",
-        href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/",
-        photo: "/team/apolline-rouze.png",
-      },
     ],
   },
   {
@@ -288,22 +280,10 @@ export const expertises: Expertise[] = [
         photo: "/team/frederic-lebrault.png",
       },
       {
-        name: "Nicolas Bouriette",
-        role: "Photographe",
-        href: "https://www.nicolas-bouriette.com/",
-        photo: "/team/nicolas-bouriette.png",
-      },
-      {
         name: "Romain Ferrand",
         role: "Rédacteur / Réalisateur de podcasts",
         href: "https://www.linkedin.com/in/romainferrand/",
         photo: "/team/romain-ferrand.png",
-      },
-      {
-        name: "Apolline Rouzé",
-        role: "UX Writer",
-        href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/",
-        photo: "/team/apolline-rouze.png",
       },
     ],
   },
@@ -446,12 +426,6 @@ export const expertises: Expertise[] = [
     ],
     team: [
       {
-        name: "Apolline Rouzé",
-        role: "UX Writer",
-        href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/",
-        photo: "/team/apolline-rouze.png",
-      },
-      {
         name: "Zoë Zadouroff",
         role: "UI / Webdesign",
         href: "https://www.salty-event.com/",
@@ -557,14 +531,12 @@ export const team: TeamMember[] = [
   { name: "Jeanne Beuvin", role: "Illustration / Design", href: "https://lesfillesdusurf.com/", photo: "/team/jeanne-beuvin.png" },
   { name: "Romain Ferrand", role: "Journaliste / Stratégie contenu / Podcasts", href: "https://www.linkedin.com/in/romainferrand/", photo: "/team/romain-ferrand.png" },
   { name: "Quentin Roussel", role: "Développeur web", href: "https://quentinroussel.fr/", photo: "/team/quentin-roussel.png" },
-  { name: "Nicolas Bouriette", role: "Photographe", href: "https://www.nicolas-bouriette.com/", photo: "/team/nicolas-bouriette.png" },
   { name: "Kathleen Van den Bril", role: "Social Media Manager", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/", photo: "/team/kathleen-van-den-bril.png" },
   { name: "Lionel Rocques", role: "Consultant IA & Automatisations", href: "https://mister-anderson.ai/", photo: "/team/lionel-rocques.png" },
   { name: "Arnaud Poullin", role: "SEA / Acquisition / Marketing automation", href: "https://e-flow.io/", photo: "/team/arnaud-poullin.png" },
   { name: "Frédéric Lebrault", role: "Motion design / Design", href: "https://g-3.studio/", photo: "/team/frederic-lebrault.png" },
   { name: "Marie Lainé", role: "Consultant SEO et Pinterest manager", href: "https://www.laminuteseo.fr/", photo: "/team/marie-laine.png" },
   { name: "Emilien Geney", role: "Event manager / Design", href: "https://www.linkedin.com/in/emiliengeney/", photo: "/team/emilien-geney.png" },
-  { name: "Apolline Rouzé", role: "UX Writer", href: "https://www.linkedin.com/in/apolline-rouz%C3%A9-6050b873/", photo: "/team/apolline-rouze.png" },
   { name: "Nicolas Farolfi", role: "Développeur web", href: "https://www.nico-pro.com/", photo: "/team/nicolas-farolfi.png" },
   { name: "Valentine Rolaz", role: "Cheffe de projets", href: "https://valentinerolaz.squarespace.com/", photo: undefined },
   { name: "Cécile Lehoux", role: "Développeuse web et co-fondatrice", href: "https://www.linkedin.com/in/c%C3%A9cile-lehoux-363a6094/", photo: "/team/cecile-lehoux.png" },
