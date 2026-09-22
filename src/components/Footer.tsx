@@ -16,23 +16,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-16">
-            <div>
-              <p className="font-display text-lg uppercase text-ink-900">
-                Offres
-              </p>
-              <Link
-                href="/lp-createur-de-contenu"
-                className="mt-2 block text-sm hover:underline"
-              >
-                Créateur de contenu
-              </Link>
-              <Link
-                href="/lp-lancement-de-marque"
-                className="block text-sm hover:underline"
-              >
-                Lancement de marque
-              </Link>
-            </div>
+
             <div>
               <p className="font-display text-lg uppercase text-ink-900">
                 Localisation
