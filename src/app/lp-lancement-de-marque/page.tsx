@@ -623,10 +623,11 @@ export default function LpLancementDeMarque() {
       {/* ── CTA FINAL ────────────────────────────────────────────────────── */}
       <section
         id="appel"
-        className="relative flex min-h-[60vh] items-center overflow-hidden"
+        className="relative flex items-center overflow-hidden"
+        style={{ height: "966px" }}
       >
         <Image src="/lp-lancement/cta-bg.png" alt="" fill className="object-cover" />
-        <div className="absolute inset-0 bg-ink-900/40" />
+        <div className="absolute inset-0" style={{ backgroundColor: "#171D3A", opacity: 0.3 }} />
         <div className="container-ds relative z-10 py-24 text-center">
           <h2 className="font-display text-[clamp(2.5rem,5vw,4rem)] uppercase text-pink">
             On commence par parler.
