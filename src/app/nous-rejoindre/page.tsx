@@ -25,7 +25,7 @@ export default function NousRejoindre() {
         <p className="lede">Le collectif réunit des <strong>freelances seniors, déjà installé·es</strong>, qui partagent des valeurs, un réseau et parfois des clients. Pour ça, il faut pouvoir se faire confiance <strong>les yeux fermés</strong>. Lis cette page avant de nous écrire&nbsp;: elle te dira en 3 minutes si c&apos;est le bon endroit pour toi.</p>
         <div className="cta-row">
           <a className="btn" href="#profil">Le profil recherché</a>
-          <a className="btn" href="#candidater">Candidater ↓</a>
+          <a className="btn" href="#candidater">Candidater</a>
         </div>
       </div>
     </div>
