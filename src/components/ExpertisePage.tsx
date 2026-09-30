@@ -1,17 +1,20 @@
 import Image from "next/image";
 import type { Expertise } from "@/lib/site-data";
 import Marquee from "@/components/Marquee";
+import HeroTitle from "@/components/HeroTitle";
 
 export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
   return (
     <>
       <section className="bg-ink-900 px-6 py-24 text-white md:py-32">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="font-display text-3xl uppercase leading-tight tracking-tight md:text-6xl">
-            {expertise.heroTitle}
-          </h1>
+          <HeroTitle
+            title={expertise.heroTitle}
+            marks={expertise.heroMarks}
+            className="font-display text-3xl uppercase leading-tight tracking-tight md:text-6xl"
+          />
           {expertise.heroSubtitle && (
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-white/70">
+            <p className="hero-subtitle mx-auto mt-6 max-w-2xl text-lg text-white/70">
               {expertise.heroSubtitle}
             </p>
           )}

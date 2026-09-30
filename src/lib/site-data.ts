@@ -128,7 +128,10 @@ export type Expertise = {
   title: string;
   /** substring of `title` rendered in the pink accent color on the home page grid */
   titleHighlight: string;
+  /** « \n » force un retour à la ligne */
   heroTitle: string;
+  /** mots de l'accroche dessinés en rose à l'arrivée (barré, entouré, souligné, surligné) */
+  heroMarks?: { text: string; style: "strike" | "circle" | "underline" | "highlight" }[];
   heroSubtitle?: string;
   banner: string;
   sections: { title: string; body: string }[];
@@ -142,6 +145,7 @@ export const expertises: Expertise[] = [
     title: "Stratégie",
     titleHighlight: "égie",
     heroTitle: "Pas d'offre standard ni de formules magiques chez nous.",
+    heroMarks: [{ text: "formules magiques", style: "strike" }],
     heroSubtitle:
       "Chaque stratégie est le fruit d'années de pratique, d'expérimentations, et d'outils éprouvés en consulting et design thinking.",
     banner: "On cadre l'idée avant de la shooter",
@@ -204,6 +208,7 @@ export const expertises: Expertise[] = [
     title: "Création",
     titleHighlight: "Créa",
     heroTitle: "La création est au cœur de ce qu'on fait.",
+    heroMarks: [{ text: "cœur", style: "circle" }],
     heroSubtitle:
       "On accompagne les marques et les projets à poser des bases solides, des messages clairs, et des visuels qui ont du sens.",
     banner: "La création c'est des risques mesurés, pas des décisions molles.",
@@ -303,6 +308,7 @@ export const expertises: Expertise[] = [
     titleHighlight: "IA",
     heroTitle:
       "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
+    heroMarks: [{ text: "subtil", style: "underline" }],
     heroSubtitle:
       "On pilote vos campagnes pour qu'elles fassent autre chose que tourner en boucle dans le vide. Et on mets en place les outils nécessaires pour que vous puissiez enfin refaire “juste” votre métier.",
     banner: "Investir oui, gaspiller non.",
@@ -367,7 +373,8 @@ export const expertises: Expertise[] = [
     title: "Social Media",
     titleHighlight: "Media",
     heroTitle:
-      "Les bons contenus trouvent leur place. Les grandes idées trouvent leur public.",
+      "Les bons contenus trouvent leur place.\nLes grandes idées trouvent leur public.",
+    heroMarks: [{ text: "leur public", style: "highlight" }],
     heroSubtitle:
       "Et nous sommes là pour écrire les règles, orchestrer les temps forts et faire vibrer votre communauté.",
     banner: "Des réseaux qui font du lien, pas juste du bruit.",
@@ -410,7 +417,8 @@ export const expertises: Expertise[] = [
     title: "UX / Webdesign",
     titleHighlight: "UX / Web",
     heroTitle:
-      "L'UX pour guider, le design pour exprimer. Le site, pour convaincre.",
+      "L'UX pour guider,\nle design pour exprimer.\nLe site, pour convaincre.",
+    heroMarks: [{ text: "convaincre", style: "circle" }],
     heroSubtitle:
       "On ne fait pas “juste un joli site”. On pense l'expérience de A à Z, pour que ça marche, que ce soit beau, et que ça serve vraiment.",
     banner:
@@ -471,7 +479,11 @@ export const expertises: Expertise[] = [
     icon: "/pictos/webdev.svg",
     title: "Développement Web",
     titleHighlight: "Dév",
-    heroTitle: "On ne développe pas pour faire joli, on développe pour faire sens.",
+    heroTitle: "On ne développe pas pour faire joli,\non développe pour faire sens.",
+    heroMarks: [
+      { text: "faire joli", style: "strike" },
+      { text: "faire sens", style: "highlight" },
+    ],
     heroSubtitle:
       "Ton site doit être utile, maniable, performant. Le reste, c'est du vernis.",
     banner: "Quand ça marche bien, ça ne se voit pas.",
