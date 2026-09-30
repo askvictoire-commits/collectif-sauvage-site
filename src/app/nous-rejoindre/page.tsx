@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Marquee from "@/components/Marquee";
 import RecruitmentApply from "./RecruitmentApply";
 import "./recrutement.css";
 
@@ -30,12 +31,11 @@ export default function NousRejoindre() {
     </div>
   </section>
 
-  <div className="marquee" aria-hidden="true">
-    <div className="track">
-      <span>Seniors</span><span>Autonomes</span><span>Déjà installé·es</span><span>Pays Basque &amp; Landes</span><span>Une vingtaine, pas plus</span><span>Confiance les yeux fermés</span>
-      <span>Seniors</span><span>Autonomes</span><span>Déjà installé·es</span><span>Pays Basque &amp; Landes</span><span>Une vingtaine, pas plus</span><span>Confiance les yeux fermés</span>
-    </div>
-  </div>
+  <Marquee
+    text="Seniors, autonomes, déjà installé·es."
+    duration={40}
+    className="py-8 text-4xl text-pink md:text-6xl"
+  />
 
   {/* CE QUE C'EST / N'EST PAS */}
   <section>

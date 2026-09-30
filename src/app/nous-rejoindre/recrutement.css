@@ -39,12 +39,6 @@
 .rec .ast{position:absolute;width:90px;right:6%;top:118px;opacity:.95;animation:rec-spin 26s linear infinite}
 @keyframes rec-spin{to{transform:rotate(360deg)}}
 @keyframes rec-float{50%{transform:rotate(-3deg) translateY(-6px)}}
-/* ---------- Marquee ---------- */
-.rec .marquee{background:var(--pink);color:var(--navy);overflow:hidden;white-space:nowrap;padding-block:16px;border-block:1.5px solid var(--navy)}
-.rec .marquee .track{display:inline-flex;gap:0;animation:rec-slide 32s linear infinite}
-.rec .marquee span{font-family:var(--display);font-size:28px;text-transform:uppercase;padding-inline:22px}
-.rec .marquee span::after{content:"✳";font-family:var(--body);font-size:20px;margin-left:44px;vertical-align:4px}
-@keyframes rec-slide{to{transform:translateX(-50%)}}
 /* ---------- Sections ---------- */
 .rec section{padding-block:clamp(72px,10vw,130px)}
 .rec .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:56px}
@@ -173,7 +167,6 @@
 @media (max-width:560px){
 .rec .steps,.rec .fit,.rec .seat-grid{grid-template-columns:1fr}
 .rec .steps li::after{display:none!important}
-.rec .marquee span{font-size:22px}
 }
 @media (prefers-reduced-motion:reduce){
 .rec, .rec *,.rec *::before,.rec *::after{animation:none!important;transition:none!important}
