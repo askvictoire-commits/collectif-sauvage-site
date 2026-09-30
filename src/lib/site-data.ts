@@ -539,8 +539,9 @@ export const team: TeamMember[] = [
   { name: "Marie Lainé", role: "Consultant SEO et Pinterest manager", href: "https://www.laminuteseo.fr/", photo: "/team/marie-laine.png" },
   { name: "Emilien Geney", role: "Event manager / Design", href: "https://www.linkedin.com/in/emiliengeney/", photo: "/team/emilien-geney.png" },
   { name: "Nicolas Farolfi", role: "Développeur web", href: "https://www.nico-pro.com/", photo: "/team/nicolas-farolfi.png" },
-  { name: "Valentine Rolaz", role: "Cheffe de projets", href: "https://valentinerolaz.squarespace.com/", photo: undefined },
+  { name: "Valentine Rolaz", role: "Gestion de projet / Event manager", href: "https://valentinerolaz.squarespace.com/", photo: "/team/valentine-rolaz.png" },
   { name: "Cécile Lehoux", role: "Développeuse web et co-fondatrice", href: "https://www.linkedin.com/in/c%C3%A9cile-lehoux-363a6094/", photo: "/team/cecile-lehoux.png" },
+  { name: "William Sanz", role: "Directeur artistique", href: "https://williamsanz.fr/", photo: "/team/william-sanz.png" },
   { name: "Google", role: "RH / Chief Happiness", photo: "/team/google.png" },
 ];
 
