@@ -172,7 +172,7 @@ export const expertises: Expertise[] = [
     team: [
       {
         name: "Victoire Ecoiffier",
-        role: "Stratégie et direction artistique",
+        role: "Stratégie / direction artistique / Webdesign",
         href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
@@ -252,7 +252,7 @@ export const expertises: Expertise[] = [
       },
       {
         name: "Victoire Ecoiffier",
-        role: "Identité / Webdesign / Graphiste IA",
+        role: "Stratégie / direction artistique / Webdesign",
         href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
@@ -434,7 +434,7 @@ export const expertises: Expertise[] = [
       },
       {
         name: "Victoire Ecoiffier",
-        role: "UI / Webdesign",
+        role: "Stratégie / direction artistique / Webdesign",
         href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
@@ -525,7 +525,7 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   { name: "Zoë Zadouroff", role: "Event Manager / Design / Webdesign", href: "https://www.salty-event.com/", photo: "/team/zoe-zadouroff.png" },
-  { name: "Victoire Ecoiffier", role: "Stratégie / Identité / Webdesign", href: "https://www.smoothstudio.fr/", photo: "/team/victoire-ecoiffier.png" },
+  { name: "Victoire Ecoiffier", role: "Stratégie / direction artistique / Webdesign", href: "https://www.smoothstudio.fr/", photo: "/team/victoire-ecoiffier.png" },
   { name: "Sylvain Nascimento", role: "Développeur web", href: "https://www.linkedin.com/in/sylvainnascimento/", photo: "/team/sylvain-nascimento.png" },
   { name: "Pierre Frechou", role: "Filmmaker / Photographe / Drone", href: "https://www.pierrefrechou.com/", photo: "/team/pierre-frechou.png" },
   { name: "Thomas Escot", role: "Consultant SEO", href: "https://thomas-escot.fr/", photo: "/team/thomas-escot.png" },
