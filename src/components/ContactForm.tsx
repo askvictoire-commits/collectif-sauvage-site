@@ -1,13 +1,74 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
+import { contact } from "@/lib/site-data";
+
+// Clé d'accès Web3Forms (gratuite, liée à l'adresse de réception).
+// À définir dans Vercel > Settings > Environment Variables.
+// Sans clé, le formulaire ouvre la messagerie pré-remplie (repli).
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+type Status = "idle" | "sending" | "sent" | "error";
+
+function buildMailto(data: FormData) {
+  const name = `${data.get("firstName") ?? ""} ${data.get("lastName") ?? ""}`.trim();
+  const body = `${data.get("message") ?? ""}\n\n— ${name}\n${data.get("email") ?? ""}`;
+  return `mailto:${contact.email}?subject=${encodeURIComponent(
+    `Contact site — ${name}`,
+  )}&body=${encodeURIComponent(body)}`;
+}
 
 export default function ContactForm({
   theme = "light",
 }: {
   theme?: "light" | "pill" | "sauvage";
 }) {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [mailto, setMailto] = useState<string>(`mailto:${contact.email}`);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    // Anti-spam : champ caché rempli uniquement par les robots
+    if (data.get("botcheck")) return;
+    const fallback = buildMailto(data);
+    setMailto(fallback);
+
+    if (!WEB3FORMS_KEY) {
+      window.location.href = fallback;
+      return;
+    }
+
+    setStatus("sending");
+    const name = `${data.get("firstName")} ${data.get("lastName")}`;
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `Nouveau message du site — ${name}`,
+          from_name: "Site Collectif Sauvage",
+          name,
+          email: data.get("email"),
+          replyto: data.get("email"),
+          message: data.get("message"),
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (res.ok && json.success !== false) {
+        setStatus("sent");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
+  const feedbackClass = `mt-3 text-sm ${isSauvageTone(theme)}`;
 
   const isPill = theme === "pill";
   const isSauvage = theme === "sauvage";
@@ -40,11 +101,16 @@ export default function ContactForm({
   return (
     <form
       className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
+      onSubmit={handleSubmit}
     >
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
       <div className="flex flex-col gap-1">
         <label htmlFor="firstName" className={labelClass}>
           Prénom <span className={noteClass}>(obligatoire)</span>
@@ -94,16 +160,38 @@ export default function ContactForm({
         />
       </div>
       <div className="sm:col-span-2">
-        <button type="submit" className={buttonClass}>
-          Envoyer
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className={`${buttonClass} disabled:cursor-wait disabled:opacity-60`}
+        >
+          {status === "sending" ? "Envoi…" : "Envoyer"}
         </button>
-        {submitted && (
-          <p className={`mt-3 text-sm ${isSauvage ? "text-white/70" : isPill ? "text-white/80" : "text-black/60"}`}>
-            Merci ! (formulaire de démonstration — le branchement à un
-            service d&apos;envoi réel reste à faire)
-          </p>
-        )}
+        <div aria-live="polite">
+          {status === "sent" && (
+            <p className={feedbackClass}>
+              Merci, ton message est bien parti ! On revient vers toi très vite.
+            </p>
+          )}
+          {status === "error" && (
+            <p className={feedbackClass}>
+              Oups, l&apos;envoi n&apos;a pas fonctionné.{" "}
+              <a href={mailto} className="underline">
+                Écris-nous directement à {contact.email}
+              </a>
+              .
+            </p>
+          )}
+        </div>
       </div>
     </form>
   );
+}
+
+function isSauvageTone(theme: "light" | "pill" | "sauvage") {
+  return theme === "sauvage"
+    ? "text-white/70"
+    : theme === "pill"
+      ? "text-white/80"
+      : "text-black/60";
 }
