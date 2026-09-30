@@ -108,15 +108,14 @@
 .rec .seats .note div{border-left:2px solid var(--pink);padding:4px 0 4px 20px;color:var(--muted);font-size:15.5px}
 .rec .seats .note b{color:var(--white);display:block;margin-bottom:4px;font-size:17px}
 /* Candidater */
-.rec .apply{position:relative;background:#120f2a url(/images/recrutement/smoke.webp) center/cover;overflow:hidden}
-.rec .apply::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,29,58,.55),rgba(23,29,58,.2) 40%,rgba(23,29,58,.7))}
+.rec .apply{position:relative;background:#0b0b0d url(/images/recrutement/dust.webp) center/cover;overflow:hidden}
 .rec .apply .wrap{position:relative}
 .rec .apply-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:start}
 .rec .apply-grid > div:first-child{position:sticky;top:100px}
 .rec .apply h2{font-size:clamp(44px,6vw,80px)}
 .rec .apply h2 .stroke-t{color:transparent;-webkit-text-stroke:1.8px var(--peri)}
-.rec .apply .intro{margin-top:22px;color:var(--muted);max-width:44ch}
-.rec .check{background:rgba(23,29,58,.82);backdrop-filter:blur(8px);border:1.5px solid var(--peri);border-radius:28px;padding:clamp(24px,3.5vw,38px)}
+.rec .apply .intro{margin-top:22px;color:#d9dcef;max-width:44ch}
+.rec .check{background:rgba(23,29,58,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1.5px solid var(--peri);border-radius:28px;padding:clamp(24px,3.5vw,38px)}
 .rec .check h3{font-size:26px;margin-bottom:6px}
 .rec .check .sub{color:var(--muted);font-size:15px;margin-bottom:20px}
 .rec .opt{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid rgba(169,179,242,.2)}
