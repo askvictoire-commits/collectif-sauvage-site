@@ -61,12 +61,13 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Une identité qui vous ressemble",
-    body: "Une identité qui vous ressemble : du logo à l'univers graphique étendu, chacun travaille dans son style et sur son terrain. Zoë, Victoire, Jeanne et Emilien mettent leur patte personnelle sur vos projets, pour créer des identités de marque singulières et sur-mesure.",
+    body: "Une identité qui vous ressemble : du logo à l'univers graphique étendu, chacun travaille dans son style et sur son terrain. Zoë, Victoire, Jeanne, Emilien et William mettent leur patte personnelle sur vos projets, pour créer des identités de marque singulières et sur-mesure.",
     freelances: [
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Victoire", href: "https://www.smoothstudio.fr/" },
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
       { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
+      { name: "William", href: "https://williamsanz.fr/" },
     ],
   },
   {
@@ -87,12 +88,13 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Des pubs qui se voient",
-    body: "Côté création, Jeanne, Zoë, Victoire et Emilien imaginent des visuels percutants et des messages qui accrochent. Côté achat média, Arnaud pilote vos campagnes Meta, Google et Pinterest, pendant que Kathleen affine vos ciblages et vos budgets social media. Chacun dans son domaine pour des campagnes qui claquent.",
+    body: "Côté création, Jeanne, Zoë, Victoire, Emilien et William imaginent des visuels percutants et des messages qui accrochent. Côté achat média, Arnaud pilote vos campagnes Meta, Google et Pinterest, pendant que Kathleen affine vos ciblages et vos budgets social media. Chacun dans son domaine pour des campagnes qui claquent.",
     freelances: [
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Victoire", href: "https://www.smoothstudio.fr/" },
       { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
+      { name: "William", href: "https://williamsanz.fr/" },
       { name: "Arnaud", href: "https://e-flow.io/" },
       { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
     ],
@@ -279,6 +281,12 @@ export const expertises: Expertise[] = [
         role: "Motion design / Design",
         href: "https://g-3.studio/",
         photo: "/team/frederic-lebrault.png",
+      },
+      {
+        name: "William Sanz",
+        role: "Directeur artistique",
+        href: "https://williamsanz.fr/",
+        photo: "/team/william-sanz.png",
       },
       {
         name: "Romain Ferrand",
