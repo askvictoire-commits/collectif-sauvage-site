@@ -92,7 +92,7 @@ export default function RecruitmentApply() {
           </p>
           <h2>
             Toujours <br />
-            <span className="outline">Sauvage&nbsp;?</span>
+            <span className="stroke-t">Sauvage&nbsp;?</span>
           </h2>
           <p className="intro">
             Avant de nous écrire, fais le point honnêtement. Si les six cases sont

@@ -18,8 +18,7 @@ export default function NousRejoindre() {
     <img className="ast" src="/images/recrutement/asterisk.webp" alt="" />
     <div className="wrap">
       <div>
-        <p className="eyebrow">Recrutement · Pays Basque &amp; Landes</p>
-        <h1>Rejoindre<br />le <span className="ring">collectif<img src="/images/recrutement/ellipse.webp" alt="" /></span><br /><span className="outline">Sauvage&nbsp;?</span></h1>
+        <h1>Rejoindre<br />le <span className="hl-ellipse">collectif<img src="/images/recrutement/ellipse.webp" alt="" /></span><br /><span className="stroke-t">Sauvage&nbsp;?</span></h1>
       </div>
       <div>
         <p className="lede">Le collectif réunit des <strong>freelances seniors, déjà installé·es</strong>, qui partagent des valeurs, un réseau et parfois des clients. Pour ça, il faut pouvoir se faire confiance <strong>les yeux fermés</strong>. Lis cette page avant de nous écrire&nbsp;: elle te dira en 3 minutes si c&apos;est le bon endroit pour toi.</p>
@@ -72,7 +71,7 @@ export default function NousRejoindre() {
   <section className="relay">
     <div className="wrap">
       <div className="sec-head">
-        <h2>Comment ça marche <span className="outline">entre nous</span></h2>
+        <h2>Comment ça marche <span className="stroke-t">entre nous</span></h2>
         <p>Chaque membre arrive avec son métier et ses clients. Le collectif sert à ne jamais laisser un client sans solution quand une compétence nous manque.</p>
       </div>
       <ol className="steps">
