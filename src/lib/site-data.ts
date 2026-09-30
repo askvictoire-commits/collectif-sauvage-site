@@ -12,6 +12,7 @@ export const nav = [
       { label: "Développement Web", href: "/developpementweb" },
     ],
   },
+  { label: "Nous rejoindre", href: "/nous-rejoindre" },
   { label: "Contact", href: "/contact" },
 ];
 
