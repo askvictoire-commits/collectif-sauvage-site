@@ -11,7 +11,7 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
           <HeroTitle
             title={expertise.heroTitle}
             marks={expertise.heroMarks}
-            className="font-display text-3xl uppercase leading-tight tracking-tight md:text-6xl"
+            className="font-display text-[32px] font-normal uppercase leading-[36px] text-white md:text-[46px] md:leading-[51px]"
           />
           {expertise.heroSubtitle && (
             <p className="hero-subtitle mx-auto mt-6 max-w-2xl text-lg text-white/70">
