@@ -3,16 +3,22 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata = { title: "Contact — Collectif Sauvage" };
 
+/*
+ * Mise en page calquée sur la page Contact Squarespace :
+ * colonne texte + formulaire étroite à gauche (~38 % de la largeur),
+ * grand visuel portrait arrondi à droite (chat qui dépasse du bord droit),
+ * textes plus petits et gros espace entre les coordonnées et le formulaire.
+ */
 export default function Contact() {
   return (
-    <section className="bg-[#f598ff] px-6 py-24 md:py-32">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-        <div className="text-white">
-          <h1 className="font-display text-3xl uppercase leading-tight md:text-6xl">
+    <section className="bg-[#f598ff] px-6 pb-24 pt-24 md:px-[4vw] md:pt-28">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-start lg:gap-[12vw]">
+        <div className="text-white lg:pt-6">
+          <h1 className="font-display text-4xl uppercase leading-none md:text-[54px]">
             Nous contacter
           </h1>
 
-          <div className="mt-6 space-y-4 text-lg text-white/90">
+          <div className="mt-8 space-y-3 text-[16px] leading-[1.3] text-white/90">
             <p>
               Une idée derrière la tête ? Un projet qui mérite mieux qu&apos;un
               devis Excel ? On est tout ouïe.
@@ -27,11 +33,8 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="mt-6 flex flex-col gap-1 text-lg">
-            <a
-              href="mailto:hello@collectifsauvage.fr"
-              className="font-medium hover:underline"
-            >
+          <div className="mt-3 flex flex-col text-[16px] leading-[1.3] text-white/90">
+            <a href="mailto:hello@collectifsauvage.fr" className="hover:underline">
               hello@collectifsauvage.fr
             </a>
             <a href="tel:+33677936795" className="hover:underline">
@@ -39,16 +42,19 @@ export default function Contact() {
             </a>
           </div>
 
-          <ContactForm theme="pill" />
+          <div className="mt-14 lg:mt-20">
+            <ContactForm theme="pill" />
+          </div>
         </div>
 
-        <div className="relative aspect-square w-full overflow-hidden lg:sticky lg:top-24">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[18px] lg:aspect-[5/8]">
           <Image
-            src="/images/contact-chat-nuages.webp"
-            alt="Un chat semblant flotter dans le ciel avec des nuages colorés en bleu et rose en arrière-plan."
+            src="/images/contact-chaton.webp"
+            alt="Un chat qui passe la tête dans un ciel de nuages bleus et roses."
             fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
+            priority
+            sizes="(max-width: 1024px) 100vw, 45vw"
+            className="object-cover object-[68%_top]"
           />
         </div>
       </div>

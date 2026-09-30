@@ -76,32 +76,32 @@ export default function ContactForm({
   const labelClass = isSauvage
     ? "text-sm font-medium uppercase tracking-wide text-pink"
     : isPill
-      ? "text-sm font-medium text-white"
+      ? "text-[15px] text-ink-900"
       : "text-sm font-medium";
   const noteClass = isSauvage
     ? "normal-case text-pink/60"
     : isPill
-      ? "text-white/60"
+      ? "ml-1 text-ink-900/55"
       : "text-black/40";
   const inputClass = isSauvage
     ? "rounded-full border-none bg-lavender px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink"
     : isPill
-      ? "rounded-full border-none bg-white px-5 py-3 text-black placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-white"
+      ? "rounded-full border-none bg-white/80 px-5 py-2.5 text-ink-900 placeholder:text-ink-900/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-white"
       : "border border-black/20 bg-transparent px-3 py-2 focus:border-black focus:outline-none";
   const textareaClass = isSauvage
     ? "rounded-3xl border-none bg-lavender px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-pink"
     : isPill
-      ? "rounded-3xl border-none bg-white px-5 py-3 text-black placeholder:text-black/40 focus:outline-none focus:ring-2 focus:ring-white"
+      ? "rounded-3xl border-none bg-white/80 px-5 py-3 text-ink-900 placeholder:text-ink-900/40 focus:bg-white focus:outline-none focus:ring-2 focus:ring-white"
       : "border border-black/20 bg-transparent px-3 py-2 focus:border-black focus:outline-none";
   const buttonClass = isSauvage
     ? "rounded-full border border-pink bg-transparent px-8 py-3 text-sm font-normal uppercase tracking-wide text-pink hover:bg-pink hover:text-white"
     : isPill
-      ? "rounded-full bg-black px-8 py-3 text-sm font-medium uppercase text-white hover:opacity-80"
+      ? "rounded-full border border-ink-900 bg-transparent px-8 py-3 text-sm uppercase text-ink-900 transition-colors hover:bg-ink-900 hover:text-white"
       : "bg-black px-6 py-3 text-sm font-medium uppercase text-white hover:opacity-80";
 
   return (
     <form
-      className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2"
+      className={`grid grid-cols-1 sm:grid-cols-2 ${isPill ? "gap-x-2 gap-y-5" : "mt-8 gap-6"}`}
       onSubmit={handleSubmit}
     >
       <input
@@ -155,7 +155,7 @@ export default function ContactForm({
         <textarea
           id="message"
           name="message"
-          rows={5}
+          rows={isPill ? 4 : 5}
           required
           className={textareaClass}
         />
