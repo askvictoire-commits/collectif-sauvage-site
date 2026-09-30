@@ -36,7 +36,7 @@ export const lookingFor: LookingFor[] = [
       { name: "Quentin", href: "https://quentinroussel.fr/" },
       { name: "Sylvain", href: "https://www.linkedin.com/in/sylvainnascimento/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
-      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Victoire", href: "https://www.smoothstudio.fr/" },
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
     ],
   },
@@ -52,7 +52,7 @@ export const lookingFor: LookingFor[] = [
     need: "De la réflexion avant l'action",
     body: "On réfléchit avant d'agir : Victoire, Zoë, Kathleen, Arnaud et Romain mènent la danse côté stratégie, chacun avec ses outils et ses terrains de jeu, pour coller au plus près des besoins des clients.",
     freelances: [
-      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Victoire", href: "https://www.smoothstudio.fr/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
       { name: "Arnaud", href: "https://e-flow.io/" },
@@ -64,7 +64,7 @@ export const lookingFor: LookingFor[] = [
     body: "Une identité qui vous ressemble : du logo à l'univers graphique étendu, chacun travaille dans son style et sur son terrain. Zoë, Victoire, Jeanne et Emilien mettent leur patte personnelle sur vos projets, pour créer des identités de marque singulières et sur-mesure.",
     freelances: [
       { name: "Zoë", href: "https://www.salty-event.com/" },
-      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Victoire", href: "https://www.smoothstudio.fr/" },
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
       { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
     ],
@@ -91,7 +91,7 @@ export const lookingFor: LookingFor[] = [
     freelances: [
       { name: "Jeanne", href: "https://lesfillesdusurf.com/" },
       { name: "Zoë", href: "https://www.salty-event.com/" },
-      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Victoire", href: "https://www.smoothstudio.fr/" },
       { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
       { name: "Arnaud", href: "https://e-flow.io/" },
       { name: "Kathleen", href: "https://www.linkedin.com/in/kathleen-van-den-bril-4a395115/" },
@@ -115,7 +115,7 @@ export const lookingFor: LookingFor[] = [
     body: "Lionel met en place des automatisations IA pour fluidifier votre organisation et réduire les tâches répétitives. Victoire s'appuie sur l'IA comme levier créatif afin de donner plus de force et de cohérence aux marques. L'IA optimise et prépare le terrain, mais c'est l'humain qui éclaire, incarne et fait la différence.",
     freelances: [
       { name: "Lionel", href: "https://mister-anderson.ai/" },
-      { name: "Victoire", href: "https://www.linkedin.com/in/victoireecoiffier/" },
+      { name: "Victoire", href: "https://www.smoothstudio.fr/" },
     ],
   },
 ];
@@ -173,7 +173,7 @@ export const expertises: Expertise[] = [
       {
         name: "Victoire Ecoiffier",
         role: "Workshop / Stratégie de marque / Stratégie de communication",
-        href: "https://www.linkedin.com/in/victoireecoiffier/",
+        href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
       {
@@ -253,7 +253,7 @@ export const expertises: Expertise[] = [
       {
         name: "Victoire Ecoiffier",
         role: "Identité / Webdesign / Graphiste IA",
-        href: "https://www.linkedin.com/in/victoireecoiffier/",
+        href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
       {
@@ -435,7 +435,7 @@ export const expertises: Expertise[] = [
       {
         name: "Victoire Ecoiffier",
         role: "UI / Webdesign",
-        href: "https://www.linkedin.com/in/victoireecoiffier/",
+        href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
       {
@@ -525,7 +525,7 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   { name: "Zoë Zadouroff", role: "Event Manager / Design / Webdesign", href: "https://www.salty-event.com/", photo: "/team/zoe-zadouroff.png" },
-  { name: "Victoire Ecoiffier", role: "Stratégie / Identité / Webdesign", href: "https://www.linkedin.com/in/victoireecoiffier/", photo: "/team/victoire-ecoiffier.png" },
+  { name: "Victoire Ecoiffier", role: "Stratégie / Identité / Webdesign", href: "https://www.smoothstudio.fr/", photo: "/team/victoire-ecoiffier.png" },
   { name: "Sylvain Nascimento", role: "Développeur web", href: "https://www.linkedin.com/in/sylvainnascimento/", photo: "/team/sylvain-nascimento.png" },
   { name: "Pierre Frechou", role: "Filmmaker / Photographe / Drone", href: "https://www.pierrefrechou.com/", photo: "/team/pierre-frechou.png" },
   { name: "Thomas Escot", role: "Consultant SEO", href: "https://thomas-escot.fr/", photo: "/team/thomas-escot.png" },
