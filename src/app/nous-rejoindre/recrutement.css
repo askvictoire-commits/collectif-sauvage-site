@@ -16,8 +16,9 @@
 .rec .wrap{max-width:1400px;margin-inline:auto;padding-inline:max(16px,4vw)}
 .rec h1,.rec h2,.rec h3{font-family:var(--display);font-weight:400;line-height:1.06;letter-spacing:.005em;text-transform:uppercase;text-wrap:balance;margin:0}
 .rec p{margin:0}
-.rec .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-.rec .btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.8em;border-radius:999px;border:1.5px solid currentColor;font:700 15px/1 var(--body);letter-spacing:.04em;text-decoration:none;color:inherit;background:transparent;cursor:pointer;transition:background .25s,color .25s}
+.rec .eyebrow{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+/* CTA alignés sur le composant Button du site : 51px de haut, contour 1px, Epilogue 400 16px en capitales */
+.rec .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;height:51px;padding:0 20.8px;border-radius:999px;border:1px solid currentColor;font:400 16px/1 var(--body);letter-spacing:.025em;text-transform:uppercase;text-decoration:none;color:inherit;background:transparent;cursor:pointer;transition:background .25s,color .25s}
 .rec .btn:focus-visible,.rec summary:focus-visible,.rec input:focus-visible+label{outline:2px solid var(--pink);outline-offset:3px}
 .rec .btn.pink{color:var(--pink)}
 .rec .btn.pink:hover{background:var(--pink);color:var(--navy)}
@@ -31,8 +32,8 @@
 .rec .hero h1 .hl-ellipse{position:relative;display:inline-block;z-index:1}
 .rec .hero h1 .hl-ellipse img{position:absolute;left:-14%;top:-24%;width:128%;height:150%;object-fit:fill;z-index:-1;pointer-events:none;transform:rotate(-6deg);filter:saturate(1.6) brightness(.7);animation:rec-float 7s ease-in-out infinite}
 .rec .hero h1 .stroke-t{color:transparent;-webkit-text-stroke:2px var(--navy)}
-.rec .hero .lede{font-size:clamp(17px,1.6vw,20px);line-height:1.55;max-width:34ch;font-weight:500}
-.rec .hero .lede strong{font-weight:700}
+.rec .hero .lede{font-size:clamp(17px,1.6vw,20px);line-height:1.55;max-width:34ch;font-weight:400}
+.rec .hero .lede strong{font-weight:600}
 .rec .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 .rec .hero .btn{color:var(--navy)}
 .rec .hero .btn:hover{background:var(--navy);color:var(--white)}
@@ -55,7 +56,7 @@
 .rec .split ul{list-style:none;margin:0;padding:0;display:grid;gap:20px}
 .rec .split li{display:grid;gap:4px;padding-bottom:20px;border-bottom:1px solid rgba(169,179,242,.25)}
 .rec .split li:last-child{border-bottom:0;padding-bottom:0}
-.rec .split li b{font-weight:700;font-size:18px}
+.rec .split li b{font-weight:600;font-size:18px}
 .rec .split li span{color:var(--muted);font-size:15.5px}
 .rec .split .yes h3{color:var(--pink)}
 .rec .split .no h3{color:var(--peri)}
@@ -83,19 +84,19 @@
 .rec .card:hover{border-color:var(--pink);transform:translateY(-3px)}
 .rec .card .k{font-family:var(--display);font-size:25px;text-transform:uppercase;line-height:1.1;color:var(--white)}
 .rec .card p{color:var(--muted);font-size:15.5px}
-.rec .card .tag{justify-self:start;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);border:1px solid var(--pink);border-radius:999px;padding:5px 11px;margin-bottom:6px}
+.rec .card .tag{justify-self:start;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--pink);border:1px solid var(--pink);border-radius:999px;padding:5px 11px;margin-bottom:6px}
 .rec .notfor{margin-top:26px;border-radius:24px;background:var(--navy-2);padding:30px 32px;display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;align-items:start}
 .rec .notfor h3{font-size:30px;color:var(--peri)}
 .rec .notfor ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
 .rec .notfor li{padding-left:28px;position:relative;color:var(--muted)}
-.rec .notfor li::before{content:"✕";position:absolute;left:0;top:0;color:var(--peri);font-weight:700}
-.rec .notfor li b{color:var(--white);font-weight:700}
+.rec .notfor li::before{content:"✕";position:absolute;left:0;top:0;color:var(--peri);font-weight:600}
+.rec .notfor li b{color:var(--white);font-weight:600}
 /* Un poste, une personne */
 .rec .seats{background:var(--navy-2)}
 .rec .seat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .rec .seat{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:20px 22px;border-radius:18px;background:var(--navy);min-width:0}
-.rec .seat span{font-weight:700}
-.rec .pill{flex:none;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.06em;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.rec .seat span{font-weight:600}
+.rec .pill{flex:none;font-style:normal;font-size:12px;font-weight:600;letter-spacing:.06em;padding:6px 12px;border-radius:999px;white-space:nowrap}
 .rec .pill.full{background:transparent;border:1px solid var(--peri);color:var(--peri)}
 .rec .pill.open{background:var(--pink);color:var(--navy)}
 .rec .seats .note{margin-top:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
@@ -123,16 +124,16 @@
 .rec .reveal h4{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:22px;color:var(--pink);margin:0 0 12px}
 .rec .reveal ol{margin:0 0 20px;padding-left:20px;display:grid;gap:6px;color:var(--muted);font-size:15.5px}
 .rec .reveal .human{margin:-4px 0 20px;font-size:15.5px;color:var(--white);border-left:2px solid var(--pink);padding-left:14px}
-.rec .reveal ol b{color:var(--white);font-weight:700}
+.rec .reveal ol b{color:var(--white);font-weight:600}
 .rec .mail{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .rec .mail code{font:700 16px/1 var(--body);background:var(--navy);border:1px solid var(--lav);border-radius:999px;padding:12px 18px;user-select:all;color:var(--white)}
-.rec .mail .btn{padding:.8em 1.3em;font-size:14px}
+.rec .mail .btn{padding:0 20.8px;font-size:14px;height:46px}
 .rec .copied{font-size:13px;color:var(--pink)}
 .rec .apply-form{margin-top:4px}
 .rec .apply-form .f2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .rec .fld{display:flex;flex-direction:column;gap:6px;min-width:0}
 .rec .fld.full{grid-column:1/-1}
-.rec .fld label{font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--pink)}
+.rec .fld label{font-size:13px;font-weight:400;text-transform:uppercase;letter-spacing:.05em;color:var(--pink)}
 .rec .fld label span{text-transform:none;letter-spacing:0;color:rgba(245,152,255,.6)}
 .rec .fld input,.rec .fld textarea{font:400 15px/1.4 var(--body);color:var(--white);background:var(--lav);border:0;border-radius:999px;padding:14px 22px;width:100%}
 .rec .fld textarea{border-radius:24px;resize:vertical}
@@ -142,10 +143,10 @@
 .rec .send{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
 .rec .btn.up{text-transform:uppercase;font-weight:400;letter-spacing:.06em}
 .rec .ferr{font-size:14px;color:var(--pink)}
-.rec .fok{margin-top:16px;padding:14px 18px;border-radius:18px;background:var(--pink);color:var(--navy);font-weight:500}
+.rec .fok{margin-top:16px;padding:14px 18px;border-radius:18px;background:var(--pink);color:var(--navy);font-weight:400}
 .rec .or{display:flex;align-items:center;gap:14px;margin:28px 0 16px;color:var(--muted);font-size:14px}
 .rec .or::before,.rec .or::after{content:"";flex:1;height:1px;background:rgba(169,179,242,.3)}
-.rec .mail a.btn{padding:.8em 1.3em;font-size:14px}
+.rec .mail a.btn{padding:0 20.8px;font-size:14px;height:46px}
 @media (max-width:560px){
 .rec .apply-form .f2{grid-template-columns:1fr}
 }
