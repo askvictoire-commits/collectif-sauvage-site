@@ -172,7 +172,7 @@ export const expertises: Expertise[] = [
     team: [
       {
         name: "Victoire Ecoiffier",
-        role: "Workshop / Stratégie de marque / Stratégie de communication",
+        role: "Stratégie et direction artistique",
         href: "https://www.smoothstudio.fr/",
         photo: "/team/victoire-ecoiffier.png",
       },
