@@ -40,20 +40,25 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
       </section>
 
       <section className="border-t border-black/10 px-6 py-24">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-[1500px]">
           <h2 className="font-display text-2xl uppercase md:text-4xl">
             Découvrez notre équipe
           </h2>
-          <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-10">
+          {/* Mise en page calquée sur le site Squarespace : jusqu'à 5 pastilles par ligne sur toute la largeur,
+              photos, noms, rôles et CTA alignés (le rôle prend la hauteur libre, donc les CTA d'une même ligne restent alignés). */}
+          <div className="mt-12 flex flex-wrap justify-center gap-y-14">
             {expertise.team.map((member) => (
-              <div key={member.name} className="w-32 text-center sm:w-36">
-                <div className="relative mx-auto aspect-square w-28 overflow-hidden rounded-full bg-black/5 md:w-32">
+              <div
+                key={member.name}
+                className="flex basis-1/2 flex-col items-center px-3 text-center md:basis-1/3 lg:basis-1/5"
+              >
+                <div className="relative aspect-square w-[100px] shrink-0 overflow-hidden rounded-full bg-black/5">
                   {member.photo ? (
                     <Image
                       src={member.photo}
                       alt={member.name}
                       fill
-                      sizes="128px"
+                      sizes="100px"
                       className="object-cover grayscale transition-all hover:grayscale-0"
                     />
                   ) : (
@@ -65,16 +70,24 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
                     </div>
                   )}
                 </div>
-                <p className="mt-4 font-display uppercase text-pink" style={{ fontSize: "19px", lineHeight: "22px" }}>
+                <p
+                  className="mt-3 font-display uppercase text-pink"
+                  style={{ fontSize: "24px", lineHeight: "28px" }}
+                >
                   {member.name}
                 </p>
-                <p className="mt-1 text-white" style={{ fontFamily: "var(--font-body)", fontSize: "14px", lineHeight: "21px" }}>{member.role}</p>
+                <p
+                  className="mt-0.5 max-w-[240px] flex-1 pb-5 text-white"
+                  style={{ fontFamily: "var(--font-body)", fontSize: "15px", lineHeight: "21px" }}
+                >
+                  {member.role}
+                </p>
                 {member.href && (
                   <a
                     href={member.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 inline-block rounded-full border border-pink px-5 py-2 text-xs font-medium uppercase text-pink hover:bg-pink hover:text-white"
+                    className="inline-block rounded-full border border-pink px-7 py-3 text-[13px] uppercase text-pink transition-colors hover:bg-pink hover:text-white"
                   >
                     Découvrir
                   </a>
