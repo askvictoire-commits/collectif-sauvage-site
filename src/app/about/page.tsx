@@ -129,7 +129,7 @@ export default function About() {
           </div>
 
           <Button
-            href="mailto:hello@collectifsauvage.fr"
+            href="/nous-rejoindre"
             variant="secondary-periwinkle"
             className="shrink-0"
           >
