@@ -43,18 +43,19 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
       </section>
 
       <section className="border-t border-black/10 px-6 py-24">
-        <div className="mx-auto max-w-[1720px]">
+        <div className="mx-auto max-w-[1500px]">
           <h2 className="font-display text-2xl uppercase md:text-4xl">
             Découvrez notre équipe
           </h2>
-          {/* Mise en page calquée sur le site Squarespace : pastilles espacées sur toute la largeur.
-              Hauteurs fixes (nom sur 1 ligne, rôle sur 2 lignes) pour que photos, noms, rôles et CTA
-              soient strictement alignés d'une carte à l'autre. */}
-          <div className="mt-14 flex flex-wrap justify-center gap-x-10 gap-y-16 xl:gap-x-14">
+          {/* Mise en page calquée sur le site Squarespace : 5 pastilles max par ligne sur toute la largeur,
+              puis retour à la ligne (dernière ligne centrée). Nom sur 1 ligne, rôle sur 2 lignes minimum ;
+              les cartes d'une même ligne ont la même hauteur et le rôle absorbe l'écart,
+              donc les CTA restent strictement alignés. */}
+          <div className="mt-14 flex flex-wrap justify-center gap-y-14">
             {expertise.team.map((member) => (
               <div
                 key={member.name}
-                className="flex w-full max-w-[300px] flex-col items-center text-center sm:w-[300px]"
+                className="flex w-full flex-col items-center px-3 text-center sm:w-1/2 md:w-1/3 lg:w-1/5"
               >
                 <div className="relative aspect-square w-[100px] shrink-0 overflow-hidden rounded-full bg-black/5">
                   {member.photo ? (
@@ -81,7 +82,7 @@ export default function ExpertisePage({ expertise }: { expertise: Expertise }) {
                   {member.name}
                 </p>
                 <p
-                  className="mt-1 h-[42px] text-balance text-white"
+                  className="mt-1 min-h-[42px] max-w-[260px] flex-1 text-balance text-white"
                   style={{ fontFamily: "var(--font-body)", fontSize: "15px", lineHeight: "21px" }}
                 >
                   {member.role}
