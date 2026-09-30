@@ -83,21 +83,14 @@ export default function About() {
         />
         <div className="container-ds relative flex flex-col items-center gap-12 md:flex-row md:items-center md:justify-between md:gap-8">
           <div className="shrink-0">
-            <svg
-              width="56"
-              height="56"
-              viewBox="0 0 56 56"
-              fill="none"
-              className="text-[#a9b3f2]"
+            <Image
+              src="/images/recrutement/asterisk.webp"
+              alt=""
               aria-hidden
-            >
-              <path
-                d="M28 2v52M6 12l44 32M50 12 6 44M2 28h52"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
+              width={90}
+              height={90}
+              className="w-[58px] animate-[spin_26s_linear_infinite] opacity-95 md:w-[90px]"
+            />
             <p className="mt-5 text-lg font-bold uppercase tracking-wide">
               How to be
             </p>
