@@ -365,6 +365,12 @@ export const expertises: Expertise[] = [
         href: "https://mister-anderson.ai/",
         photo: "/team/lionel-rocques.png",
       },
+      {
+        name: "Nicolas Farolfi",
+        role: "Dev et automatisations IA",
+        href: "https://www.nico-pro.com/",
+        photo: "/team/nicolas-farolfi.png",
+      },
     ],
   },
   {
