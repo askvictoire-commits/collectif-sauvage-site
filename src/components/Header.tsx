@@ -13,7 +13,7 @@ export default function Header() {
   const textColor = isPink ? "text-white" : "text-pink";
 
   return (
-    <header className={`sticky top-0 z-50 bg-transparent ${textColor}`}>
+    <header className={`sticky top-0 z-50 border-b border-white/10 bg-ink-900/55 backdrop-blur-md backdrop-saturate-150 ${textColor}`}>
       <div className="container-ds flex items-center justify-between py-4">
         <Link href="/" className="font-display text-xl uppercase tracking-tight md:text-2xl">
           Collectif Sauvage
