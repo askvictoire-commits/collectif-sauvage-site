@@ -3,10 +3,11 @@
 import { useState, type FormEvent } from "react";
 import { contact } from "@/lib/site-data";
 
-// Clé d'accès Web3Forms (gratuite, liée à l'adresse de réception).
-// À définir dans Vercel > Settings > Environment Variables.
-// Sans clé, le formulaire ouvre la messagerie pré-remplie (repli).
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+// Clé d'accès Web3Forms (compte hello@collectifsauvage.fr, formulaire « Contact site Collectif Sauvage »).
+// Clé publique par conception (utilisée côté navigateur) : elle ne permet que d'envoyer vers cette adresse.
+// Peut être surchargée par la variable Vercel NEXT_PUBLIC_WEB3FORMS_KEY.
+const WEB3FORMS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "a3566971-f219-485d-8ead-014052603c2f";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
