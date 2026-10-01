@@ -603,3 +603,77 @@ export const brandNames = [
   "ISA Surf",
   "GIP Skate Parks de France",
 ];
+
+/**
+ * Page Expertise IA (/ia) — volontairement HORS du tableau `expertises` :
+ * pas de tuile sur l'accueil, pas d'entrée dans la nav ni le footer, et noindex (voir src/app/ia/page.tsx).
+ */
+export const iaExpertise: Expertise = {
+  slug: "ia",
+  icon: "/pictos/ia.svg",
+  title: "Intelligence Sauvage",
+  titleHighlight: "Sauvage",
+  heroTitle: "L'intelligence artificielle est un outil,\nc'est l'expertise humaine qui la rend pertinente.",
+  heroMarks: [{ text: "pertinente", style: "highlight" }],
+  heroSubtitle:
+    "Vidéo, direction artistique, visibilité, automatisations : l'IA ouvre de nouveaux terrains de jeu. Mais c'est toujours la stratégie créative et le savoir-faire de nos experts qui la dirigent, la cadrent et lui donnent du sens.",
+  banner: "L'outil change, le regard reste.",
+  sections: [
+    {
+      title: "Automatisations IA",
+      body:
+        "Arrêtez de copier-coller des données à l'infini. On installe des workflows intelligents (n8n, Make) qui tournent 24h/24 : capture et qualification de leads, CRM qui se remplit tout seul, publications planifiées, relances, reporting. Mais on n'automatise pas un process bancal : on commence par comprendre comment vous travaillez, puis on construit des systèmes sur mesure, branchés sur vos outils, que vous gardez en main. Moins de tâches rébarbatives, plus d'énergie pour votre métier.",
+    },
+    {
+      title: "Visibilité dans les IA (SEO & GEO)",
+      body:
+        "Vos clients interrogent ChatGPT, vérifient sur Perplexity, lisent un AI Overview… et repartent avec une décision déjà prise. Le GEO rend vos contenus factuels, structurés et citables par les moteurs génératifs. Il s'ajoute au SEO, il ne le remplace pas. Et ce qui fait la différence, ce n'est pas l'outil : c'est la lecture fine de ce que vos clients cherchent vraiment. Audit de visibilité dans les IA, cartographie des intentions, stratégie de contenu : on vous rend visible sur Google et cité par les IA.",
+    },
+    {
+      title: "Direction artistique IA",
+      body:
+        "L'IA ne remplace pas le regard, elle l'augmente, à condition de savoir la diriger. Shootings et visuels IA, packs photo, univers de marque, déclinaisons de campagne : chaque image générée passe par une direction artistique exigeante, avec une intention, une charte et une cohérence. Ici, l'IA est un outil créatif, pas un raccourci. Avant le premier prompt, il y a une stratégie de marque, un moodboard, des choix assumés. Résultat : des visuels singuliers, fidèles à votre identité, qui ne sentent pas le prompt.",
+    },
+    {
+      title: "Audit & acculturation",
+      body:
+        "Avant d'outiller, on regarde. On audite vos usages, vos process et vos outils pour repérer où l'IA a vraiment sa place, et où elle n'en a pas. Puis on transmet : ateliers de prise en main, cadres d'usage, bonnes pratiques, méthodes de mesure, pour que vos équipes gagnent en autonomie sans réinventer la roue. Des formats sur mesure, ancrés dans vos vrais cas d'usage. On n'apprend pas à appuyer sur un bouton : on apprend à garder la main sur l'outil.",
+    },
+    {
+      title: "Agents IA sur mesure",
+      body:
+        "Un agent IA, c'est un collègue qui ne dort jamais et qui connaît vos dossiers. On conçoit, développe et déploie en production des agents adaptés à vos usages : support client, coordination interne, recherche dans vos documents, préparation de contenus. Les modèles de langage s'intègrent dans vos sites, apps et back-offices, avec du code propre et des garde-fous. Chaque agent part d'un besoin métier précis, pas d'une tendance. Pas de gadget : des outils qui servent vraiment.",
+    },
+    {
+      title: "Production vidéo IA",
+      body:
+        "Le prestige d'un plateau de cinéma, sans le budget d'un long-métrage. Spots publicitaires, packshots produits, brand stories, reels et shorts : nous produisons des vidéos générées et augmentées par l'IA, rendues en 4K et pensées pour arrêter le scroll. Mais une belle image générée ne fait pas un film : c'est l'écriture, le découpage et le regard de réalisateur qui donnent le rythme et le sens. L'IA accélère la fabrication, nos vidéastes tiennent la caméra, même virtuelle.",
+    },
+  ],
+  team: [
+    {
+      name: "Lionel Rocques",
+      role: "Consultant IA / Production vidéo",
+      href: "https://mister-anderson.ai/",
+      photo: "/team/lionel-rocques.png",
+    },
+    {
+      name: "Thomas Escot",
+      role: "Consultant SEO & GEO",
+      href: "https://thomas-escot.fr/",
+      photo: "/team/thomas-escot.png",
+    },
+    {
+      name: "Nicolas Farolfi",
+      role: "Dev / Agents & automatisations IA",
+      href: "https://www.nico-pro.com/",
+      photo: "/team/nicolas-farolfi.png",
+    },
+    {
+      name: "Victoire Ecoiffier",
+      role: "Direction artistique / Visuels IA",
+      href: "https://www.smoothstudio.fr/",
+      photo: "/team/victoire-ecoiffier.png",
+    },
+  ],
+};
