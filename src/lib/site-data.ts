@@ -316,7 +316,8 @@ export const expertises: Expertise[] = [
     titleHighlight: "IA",
     // Tuile accueil : l'IA a désormais sa propre tuile
     tileTitle: "SEO & Acquisition",
-    tileHighlight: "Acquisition",
+    // « SEO & » en noir, « Acquisition » en rose
+    tileHighlight: "SEO &",
     heroTitle:
       "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
     heroMarks: [{ text: "subtil", style: "underline" }],
