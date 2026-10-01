@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 export const metadata: Metadata = {
   title: "Lancement de Marque — Collectif Sauvage",
@@ -626,7 +627,10 @@ export default function LpLancementDeMarque() {
         className="relative flex items-center overflow-hidden"
         style={{ height: "clamp(500px, 56.9vw, 820px)" }}
       >
-        <Image src="/lp-lancement/cta-bg.png" alt="" fill className="object-cover" />
+        {/* Fond en parallaxe au scroll (débordement réduit pour garder le cadrage du visuel) */}
+        <ParallaxBackground extra={0.15}>
+          <Image src="/lp-lancement/cta-bg.png" alt="" fill className="object-cover" />
+        </ParallaxBackground>
         <div className="absolute inset-0" style={{ backgroundColor: "#171D3A", opacity: 0.3 }} />
         <div
           className="relative z-10 w-full py-24 text-center"

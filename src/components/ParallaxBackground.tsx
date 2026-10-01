@@ -6,11 +6,11 @@ import { useEffect, useRef } from 'react';
  * et glisse plus lentement que la page. Le décalage est borné à ce débordement,
  * donc les bords du visuel ne sont jamais visibles. Désactivé si « réduire les animations ».
  */
-const EXTRA = 0.25; // débordement haut/bas, en fraction de la hauteur de la section
+const DEFAULT_EXTRA = 0.25; // débordement haut/bas, en fraction de la hauteur de la section
 
-interface Props { children: React.ReactNode; }
+interface Props { children: React.ReactNode; extra?: number; }
 
-export default function ParallaxBackground({ children }: Props) {
+export default function ParallaxBackground({ children, extra = DEFAULT_EXTRA }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export default function ParallaxBackground({ children }: Props) {
       // -1 quand la section entre par le bas de l'écran, +1 quand elle sort par le haut
       const range = vh / 2 + rect.height / 2;
       const progress = Math.max(-1, Math.min(1, (vh / 2 - (rect.top + rect.height / 2)) / range));
-      const shift = progress * rect.height * EXTRA;
+      const shift = progress * rect.height * extra;
       layer.style.transform = `translate3d(0, ${shift.toFixed(1)}px, 0)`;
     };
     const onScroll = () => { if (!rafId) rafId = requestAnimationFrame(update); };
@@ -40,14 +40,14 @@ export default function ParallaxBackground({ children }: Props) {
       window.removeEventListener('resize', onScroll);
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, []);
+  }, [extra]);
 
   return (
     <div
       ref={ref}
       aria-hidden
       className="pointer-events-none absolute inset-x-0 will-change-transform"
-      style={{ top: `-${EXTRA * 100}%`, bottom: `-${EXTRA * 100}%` }}
+      style={{ top: `-${extra * 100}%`, bottom: `-${extra * 100}%` }}
     >
       {children}
     </div>
