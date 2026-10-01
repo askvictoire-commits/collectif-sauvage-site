@@ -7,6 +7,7 @@ import ProjectsCarousel from "@/components/ProjectsCarousel";
 import HighlightedTitle from "@/components/HighlightedTitle";
 import Button from "@/components/Button";
 import ParallaxIcon from "@/components/ParallaxIcon";
+import ParallaxBackground from "@/components/ParallaxBackground";
 
 export default function Home() {
   return (
@@ -201,15 +202,17 @@ export default function Home() {
 
       {/* Brand collaborations */}
       <section className="relative w-full overflow-hidden py-10">
-        {/* Background nuages */}
-        <Image
-          src="/images/fond-nuages-mid.png"
-          alt=""
-          aria-hidden
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-        />
+        {/* Background nuages, en parallaxe au scroll */}
+        <ParallaxBackground>
+          <Image
+            src="/images/fond-nuages-mid.png"
+            alt=""
+            aria-hidden
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+        </ParallaxBackground>
         <div className="container-ds relative z-10 flex items-center gap-8 md:gap-12">
           {/* Colonne gauche : visuel SVG Brand Collaborations */}
           <div className="flex w-[22%] shrink-0 items-center">
