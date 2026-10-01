@@ -10,8 +10,8 @@ export const nav = [
       { label: "Social Media", href: "/social-media" },
       { label: "UX / Webdesign", href: "/ux-webdesign" },
       { label: "Développement Web", href: "/developpementweb" },
-      { label: "IA", href: "/ia" },
       { label: "Event & Gestion de projet", href: "/evenementiel" },
+      { label: "IA", href: "/ia" },
     ],
   },
   { label: "Nous rejoindre", href: "/nous-rejoindre" },
@@ -758,4 +758,4 @@ export const eventExpertise: Expertise = {
 };
 
 /** Tuiles de la section « Nos expertises » de l'accueil. */
-export const homeExpertises: Expertise[] = [...expertises, iaExpertise, eventExpertise];
+export const homeExpertises: Expertise[] = [...expertises, eventExpertise, iaExpertise];
