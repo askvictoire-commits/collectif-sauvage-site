@@ -400,7 +400,7 @@ export default function LpLancementDeMarque() {
             Chaque projet est différent. Un appel de vingt minutes suffit à
             cadrer votre besoin et vous donner une estimation honnête.
           </p>
-          <div className="mt-16 grid gap-0 md:grid-cols-3">
+          <div className="mt-16 grid gap-4 md:grid-cols-3">
             {pricing.map((tier) => (
               <div
                 key={tier.name}
