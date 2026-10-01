@@ -200,8 +200,8 @@ export default function Home() {
         <ProjectsCarousel />
       </section>
 
-      {/* Brand collaborations */}
-      <section className="relative w-full overflow-hidden py-10">
+      {/* Brand collaborations — bandeau ~25 % plus haut (padding vertical augmenté) */}
+      <section className="relative w-full overflow-hidden py-14 md:py-24">
         {/* Background nuages, en parallaxe au scroll */}
         <ParallaxBackground>
           <Image
