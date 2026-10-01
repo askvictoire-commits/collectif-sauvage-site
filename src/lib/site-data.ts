@@ -106,10 +106,11 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "Un événement aux petits oignons",
-    body: "Zoë conçoit et pilote des événements tout terrain, aussi bien dans le sport de haut niveau que des formats B2B comme le Surf Summit. Emilien, event manager et régisseur, est spécialisé dans les univers sport et outdoor. Deux expertises complémentaires, chacun dans son élément, pour créer des expériences fortes et bien ficelées.",
+    body: "Zoë conçoit et pilote des événements tout terrain, aussi bien dans le sport de haut niveau que des formats B2B comme le Surf Summit. Emilien, event manager et régisseur, est spécialisé dans les univers sport et outdoor. Valentine orchestre la gestion de projet et la coordination, du montage au démontage. Trois expertises complémentaires, chacun dans son élément, pour créer des expériences fortes et bien ficelées.",
     freelances: [
       { name: "Zoë", href: "https://www.salty-event.com/" },
       { name: "Emilien", href: "https://www.linkedin.com/in/emiliengeney/" },
+      { name: "Valentine", href: "https://valentinerolaz.squarespace.com/" },
     ],
   },
   {
@@ -270,7 +271,7 @@ export const expertises: Expertise[] = [
         photo: "/team/zoe-zadouroff.png",
       },
       {
-        name: "Emilie Geney",
+        name: "Emilien Geney",
         role: "Design",
         href: "https://www.linkedin.com/in/emiliengeney/",
         photo: "/team/emilien-geney.png",
@@ -674,6 +675,69 @@ export const iaExpertise: Expertise = {
       role: "Direction artistique / Visuels IA",
       href: "https://www.smoothstudio.fr/",
       photo: "/team/victoire-ecoiffier.png",
+    },
+  ],
+};
+
+// Page Événementiel accessible par URL directe uniquement (/evenementiel) :
+// hors du tableau `expertises`, donc absente de la nav, du footer et de l'accueil.
+export const eventExpertise: Expertise = {
+  slug: "evenementiel",
+  icon: "/pictos/strategie.svg",
+  title: "Event & Gestion de projet",
+  titleHighlight: "Event",
+  heroTitle: "Un bon événement, ça ne s'improvise pas.\nÇa se pilote.",
+  heroMarks: [
+    { text: "s'improvise", style: "strike" },
+    { text: "pilote", style: "underline" },
+  ],
+  heroSubtitle:
+    "Compétitions internationales, summits B2B, rassemblements outdoor : on conçoit, on planifie et on coordonne, de la première idée au dernier barnum replié. Et entre deux événements, on tient le fil de vos projets de communication.",
+  banner: "Le jour J se gagne bien avant le jour J.",
+  sections: [
+    {
+      title: "Conception d'événements",
+      body: "Un événement réussi commence par une intention claire. Pourquoi on réunit ces gens, ce qu'on veut qu'ils vivent, ce qu'ils doivent en retenir. On imagine le concept, le format, le déroulé et le parcours des participants, puis on le confronte au réel : budget, lieu, saison, contraintes terrain. Résultat : un événement qui a du sens avant d'avoir de l'allure.",
+    },
+    {
+      title: "Production & régie",
+      body: "Rétroplanning, prestataires, technique, logistique, sécurité : on tient tous les fils pour que rien ne lâche le jour J. Du montage au démontage, nos régisseurs et event managers sont sur le terrain, talkie à la main, pour anticiper plutôt que subir. Vous profitez de votre événement, on s'occupe de ce qui se passe en coulisses.",
+    },
+    {
+      title: "Événements sportifs & outdoor",
+      body: "Championnats internationaux de surf, compétitions de haut niveau, summits B2B, rassemblements outdoor de plusieurs centaines de participants : le sport et la nature, c'est notre terrain de jeu. On en connaît les codes, les fédérations, les athlètes, les aléas météo et les marées. Et on sait qu'une vague ne prévient pas avant d'arriver.",
+    },
+    {
+      title: "Événements écoresponsables",
+      body: "Organiser un événement en pleine nature, c'est aussi en prendre soin. Choix des prestataires locaux, gestion des déchets, mobilité, sobriété des supports : on intègre l'impact dès la conception, pas en note de bas de page. Moins de plastique, plus de bon sens, sans rien enlever à l'expérience.",
+    },
+    {
+      title: "Gestion de projet",
+      body: "Print, digital, événementiel : quand un projet de communication mobilise plusieurs métiers, il faut quelqu'un pour tenir la barre. On cadre, on planifie, on coordonne les équipes et les freelances du collectif, on suit chaque étape avec rigueur et on vous tient au courant sans vous noyer. Ponctuellement ou sur la durée, un seul interlocuteur pour que tout avance.",
+    },
+    {
+      title: "Identité & supports d'événement",
+      body: "Un événement, c'est aussi une marque. Logo, univers graphique, affiches, signalétique, kakémonos, badges, programmes, newsletters et réseaux : on habille l'événement de A à Z, du premier teaser au dernier merci. Des supports cohérents, pensés pour le terrain autant que pour l'écran.",
+    },
+  ],
+  team: [
+    {
+      name: "Zoë Zadouroff",
+      role: "Event manager / Coordination événements sportifs",
+      href: "https://www.salty-event.com/",
+      photo: "/team/zoe-zadouroff.png",
+    },
+    {
+      name: "Emilien Geney",
+      role: "Event manager / Régisseur sport & outdoor",
+      href: "https://www.linkedin.com/in/emiliengeney/",
+      photo: "/team/emilien-geney.png",
+    },
+    {
+      name: "Valentine Rolaz",
+      role: "Gestion de projet / Event manager",
+      href: "https://valentinerolaz.squarespace.com/",
+      photo: "/team/valentine-rolaz.png",
     },
   ],
 };
