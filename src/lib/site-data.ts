@@ -653,7 +653,7 @@ export const iaExpertise: Expertise = {
   team: [
     {
       name: "Lionel Rocques",
-      role: "Consultant IA / Production vidéo",
+      role: "Consultant IA / Agents & automatisations IA",
       href: "https://mister-anderson.ai/",
       photo: "/team/lionel-rocques.png",
     },
