@@ -708,7 +708,7 @@ export const eventExpertise: Expertise = {
       body: "Championnats internationaux de surf, compétitions de haut niveau, summits B2B, rassemblements outdoor de plusieurs centaines de participants : le sport et la nature, c'est notre terrain de jeu. On en connaît les codes, les fédérations, les athlètes, les aléas météo et les marées. Et on sait qu'une vague ne prévient pas avant d'arriver.",
     },
     {
-      title: "Événements écoresponsables",
+      title: "Événements engagés",
       body: "Organiser un événement en pleine nature, c'est aussi en prendre soin. Choix des prestataires locaux, gestion des déchets, mobilité, sobriété des supports : on intègre l'impact dès la conception, pas en note de bas de page. Moins de plastique, plus de bon sens, sans rien enlever à l'expérience.",
     },
     {
