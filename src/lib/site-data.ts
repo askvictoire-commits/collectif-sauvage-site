@@ -213,6 +213,8 @@ export const expertises: Expertise[] = [
     icon: "/pictos/creation.svg",
     title: "Création",
     titleHighlight: "Créa",
+    // Tuile accueil : « Créa » en rose, « tion » en noir
+    tileHighlight: "tion",
     heroTitle: "La création est au cœur de ce qu'on fait.",
     heroMarks: [{ text: "cœur", style: "circle" }],
     heroSubtitle:
