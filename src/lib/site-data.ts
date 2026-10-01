@@ -10,7 +10,7 @@ export const nav = [
       { label: "Social Media", href: "/social-media" },
       { label: "UX / Webdesign", href: "/ux-webdesign" },
       { label: "Développement Web", href: "/developpementweb" },
-      { label: "Intelligence Sauvage (IA)", href: "/ia" },
+      { label: "IA", href: "/ia" },
       { label: "Event & Gestion de projet", href: "/evenementiel" },
     ],
   },
@@ -312,6 +312,9 @@ export const expertises: Expertise[] = [
     icon: "/pictos/seo.svg",
     title: "SEO, IA & Acquisition",
     titleHighlight: "IA",
+    // Tuile accueil : l'IA a désormais sa propre tuile
+    tileTitle: "SEO & Acquisition",
+    tileHighlight: "Acquisition",
     heroTitle:
       "Faire de la pub en ligne, c'est facile. En faire qui sert vraiment vos objectifs, c'est un peu plus subtil.",
     heroMarks: [{ text: "subtil", style: "underline" }],
@@ -619,8 +622,8 @@ export const iaExpertise: Expertise = {
   icon: "/pictos/ia.svg",
   title: "Intelligence Sauvage",
   titleHighlight: "Sauvage",
-  tileTitle: "Intelligence artificielle",
-  tileHighlight: "artificielle",
+  tileTitle: "IA",
+  tileHighlight: "",
   heroTitle: "L'intelligence artificielle est un outil,\nc'est l'expertise humaine qui la rend pertinente.",
   heroMarks: [{ text: "pertinente", style: "highlight" }],
   heroSubtitle:
