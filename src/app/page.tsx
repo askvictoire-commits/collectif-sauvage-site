@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { expertises } from "@/lib/site-data";
+import { homeExpertises } from "@/lib/site-data";
 import LookingForAccordion from "@/components/LookingForAccordion";
 import Marquee from "@/components/Marquee";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
@@ -163,7 +163,7 @@ export default function Home() {
             Nos expertises
           </h2>
           <div className="expertise-grid mt-10 mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
-            {expertises.map((exp, i) => (
+            {homeExpertises.map((exp, i) => (
               <Link
                 key={exp.slug}
                 href={`/${exp.slug}`}

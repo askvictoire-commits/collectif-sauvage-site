@@ -10,6 +10,8 @@ export const nav = [
       { label: "Social Media", href: "/social-media" },
       { label: "UX / Webdesign", href: "/ux-webdesign" },
       { label: "Développement Web", href: "/developpementweb" },
+      { label: "Intelligence Sauvage (IA)", href: "/ia" },
+      { label: "Event & Gestion de projet", href: "/evenementiel" },
     ],
   },
   { label: "Nous rejoindre", href: "/nous-rejoindre" },
@@ -606,8 +608,8 @@ export const brandNames = [
 ];
 
 /**
- * Page Expertise IA (/ia) — volontairement HORS du tableau `expertises` :
- * pas de tuile sur l'accueil, pas d'entrée dans la nav ni le footer, et noindex (voir src/app/ia/page.tsx).
+ * Page Expertise IA (/ia) — déclarée hors du tableau `expertises` mais affichée
+ * dans la nav (menu Expertises) et en tuile sur l'accueil (voir `homeExpertises`).
  */
 export const iaExpertise: Expertise = {
   slug: "ia",
@@ -679,11 +681,11 @@ export const iaExpertise: Expertise = {
   ],
 };
 
-// Page Événementiel accessible par URL directe uniquement (/evenementiel) :
-// hors du tableau `expertises`, donc absente de la nav, du footer et de l'accueil.
+// Page Événementiel (/evenementiel) — déclarée hors du tableau `expertises` mais affichée
+// dans la nav (menu Expertises) et en tuile sur l'accueil (voir `homeExpertises`).
 export const eventExpertise: Expertise = {
   slug: "evenementiel",
-  icon: "/pictos/strategie.svg",
+  icon: "/pictos/evenementiel.svg",
   title: "Event & Gestion de projet",
   titleHighlight: "Event",
   heroTitle: "Un bon événement, ça ne s'improvise pas.\nÇa se pilote.",
@@ -741,3 +743,6 @@ export const eventExpertise: Expertise = {
     },
   ],
 };
+
+/** Tuiles de la section « Nos expertises » de l'accueil. */
+export const homeExpertises: Expertise[] = [...expertises, iaExpertise, eventExpertise];
