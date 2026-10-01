@@ -131,6 +131,9 @@ export type Expertise = {
   title: string;
   /** substring of `title` rendered in the pink accent color on the home page grid */
   titleHighlight: string;
+  /** libellé de la tuile d'accueil s'il diffère de `title` (+ partie en noir) */
+  tileTitle?: string;
+  tileHighlight?: string;
   /** « \n » force un retour à la ligne */
   heroTitle: string;
   /** mots de l'accroche dessinés en rose à l'arrivée (barré, entouré, souligné, surligné) */
@@ -616,6 +619,8 @@ export const iaExpertise: Expertise = {
   icon: "/pictos/ia.svg",
   title: "Intelligence Sauvage",
   titleHighlight: "Sauvage",
+  tileTitle: "Intelligence artificielle",
+  tileHighlight: "artificielle",
   heroTitle: "L'intelligence artificielle est un outil,\nc'est l'expertise humaine qui la rend pertinente.",
   heroMarks: [{ text: "pertinente", style: "highlight" }],
   heroSubtitle:
@@ -688,6 +693,8 @@ export const eventExpertise: Expertise = {
   icon: "/pictos/evenementiel.svg",
   title: "Event & Gestion de projet",
   titleHighlight: "Event",
+  // Tuile accueil : « Event » en rose, le reste en noir
+  tileHighlight: "& Gestion de projet",
   heroTitle: "Un bon événement, ça ne s'improvise pas.\nÇa se pilote.",
   heroMarks: [
     { text: "s'improvise", style: "strike" },

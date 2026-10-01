@@ -162,22 +162,22 @@ export default function Home() {
           <h2 className="font-display text-3xl uppercase md:text-5xl">
             Nos expertises
           </h2>
-          <div className="expertise-grid mt-10 mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+          <div className="expertise-grid mt-10 mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {homeExpertises.map((exp, i) => (
               <Link
                 key={exp.slug}
                 href={`/${exp.slug}`}
-                className="group flex aspect-square flex-col items-center justify-center gap-4 overflow-hidden bg-white p-4 text-center hover:opacity-90 sm:p-6"
+                className="group @container flex aspect-square flex-col items-center justify-center gap-4 overflow-hidden bg-white px-3 py-4 text-center hover:opacity-90 sm:py-6"
               >
                 <div className="relative aspect-square w-[42%]">
                   <ParallaxIcon index={i}>
                     <Image src={exp.icon} alt="" fill className="object-contain" />
                   </ParallaxIcon>
                 </div>
-                <h3 className="relative z-10 font-display text-[clamp(0.75rem,1.4vw,18px)] font-normal uppercase leading-tight text-[#f598ff]">
+                <h3 className="relative z-10 whitespace-nowrap font-display text-[length:min(18px,9cqw)] font-normal uppercase leading-tight text-[#f598ff]">
                   <HighlightedTitle
-                    title={exp.title}
-                    highlight={exp.titleHighlight}
+                    title={exp.tileTitle ?? exp.title}
+                    highlight={exp.tileHighlight ?? exp.titleHighlight}
                     highlightClassName="text-black"
                   />
                 </h3>
