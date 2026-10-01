@@ -623,7 +623,7 @@ export const iaExpertise: Expertise = {
   title: "Intelligence Sauvage",
   titleHighlight: "Sauvage",
   tileTitle: "IA",
-  tileHighlight: "",
+  tileHighlight: "A",
   heroTitle: "L'intelligence artificielle est un outil,\nc'est l'expertise humaine qui la rend pertinente.",
   heroMarks: [{ text: "pertinente", style: "highlight" }],
   heroSubtitle:
