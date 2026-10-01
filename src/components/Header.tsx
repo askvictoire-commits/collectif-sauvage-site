@@ -28,16 +28,16 @@ export default function Header() {
                 onMouseEnter={() => setExpertisesOpen(true)}
                 onMouseLeave={() => setExpertisesOpen(false)}
               >
-                <button className="text-sm uppercase tracking-wide hover:opacity-70">
+                <button className="text-base font-normal leading-6 uppercase tracking-wide hover:opacity-70">
                   {item.label}
                 </button>
                 {expertisesOpen && (
-                  <div className="absolute left-0 top-full w-64 border border-white/10 bg-ink-900 py-2 text-white shadow-xl">
+                  <div className="absolute left-0 top-full w-72 border border-white/10 bg-ink-900 py-2 text-white shadow-xl">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-4 py-2 text-sm normal-case hover:bg-white/10"
+                        className="block px-4 py-2 text-base font-normal leading-6 normal-case hover:bg-white/10"
                       >
                         {child.label}
                       </Link>
@@ -49,7 +49,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm uppercase tracking-wide hover:opacity-70"
+                className="text-base font-normal leading-6 uppercase tracking-wide hover:opacity-70"
               >
                 {item.label}
               </Link>
