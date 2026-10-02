@@ -240,24 +240,24 @@ export default function Home() {
 
       {/* CTA final */}
       <section className="px-6 py-24 md:py-36">
-        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-card bg-[#94abf9] px-10 py-10 text-white md:px-14 md:py-12">
-          {/* Double ellipse decoration — fully visible, behind text */}
+        <div className="relative mx-auto flex max-w-[820px] flex-col items-center overflow-hidden rounded-card bg-[#94abf9] px-6 pb-14 pt-16 text-center text-white md:px-14 md:pb-[83px] md:pt-[120px]">
+          {/* Double ellipse — derrière « SE LANCER », alignée sur le « S » comme sur Squarespace */}
           <Image
             src="/images/double-ellipse.webp"
             alt=""
             aria-hidden
             width={600}
             height={500}
-            className="pointer-events-none absolute left-[50%] top-[8%] w-[44%] opacity-95"
+            className="pointer-events-none absolute left-[43.5%] top-[9%] w-[42%] opacity-95"
           />
-          <h2 className="font-display relative z-10 whitespace-nowrap text-[clamp(2.8rem,5.8vw,5.2rem)] uppercase leading-[1] text-white">
+          <h2 className="font-display relative z-10 text-[clamp(2.4rem,5.8vw,4.7rem)] uppercase leading-[1] text-white md:whitespace-nowrap">
             Prêts à se lancer&nbsp;?
           </h2>
-          <div className="relative z-10 mt-12 flex flex-wrap items-center gap-4">
-            <Button href="/contact" variant="primary">
+          <div className="relative z-10 mt-12 flex w-full flex-col items-center justify-center gap-3 sm:flex-row md:mt-[132px]">
+            <Button href="/contact" variant="primary" className="w-full sm:w-[285px] md:h-[72px]">
               Parlons en ensemble
             </Button>
-            <Button href="/about" variant="primary">
+            <Button href="/about" variant="primary" className="w-full sm:w-[285px] md:h-[72px]">
               Découvrir l&apos;équipe
             </Button>
           </div>
