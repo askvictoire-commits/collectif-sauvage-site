@@ -31,7 +31,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="fr"
       className={`${anton.variable} ${epilogue.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Reveal au chargement : masque main/footer avant le 1er affichage, ScrollReveal prend le relais (filet : 4 s) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;var r=document.documentElement;r.classList.add('sr-boot');setTimeout(function(){r.classList.remove('sr-boot')},4000)}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-ink-900 text-white">
         <Header />
         <main className="flex-1">{children}</main>

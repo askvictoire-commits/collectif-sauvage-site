@@ -22,6 +22,7 @@ export default function ProjectsCarousel() {
         {projects.map((p) => (
           <div
             key={p.name}
+            data-reveal
             className="group shrink-0 w-[240px] snap-start cursor-pointer sm:w-[260px]"
           >
             {/* Image */}
