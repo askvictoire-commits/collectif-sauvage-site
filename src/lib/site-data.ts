@@ -117,7 +117,7 @@ export const lookingFor: LookingFor[] = [
   },
   {
     need: "IA et créativité : libérer du temps, amplifier vos idées",
-    body: "Lionel met en place des automatisations IA pour fluidifier votre organisation et réduire les tâches répétitives. Thomas vous rend visible là où vos clients cherchent désormais, jusque dans les réponses des IA, grâce au SEO et au GEO. Nicolas développe des agents IA sur mesure et les branche sur vos outils du quotidien. Victoire s'appuie sur l'IA comme levier créatif afin de donner plus de force et de cohérence aux marques. L'IA optimise et prépare le terrain, mais c'est l'humain qui éclaire, incarne et fait la différence.",
+    body: "Lionel audite votre organisation, conçoit des agents IA et met en place des automatisations pour fluidifier votre quotidien et réduire les tâches répétitives. Thomas vous rend visible là où vos clients cherchent désormais, jusque dans les réponses des IA, grâce au SEO et au GEO. Nicolas développe des agents et des automatisations sur mesure, qu'il intègre directement au site qu'il crée pour vous et à vos outils du quotidien. Victoire s'appuie sur l'IA pour enrichir l'univers visuel de votre marque, dans le cadre d'une direction artistique maîtrisée. L'IA optimise et prépare le terrain, mais c'est l'humain qui éclaire, incarne et fait la différence.",
     freelances: [
       { name: "Lionel", href: "https://mister-anderson.ai/" },
       { name: "Thomas", href: "https://thomas-escot.fr/" },
