@@ -15,7 +15,17 @@ export default function Header() {
   return (
     <header className={`sticky top-0 z-50 border-b border-white/10 bg-ink-900/55 backdrop-blur-md backdrop-saturate-150 ${textColor}`}>
       <div className="container-ds flex items-center justify-between py-4">
-        <Link href="/" className="font-display text-xl uppercase tracking-tight md:text-2xl">
+        <Link
+          href="/"
+          onClick={(e) => {
+            setOpen(false);
+            if (pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+          className="font-display text-xl uppercase tracking-tight md:text-2xl"
+        >
           Collectif Sauvage
         </Link>
 
