@@ -116,6 +116,8 @@ const pricing = [
       "Logo modulable",
       "Charte graphique de base",
       "Guide de tonalité",
+      "Webdesign 3 pages",
+      "Design system",
     ],
     note: "Un expert stratégie + design.",
     featured: false,
