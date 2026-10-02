@@ -151,3 +151,20 @@ body {
   .hero-mark--strike::after, .hero-mark--underline::after, .hero-mark--highlight::before { transform: none; animation: none; }
   .hero-mark__circle path { stroke-dashoffset: 0; animation: none; }
 }
+
+/* ---------- Reveal on scroll (ScrollReveal.tsx) ---------- */
+[data-sr] {
+  opacity: 0;
+  translate: 0 28px;
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    translate 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+[data-sr="in"] {
+  /* revient aux valeurs d'origine de l'élément (classes Tailwind) */
+  opacity: revert-layer;
+  translate: revert-layer;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-sr] { opacity: 1; translate: none; transition: none; }
+}
