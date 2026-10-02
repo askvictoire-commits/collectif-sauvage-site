@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 /**
  * Reveal on scroll appliqué à tout le site (monté une fois dans layout.tsx).
  * Les blocs de contenu (titres, textes, images, listes, formulaires, boutons…) apparaissent
- * en fondu pop (opacité + petit zoom avec rebond) quand ils entrent dans l'écran, avec un petit décalage entre voisins.
+ * en fondu + zoom doux (opacité + scale 0.9 → 1, sans rebond, comme sur Squarespace) quand ils entrent dans l'écran, avec un petit décalage entre voisins.
  *
  * - Utilise la propriété CSS `scale` (pas `transform`) pour ne pas écraser les transformations existantes.
  * - Ce qui est déjà visible au chargement n'est pas masqué (pas de clignotement du hero).
@@ -21,7 +21,7 @@ const SELECTOR = [
 ].join(',');
 
 const EXCLUDE = 'header, [data-no-reveal], .animate-marquee, .overflow-x-auto';
-const STAGGER_MS = 90;
+const STAGGER_MS = 120;
 const MAX_STAGGER = 5;
 
 export default function ScrollReveal() {
@@ -68,7 +68,7 @@ export default function ScrollReveal() {
           window.setTimeout(() => {
             el.removeAttribute('data-sr');
             el.style.transitionDelay = '';
-          }, 1200 + Math.min(i, MAX_STAGGER) * STAGGER_MS);
+          }, 1500 + Math.min(i, MAX_STAGGER) * STAGGER_MS);
         });
       },
       { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
