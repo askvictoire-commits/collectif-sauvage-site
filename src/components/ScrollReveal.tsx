@@ -8,8 +8,7 @@ import { usePathname } from 'next/navigation';
  * en fondu + zoom doux (opacité + scale 0.9 → 1, sans rebond, comme sur Squarespace) quand ils entrent dans l'écran, avec un petit décalage entre voisins.
  *
  * - Utilise la propriété CSS `scale` (pas `transform`) pour ne pas écraser les transformations existantes.
- * - Le haut de page s'anime aussi au chargement (comme Squarespace) : un script dans <head>
- *   masque main/footer (classe `sr-boot`) jusqu'à ce que ce composant prenne le relais → pas de clignotement.
+ * - Ce qui est déjà visible au chargement (hero) n'est pas animé : choix de Victoire.
  * - Visuels en `fill` (image absolue qui remplit son parent, avec un alt) : c'est le cadre parent qui s'anime.
  * - Ignorés : header, éléments en position absolute/fixed (décors, ellipses, images `fill`),
  *   marquees, carrousels, titres hero déjà animés (.hero-title), et tout ce qui est dans [data-no-reveal].
@@ -30,13 +29,12 @@ export default function ScrollReveal() {
   const pathname = usePathname();
 
   useLayoutEffect(() => {
-    const root = document.documentElement;
-    const unboot = () => root.classList.remove('sr-boot');
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return unboot();
-    if (!('IntersectionObserver' in window)) return unboot();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
 
     const scope = document.querySelectorAll<HTMLElement>('main, footer');
     const picked: HTMLElement[] = [];
+    const vh = window.innerHeight;
 
     scope.forEach((zone) => {
       zone.querySelectorAll<HTMLElement>(SELECTOR).forEach((node) => {
@@ -60,13 +58,13 @@ export default function ScrollReveal() {
         if (cs.display === 'none' || cs.visibility === 'hidden') return;
         const r = el.getBoundingClientRect();
         if (r.width === 0 && r.height === 0) return;
+        if (r.top < vh * 0.9 && r.bottom > 0) return; // déjà visible au chargement (hero) : pas d'animation
         picked.push(el);
       });
     });
 
-    picked.forEach((el) => el.setAttribute('data-sr', ''));
-    unboot();
     if (!picked.length) return;
+    picked.forEach((el) => el.setAttribute('data-sr', ''));
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -75,18 +73,27 @@ export default function ScrollReveal() {
           .map((e) => e.target as HTMLElement)
           .sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top || a.getBoundingClientRect().left - b.getBoundingClientRect().left);
         entering.forEach((el, i) => {
+          io.unobserve(el);
+          // on attend que les images du bloc soient chargées (max 1,5 s) pour que le visuel apparaisse avec le fondu
+          const imgs = el.tagName === 'IMG' ? [el as HTMLImageElement] : Array.from(el.querySelectorAll('img'));
+          const ready = Promise.all(
+            imgs.map((img) => (img.complete && img.naturalWidth ? Promise.resolve() : img.decode().catch(() => {}))),
+          );
+          Promise.race([ready, new Promise((r) => window.setTimeout(r, 1500))]).then(() => reveal(el, i));
+        });
+      },
+      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
+    );
+
+    function reveal(el: HTMLElement, i: number) {
           el.style.transitionDelay = `${Math.min(i, MAX_STAGGER) * STAGGER_MS}ms`;
           el.setAttribute('data-sr', 'in');
-          io.unobserve(el);
           // on rend la main aux transitions propres de l'élément une fois l'apparition finie
           window.setTimeout(() => {
             el.removeAttribute('data-sr');
             el.style.transitionDelay = '';
           }, 1500 + Math.min(i, MAX_STAGGER) * STAGGER_MS);
-        });
-      },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
-    );
+    }
     picked.forEach((el) => io.observe(el));
 
     return () => {

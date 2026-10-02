@@ -153,10 +153,6 @@ body {
 }
 
 /* ---------- Reveal on scroll (ScrollReveal.tsx) : fondu pop ---------- */
-html.sr-boot main,
-html.sr-boot footer {
-  opacity: 0;
-}
 [data-sr] {
   opacity: 0;
   scale: 0.9;
