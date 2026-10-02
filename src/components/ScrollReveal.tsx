@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 /**
  * Reveal on scroll appliqué à tout le site (monté une fois dans layout.tsx).
  * Les blocs de contenu (titres, textes, images, listes, formulaires, boutons…) apparaissent
- * en fondu + légère montée quand ils entrent dans l'écran, avec un petit décalage entre voisins.
+ * en fondu pop (opacité + petit zoom avec rebond) quand ils entrent dans l'écran, avec un petit décalage entre voisins.
  *
- * - Utilise la propriété CSS `translate` (pas `transform`) pour ne pas écraser les transformations existantes.
+ * - Utilise la propriété CSS `scale` (pas `transform`) pour ne pas écraser les transformations existantes.
  * - Ce qui est déjà visible au chargement n'est pas masqué (pas de clignotement du hero).
  * - Ignorés : header, éléments en position absolute/fixed (décors, ellipses, images `fill`),
  *   marquees, carrousels, et tout ce qui est dans [data-no-reveal].
