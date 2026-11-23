@@ -140,16 +140,16 @@ input[aria-invalid=true]{border-color:var(--danger)}
 .swipe .sec.bonus{background:var(--peri)}
 .swipe .qq{font-family:var(--display);text-transform:uppercase;margin-top:.9rem;font-size:clamp(2.2rem,9vw,3.4rem);line-height:.95}
 .answers{margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:.75rem;font-size:.9rem;font-weight:700}
-.answers div{border:2px solid var(--ink);border-radius:1rem;padding:.75rem;transition:transform .15s,background .15s,color .15s}
-.answers div:last-child{text-align:right}
-.answers div small{display:block;font-size:.7rem;opacity:.6;font-weight:600}
-.answers div.on{transform:scale(1.05);background:var(--ink);color:var(--white)}
+.answers button{font:inherit;color:var(--ink);text-align:left;cursor:pointer;border:2px solid transparent;border-radius:1rem;padding:.9rem 1rem;min-height:64px;line-height:1.2;transition:transform .15s,border-color .15s,box-shadow .15s}
+.answers button[data-c="A"]{background:var(--peri)}
+.answers button[data-c="B"]{background:var(--pink);text-align:right}
+.answers button:hover,.answers button:focus-visible{border-color:var(--ink);outline:none}
+.answers button:active{transform:scale(.97)}
+.answers button.on{transform:scale(1.05);border-color:var(--ink);box-shadow:0 6px 18px rgba(23,29,58,.25)}
 .stamp{position:absolute;left:50%;top:50%;pointer-events:none;font-family:var(--display);text-transform:uppercase;font-size:1.5rem;color:var(--ink);
   background:var(--pink);border:4px solid var(--ink);border-radius:.75rem;padding:.5rem 1rem;text-align:center;max-width:80%;
   translate:-50% -50%;animation:stamp .3s cubic-bezier(.3,1.4,.5,1) both}
 @keyframes stamp{from{opacity:0;transform:scale(2.2) rotate(var(--r))}to{opacity:1;transform:scale(1) rotate(0)}}
-.choices{position:absolute;left:0;right:0;bottom:-6rem;display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-.choices .btn{min-height:56px;padding:.6rem 1rem;font-size:.95rem;line-height:1.15}
 
 /* résultat */
 .result{max-width:36rem;margin:0 auto;padding:2.5rem 1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center}
@@ -378,13 +378,12 @@ function nextCard(){
       <p class="kicker">Question ${idx+1} / ${QUESTIONS.length}</p>
       <span class="sec ${Q.bonus?'bonus':''}">${Q.sec}</span>
       <p class="qq">${esc(Q.q)}</p>
-      <div class="answers"><div data-s="A"><small>← gauche</small>${esc(Q.A.label)}</div><div data-s="B"><small>droite →</small>${esc(Q.B.label)}</div></div>
-    </div>
-    <div class="choices"><button class="btn peri" data-c="A">← ${esc(Q.A.label)}</button><button class="btn pink" data-c="B">${esc(Q.B.label)} →</button></div>`;
-  const card=document.getElementById('sw'), opts=card.querySelectorAll('.answers div');
+      <div class="answers"><button type="button" data-c="A">← ${esc(Q.A.label)}</button><button type="button" data-c="B">${esc(Q.B.label)} →</button></div>
+    </div>`;
+  const card=document.getElementById('sw'), opts=card.querySelectorAll('.answers button');
   let x=0, startX=0, dragging=false, chosen=null;
   const setX=v=>{x=v;card.style.transform=`translateX(${x}px) rotate(${Math.max(-18,Math.min(18,x/200*18))}deg)`;
-    const s=chosen||(x<-40?'A':x>40?'B':null);opts.forEach(o=>o.classList.toggle('on',o.dataset.s===s))};
+    const s=chosen||(x<-40?'A':x>40?'B':null);opts.forEach(o=>o.classList.toggle('on',o.dataset.c===s))};
   const choose=s=>{
     if(chosen)return;chosen=s;setX(x);card.style.cursor='default';
     const st=document.createElement('div');st.className='stamp';st.style.setProperty('--r',s==='A'?'-14deg':'14deg');st.textContent=Q[s].label;card.appendChild(st);
@@ -396,7 +395,7 @@ function nextCard(){
           else nextCard();};
     },380);
   };
-  card.addEventListener('pointerdown',e=>{if(chosen)return;dragging=true;startX=e.clientX-x;card.setPointerCapture(e.pointerId);card.style.transition='none'});
+  card.addEventListener('pointerdown',e=>{if(chosen||e.target.closest('[data-c]'))return;dragging=true;startX=e.clientX-x;card.setPointerCapture(e.pointerId);card.style.transition='none'});
   card.addEventListener('pointermove',e=>{if(!dragging)return;const raw=e.clientX-startX;setX(raw*0.9)});
   const end=()=>{if(!dragging)return;dragging=false;
     if(x<-100)choose('A');else if(x>100)choose('B');
