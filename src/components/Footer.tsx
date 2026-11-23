@@ -32,6 +32,13 @@ export default function Footer() {
               >
                 Pack lancement de marque
               </Link>
+              {/* Page HTML statique (public/) : <a> et non <Link> pour un chargement complet */}
+              <a
+                href="/test-ia-masters.html"
+                className="block text-sm hover:underline"
+              >
+                Test IA Masters
+              </a>
             </div>
             <div>
               <p className="font-display text-lg uppercase text-ink-900">
