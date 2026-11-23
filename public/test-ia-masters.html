@@ -54,20 +54,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,152,255,.45)}50%{box-shadow:0 0 0 16px rgba(245,152,255,0)}}
 .star{animation:spin 14s linear infinite;color:var(--white)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.ellipse{position:absolute;pointer-events:none;color:var(--peri);z-index:-1}
-/* boucle tissée : la partie haute passe derrière le mot, la partie basse devant */
-.ellipse.front{z-index:1;clip-path:inset(56% 0 0 0)}
-.animal-name,.word.lion{isolation:isolate}
-.ellipse path{stroke-dasharray:1000;stroke-dashoffset:1000;animation:draw 1.1s ease-out forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
 .card{background:var(--card);color:var(--card-ink);border-radius:1.5rem;box-shadow:var(--shadow)}
 .kicker{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--card-muted)}
 
 /* marquee façon site */
 .marquee{overflow:hidden;white-space:nowrap;background:var(--peri);color:var(--ink);font-family:var(--display);text-transform:uppercase;
   font-size:1rem;padding:.45rem 0;letter-spacing:.02em}
-.marquee span{display:inline-block;animation:marq 22s linear infinite;padding-left:100%}
-@keyframes marq{to{transform:translateX(-100%)}}
+/* deux copies identiques défilent de -50% : boucle sans début ni trou */
+.marquee .track{display:inline-flex;animation:marq 45s linear infinite}
+.marquee .track span{flex-shrink:0;white-space:pre}
+@keyframes marq{to{transform:translateX(-50%)}}
 
 /* ---------- écrans ---------- */
 main{position:relative;min-height:100dvh}
@@ -158,7 +154,7 @@ input[aria-invalid=true]{border-color:var(--danger)}
 .result{max-width:36rem;margin:0 auto;padding:2.5rem 1.25rem;display:flex;flex-direction:column;align-items:center;text-align:center}
 .big-animal{margin-top:1.5rem;color:var(--white);animation:spring .9s cubic-bezier(.34,1.7,.5,1) .2s both}
 @keyframes spring{from{transform:scale(0) rotate(-20deg)}to{transform:none}}
-.animal-name{position:relative;margin-top:.5rem;margin-bottom:.3em;font-size:clamp(4rem,20vw,8rem);color:var(--pink);animation:up .5s ease .5s both}
+.animal-name{position:relative;margin-top:.5rem;font-size:clamp(4rem,20vw,8rem);color:var(--pink);animation:up .5s ease .5s both}
 @keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
 .tag{margin-top:.5rem;font-size:1.15rem;font-weight:700}
 .ladder{margin-top:2rem;width:100%;padding:1.25rem}
@@ -188,11 +184,11 @@ input[aria-invalid=true]{border-color:var(--danger)}
 .end ul{list-style:none;margin-top:2rem;width:100%;display:flex;flex-direction:column;gap:.75rem;text-align:left}
 .end li{display:flex;align-items:center;gap:.75rem;padding:1rem;font-weight:700}
 
-@media (prefers-reduced-motion:reduce){.star,.pulse,.marquee span{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.star,.pulse,.marquee .track{animation:none!important}}
 </style>
 </head>
 <body>
-<div class="marquee" aria-hidden="true"><span>Stratégie ✺ Identité ✺ Contenus ✺ Social media ✺ Web ✺ Acquisition ✺ Automatisations IA ✺ Comme une agence, mais en mieux ! ✺ Stratégie ✺ Identité ✺ Contenus ✺ Social media ✺ Web ✺ Acquisition ✺ Automatisations IA ✺</span></div>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Stratégie ✺ Identité ✺ Contenus ✺ Social media ✺ Web ✺ Acquisition ✺ Automatisations IA ✺ Comme une agence, mais en mieux ! ✺ Stratégie ✺ Identité ✺ Contenus ✺ Social media ✺ Web ✺ Acquisition ✺ Automatisations IA ✺ Comme une agence, mais en mieux ! ✺ </span><span>Stratégie ✺ Identité ✺ Contenus ✺ Social media ✺ Web ✺ Acquisition ✺ Automatisations IA ✺ Comme une agence, mais en mieux ! ✺ Stratégie ✺ Identité ✺ Contenus ✺ Social media ✺ Web ✺ Acquisition ✺ Automatisations IA ✺ Comme une agence, mais en mieux ! ✺ </span></div></div>
 <main id="app"></main>
 
 <script>
@@ -244,8 +240,6 @@ function compute(ans){
 const PATHS={DODO:"M30 70 C30 45 45 35 60 38 C62 25 75 20 82 30 C90 32 92 40 84 44 L76 46 C80 60 78 78 60 84 C45 88 30 82 30 70 Z M45 84 L42 96 M62 85 L64 96 M76 30 L77 30",TORTUE:"M20 62 C22 38 40 26 58 26 C78 26 92 40 92 62 Z M20 62 L96 62 M40 30 L48 46 L66 46 L74 32 M48 46 L44 62 M66 46 L70 62 M92 50 C100 46 106 50 104 58 C102 62 96 62 92 60 M30 62 L28 76 M80 62 L82 76 M100 54 L101 54",RENARD:"M25 20 L40 50 M85 20 L70 50 M25 20 C35 22 45 35 55 38 C65 35 75 22 85 20 C85 45 75 65 55 78 C35 65 25 45 25 20 Z M45 50 L47 52 M63 50 L65 52 M55 70 L55 72",LOUP:"M28 18 L38 42 M82 18 L72 42 M28 18 L45 34 L65 34 L82 18 L78 55 L62 70 L55 82 L48 70 L32 55 Z M44 48 L48 50 M66 48 L62 50 M50 72 L60 72",LION:"M55 10 C70 10 78 18 88 22 C92 34 98 42 95 55 C98 68 88 78 82 88 C70 94 62 100 55 98 C48 100 40 94 28 88 C22 78 12 68 15 55 C12 42 18 34 22 22 C32 18 40 10 55 10 Z M35 50 C35 35 75 35 75 50 C75 68 66 78 55 78 C44 78 35 68 35 50 Z M46 52 L48 52 M62 52 L64 52 M50 64 L55 68 L60 64"};
 const animalSvg=(k,size)=>`<svg viewBox="0 0 110 110" width="${size}" height="${size}" aria-hidden="true"><path d="${PATHS[k]}" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const star=(cls,size)=>`<svg viewBox="0 0 40 40" class="star ${cls||''}" width="${size}" height="${size}" aria-hidden="true"><g stroke="currentColor" stroke-width="6" stroke-linecap="round"><line x1="20" y1="3" x2="20" y2="37"/><line x1="5" y1="11" x2="35" y2="29"/><line x1="5" y1="29" x2="35" y2="11"/></g></svg>`;
-const ellipseSvg=(style,cls)=>`<svg viewBox="0 0 300 120" preserveAspectRatio="none" class="ellipse ${cls}" style="${style}" aria-hidden="true"><path d="M40 70 C 30 25, 230 5, 280 45 C 310 75, 200 115, 110 108 C 40 102, 5 80, 30 50 C 45 35, 90 25, 130 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>`;
-const ellipse=(style)=>ellipseSvg(style,'back')+ellipseSvg(style,'front');
 const QR=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" width="120" height="120" class="segno"><path class="qrline" stroke="#171d3a" d="M0 0.5h7m1 0h1m1 0h1m3 0h1m1 0h2m4 0h7m-29 1h1m5 0h1m1 0h1m1 0h3m3 0h1m1 0h2m2 0h1m5 0h1m-29 1h1m1 0h3m1 0h1m1 0h2m1 0h3m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m3 0h1m1 0h2m2 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h3m1 0h1m-29 1h1m5 0h1m4 0h3m3 0h2m3 0h1m5 0h1m-29 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-20 1h1m2 0h2m4 0h2m-20 1h1m2 0h7m2 0h1m1 0h1m1 0h2m3 0h1m2 0h1m1 0h3m-29 1h4m1 0h1m2 0h2m3 0h3m2 0h2m3 0h2m1 0h2m-26 1h1m1 0h1m1 0h1m1 0h1m1 0h4m1 0h3m3 0h1m1 0h1m2 0h1m-26 1h3m4 0h1m1 0h3m1 0h1m2 0h1m2 0h3m1 0h2m2 0h1m-29 1h2m1 0h1m1 0h5m1 0h2m3 0h1m2 0h2m1 0h1m5 0h1m-29 1h1m1 0h1m4 0h1m1 0h1m1 0h1m2 0h2m1 0h2m3 0h7m-28 1h1m1 0h1m2 0h4m1 0h1m1 0h4m2 0h1m2 0h3m1 0h1m1 0h1m-29 1h6m1 0h1m1 0h1m5 0h2m2 0h1m1 0h1m1 0h2m1 0h1m1 0h1m-25 1h4m1 0h2m3 0h2m9 0h1m-26 1h1m1 0h3m4 0h4m2 0h1m1 0h4m3 0h1m1 0h2m-28 1h3m3 0h1m3 0h6m1 0h1m1 0h1m2 0h1m1 0h2m2 0h1m-29 1h3m1 0h1m2 0h4m1 0h3m1 0h1m2 0h1m1 0h1m2 0h3m-27 1h5m1 0h2m1 0h2m2 0h1m1 0h3m1 0h9m-20 1h2m2 0h4m1 0h2m1 0h1m3 0h2m-26 1h7m1 0h3m1 0h2m1 0h2m2 0h2m1 0h1m1 0h2m-26 1h1m5 0h1m1 0h2m3 0h1m1 0h1m1 0h4m3 0h1m3 0h1m-29 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m1 0h1m3 0h7m1 0h1m-28 1h1m1 0h3m1 0h1m1 0h5m1 0h3m2 0h2m7 0h1m-29 1h1m1 0h3m1 0h1m4 0h2m1 0h2m5 0h1m1 0h2m1 0h3m-29 1h1m5 0h1m3 0h1m1 0h2m4 0h1m2 0h1m1 0h1m1 0h2m1 0h1m-29 1h7m1 0h2m1 0h1m1 0h1m4 0h8"/></svg>`;
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
@@ -295,7 +289,6 @@ function cover(){
     tick.querySelectorAll('.word').forEach(w=>{w.className='word out';setTimeout(()=>w.remove(),350)});
     const w=document.createElement('span');w.className='word '+(lion?'lion':'in');w.textContent=a.key;
     if(lion){
-      w.insertAdjacentHTML('beforeend',ellipse('left:-18%;top:-22%;width:136%;height:144%'));
       for(let k=0;k<8;k++){
         const s=document.createElement('span');s.className='spark';s.innerHTML=star('',24);
         const ang=k/8*Math.PI*2;
@@ -442,9 +435,9 @@ function submitResults(){
 function result(){
   const r=compute(state.answers), idx=ANIMALS.findIndex(a=>a.key===r.animal), a=ANIMALS[idx], lion=r.animal==='LION', bi=BINOME[r.pret];
   app.innerHTML=`<section class="screen result">
-    <p class="pill pink">Ton entreprise est un</p>
+    <p class="pill pink">Ton entreprise est ${r.animal==='TORTUE'?'une':'un'}</p>
     <div class="big-animal">${animalSvg(r.animal,128)}</div>
-    <h2 class="animal-name">${r.animal}${ellipse('left:-20%;top:-26%;width:140%;height:158%')}</h2>
+    <h2 class="animal-name">${r.animal}</h2>
     <p class="tag">${a.tagline}</p>
     <p class="small" style="margin-top:.25rem">Maturité : ${r.score} / ${MAX}</p>
     <div class="card ladder">
