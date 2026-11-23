@@ -458,19 +458,22 @@ function result(){
   document.getElementById('next').onclick=()=>go('rdv');
 }
 
-/* ---------- RDV (Calendly de la V1) ---------- */
-const CALENDLY='https://calendly.com/collectif-sauvage/rdv';
+/* ---------- RDV (agenda de rendez-vous Google Agenda du collectif) ---------- */
+const BOOKING_EMBED='https://calendar.google.com/calendar/appointments/schedules/AcZssZ3emkMuaHZrf1PBKpaMoPvjcAPxGy9zA6PStbmYvcNwgyvMePOVlNwoluSfFZc5aQSMPtGdsmpJ?gv=true';
+const BOOKING_LINK='https://calendar.app.google/Dmo5gP8knUJV1Pg88';
 function rdv(){
-  const name=`${state.id.prenom} ${state.id.nom}`.trim();
-  const src=`${CALENDLY}?embed_type=Inline&hide_gdpr_banner=1&embed_domain=${location.host}&name=${encodeURIComponent(name)}&email=${encodeURIComponent(state.id.email)}&utm_source=salon-ia-cci`;
   app.innerHTML=`<section class="screen rdv">
     <h2>On en discute avec le collectif, <span class="accent">on monte la team sur mesure.</span></h2>
-    <div class="card" style="margin-top:1.5rem;overflow:hidden"><iframe title="Prendre RDV avec le Collectif Sauvage" src="${src}"></iframe></div>
-    <button class="btn peri" style="margin:1.5rem auto 0" id="skip">Plus tard, envoie-moi juste mon bilan</button>
+    <div class="card" style="margin-top:1.5rem;overflow:hidden"><iframe title="Prendre RDV avec le Collectif Sauvage" src="${BOOKING_EMBED}"></iframe></div>
+    <p class="small" style="margin-top:.75rem;text-align:center">Le calendrier ne s'affiche pas ? <a href="${BOOKING_LINK}" target="_blank" rel="noopener" style="color:var(--pink);text-decoration:underline">Ouvrir la page de réservation</a></p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.5rem">
+      <button class="btn pink" id="booked">C'est réservé ✓</button>
+      <button class="btn peri" id="skip">Plus tard, envoie-moi juste mon bilan</button>
+    </div>
   </section>`;
+  // Google Agenda ne prévient pas la page quand un créneau est réservé : la personne confirme elle-même.
+  document.getElementById('booked').onclick=()=>{state.rdv=true;go('end')};
   document.getElementById('skip').onclick=()=>go('end');
-  const onMsg=e=>{if(typeof e.origin==='string'&&e.origin.includes('calendly.com')&&e.data&&e.data.event==='calendly.event_scheduled'){state.rdv=true;window.removeEventListener('message',onMsg);setTimeout(()=>go('end'),1500)}};
-  window.addEventListener('message',onMsg);
 }
 
 /* ---------- FIN ---------- */
