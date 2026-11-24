@@ -347,7 +347,7 @@ function identity(){
   document.getElementById('rgpd').onchange=()=>f.querySelector('[data-e="rgpd"]').textContent='';
   const submit=()=>{let ok=FIELDS.map(d=>check(d.k)).every(Boolean);
     if(!document.getElementById('rgpd').checked){ok=false;f.querySelector('[data-e="rgpd"]').textContent='Coche la case pour continuer'}
-    if(ok){state.answers=[];go('quiz')}
+    if(ok){state.answers=[];sendContact();go('quiz')}
     else{const first=f.querySelector('[aria-invalid="true"]')||document.getElementById('rgpd');first.scrollIntoView({behavior:'smooth',block:'center'});}};
   document.getElementById('go').onclick=submit;
   f.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.tagName==='INPUT'&&e.target.type!=='checkbox'){e.preventDefault();submit()}});
@@ -412,6 +412,15 @@ function nextCard(){
       (coller l'URL /exec du déploiement Apps Script dans SHEET_URL ; vide = étape désactivée)
    ========================================================= */
 const WEB3FORMS_KEY='a3566971-f219-485d-8ead-014052603c2f';
+/* Premier envoi : le contact part dès la validation du formulaire « Présente-toi » */
+function sendContact(){
+  const d=state.id, name=`${d.prenom} ${d.nom}`.trim();
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},
+    body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:`🟡 Contact IA Masters (test en cours) — ${name} (${d.entreprise})`,from_name:'Test IA Masters',
+      name,email:d.email,replyto:d.email,'Téléphone':d.telephone,'Entreprise':d.entreprise,'Site':d.site_url||'-',
+      message:"Contact enregistré au début du test. Un second mail « Lead IA Masters » suivra avec le bilan complet si la personne va jusqu'au bout."})})
+    .then(x=>x.json()).then(j=>console.log('[Sauvage quiz] contact',j)).catch(e=>console.error('[Sauvage quiz] contact',e));
+}
 const SHEET_URL='';
 const BILAN_AUTO=!!SHEET_URL;
 function submitResults(){
