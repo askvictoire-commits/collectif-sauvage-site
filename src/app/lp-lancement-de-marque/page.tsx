@@ -118,26 +118,6 @@ const brands = [
   "Anglet Côte Basque",
 ];
 
-const testimonials = [
-  {
-    quote:
-      "« Sauvage nous a permis de passer de “freelance qu’on ne prend pas au sérieux” à une marque que les clients veulent vraiment s’offrir. En 6 semaines. »",
-    name: "Marie D.",
-    title: "Fondatrice, Atelier Nord",
-  },
-  {
-    quote:
-      "« Leur méthode est redoutable d'efficacité. Stratégie, identité, site : tout livré en moins de 2 mois. Je recommande sans hésitation. »",
-    name: "Thomas R.",
-    title: "CEO, Vague Labs",
-  },
-  {
-    quote:
-      "« Enfin une équipe qui comprend que le design est un outil de business, pas une note de frais. ROI visible dès le premier mois. »",
-    name: "Claire M.",
-    title: "Co-fondatrice, Forma Studio",
-  },
-];
 
 const timeline = [
   {
@@ -373,18 +353,6 @@ export default function LpLancementDeMarque() {
               >
                 {b}
               </span>
-            ))}
-          </div>
-          <div className="mt-16 grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="border border-pink/20 bg-[#2a3154] p-8"
-              >
-                <p className="text-sm leading-relaxed text-white/90">{t.quote}</p>
-                <p className="mt-6 font-bold text-white">{t.name}</p>
-                <p className="mt-1 text-xs text-white/60">{t.title}</p>
-              </div>
             ))}
           </div>
         </div>
