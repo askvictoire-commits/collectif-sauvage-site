@@ -125,15 +125,20 @@ export default function LpCreateurDeContenu() {
       {/* ── PIERRE FRECHOU ───────────────────────────────────────────────── */}
       <section className="py-24">
         <div className="container-ds grid items-center gap-16 md:grid-cols-2">
-          <div className="relative aspect-video overflow-hidden rounded-2xl">
-            <Image
-              src="/lp/pierre-video-thumb.png"
-              alt="Bande démo Pierre Frechou"
-              fill
-              className="object-cover"
-            />
-            <p className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap font-display text-[11px] uppercase tracking-[1px] text-pink">
-              Réalisation — outdoor filmmaker · drone · aqua · corporate
+          <div>
+            <div className="relative aspect-video overflow-hidden rounded-2xl">
+              <iframe
+                title="Showreel Pierre Fréchou"
+                src="https://player.vimeo.com/video/654863395?h=18b8f2d691"
+                className="absolute inset-0 h-full w-full"
+                frameBorder={0}
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowFullScreen
+              />
+            </div>
+            <p className="mt-4 text-center font-display text-[11px] uppercase tracking-[1px] text-pink">
+              Outdoor filmmaker · drone · aqua · corporate
             </p>
           </div>
           <div>
@@ -211,11 +216,14 @@ export default function LpCreateurDeContenu() {
           </div>
           <div>
             <div className="relative aspect-video overflow-hidden rounded-2xl">
-              <Image
-                src="/lp/fred-video-thumb.png"
-                alt="Bande démo Fred G-3 Studio"
-                fill
-                className="object-cover"
+              <iframe
+                title="Showreel Fred G-3 Studio"
+                src="https://player.vimeo.com/video/1094945600?h=54b0d2f9f8"
+                className="absolute inset-0 h-full w-full"
+                frameBorder={0}
+                referrerPolicy="strict-origin-when-cross-origin"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                allowFullScreen
               />
             </div>
             <p className="mt-4 text-center font-display text-[11px] uppercase tracking-[1px] text-pink">
