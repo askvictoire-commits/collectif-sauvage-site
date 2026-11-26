@@ -129,7 +129,7 @@ export default function LpCreateurDeContenu() {
             <div className="relative aspect-video overflow-hidden rounded-2xl">
               <iframe
                 title="Showreel Pierre Fréchou"
-                src="https://player.vimeo.com/video/654863395?h=18b8f2d691"
+                src="https://player.vimeo.com/video/654863395?h=18b8f2d691&dnt=1"
                 className="absolute inset-0 h-full w-full"
                 frameBorder={0}
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -218,7 +218,7 @@ export default function LpCreateurDeContenu() {
             <div className="relative aspect-video overflow-hidden rounded-2xl">
               <iframe
                 title="Showreel Fred G-3 Studio"
-                src="https://player.vimeo.com/video/1094945600?h=54b0d2f9f8"
+                src="https://player.vimeo.com/video/1094945600?h=54b0d2f9f8&dnt=1"
                 className="absolute inset-0 h-full w-full"
                 frameBorder={0}
                 referrerPolicy="strict-origin-when-cross-origin"
