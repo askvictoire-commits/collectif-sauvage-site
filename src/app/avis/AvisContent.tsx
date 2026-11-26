@@ -2,8 +2,6 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import "./avis.css";
 
 const GOOGLE_REVIEW_URL =
@@ -57,8 +55,6 @@ export default function AvisContent() {
 
   return (
     <>
-      <Header />
-
       <div className="avis">
         {/* HERO */}
         <section className="band">
@@ -213,12 +209,6 @@ export default function AvisContent() {
               </p>
               <div className="mail">
                 <span className="addr">hello@collectifsauvage.fr</span>
-                <a
-                  className="btn ghost"
-                  href="mailto:hello@collectifsauvage.fr?subject=Mon%20avis%20sur%20le%20Collectif%20Sauvage"
-                >
-                  Ouvrir ma messagerie
-                </a>
               </div>
             </div>
           </div>
@@ -232,8 +222,6 @@ export default function AvisContent() {
           {toastText}
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }
