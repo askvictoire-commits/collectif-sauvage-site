@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Des images qui font la différence. Shooting, tournage, post-production et livraison multi-formats. Un collectif de freelances pour une production de marque sans intermédiaire.",
 };
 
-const BOOKING_URL = "#appel";
+const BOOKING_URL = "https://calendar.app.google/Dmo5gP8knUJV1Pg88";
 
 const steps = [
   {
@@ -276,7 +276,6 @@ export default function LpCreateurDeContenu() {
               <h3 className="font-display text-2xl uppercase text-pink">
                 Contenu Essentiel
               </h3>
-              <p className="mt-4 text-[22px] font-bold">À partir de 1 800 €</p>
               <p className="mt-4 text-xs uppercase tracking-[3px] text-pink">
                 Pour poser les bases
               </p>
@@ -295,7 +294,6 @@ export default function LpCreateurDeContenu() {
               <h3 className="font-display text-2xl uppercase text-pink">
                 Contenu Complet
               </h3>
-              <p className="mt-4 text-[22px] font-bold">À partir de 3 500 €</p>
               <p className="mt-4 text-xs uppercase tracking-[3px] text-pink">
                 Pour passer un cap
               </p>
@@ -313,7 +311,6 @@ export default function LpCreateurDeContenu() {
               <h3 className="font-display text-2xl uppercase text-pink">
                 Contenu Premium
               </h3>
-              <p className="mt-4 text-[22px] font-bold">Sur devis</p>
               <p className="mt-4 text-xs uppercase tracking-[3px] text-pink">
                 Lancement ou refonte totale
               </p>
@@ -338,6 +335,36 @@ export default function LpCreateurDeContenu() {
               Réserver un appel découverte
             </a>
           </div>
+        </div>
+      </section>
+
+
+      {/* ── RÉSERVER UN APPEL DÉCOUVERTE ────────────────────────────────── */}
+      <section id="appel" className="py-24 bg-[#1a2040]">
+        <div className="container-ds">
+          <h2 className="text-center font-display text-[clamp(2rem,3.5vw,3rem)] uppercase text-pink">
+            Réservez votre appel découverte.
+          </h2>
+          <p className="mt-4 text-center italic text-lg text-white/80">
+            Vingt minutes. Votre projet, vos contraintes, ce que vous voulez transmettre.
+          </p>
+          <div className="mt-12 overflow-hidden rounded-lg">
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3emkMuaHZrf1PBKpaMoPvjcAPxGy9zA6PStbmYvcNwgyvMePOVlNwoluSfFZc5aQSMPtGdsmpJ?gv=true"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              frameBorder={0}
+              scrolling="no"
+            />
+          </div>
+          <p className="mt-6 text-center text-sm text-white/60">
+            Si le calendrier ne s&apos;affiche pas,{" "}
+            <a href={BOOKING_URL} className="underline text-pink" target="_blank" rel="noopener noreferrer">
+              réservez directement ici
+            </a>
+            .
+          </p>
         </div>
       </section>
 

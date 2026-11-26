@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     "Stratégie, identité visuelle et site web. Nous bâtissons les fondations de votre marque en 45 jours avec un commando d'experts seniors. Comme une agence, mais en mieux.",
 };
 
-const BOOKING_URL = "#appel";
+const BOOKING_URL = "https://calendar.app.google/Dmo5gP8knUJV1Pg88";
 
 const profiles = [
   {
@@ -103,53 +103,6 @@ const pack = [
       "Transformer votre trafic en clients qualifiés grâce à une UX pensée pour l'action.",
     livrables:
       "Site optimisé (SEO & Vitesse), UX fluide, copywriting converti, déploiement clés en main.",
-  },
-];
-
-const pricing = [
-  {
-    name: "Pack Starter",
-    price: "À partir de 3 500 €",
-    sub: "Pour poser les bases",
-    items: [
-      "Stratégie de positionnement",
-      "Logo modulable",
-      "Charte graphique de base",
-      "Guide de tonalité",
-      "Webdesign 3 pages",
-      "Design system",
-    ],
-    note: "Un expert stratégie + design.",
-    featured: false,
-  },
-  {
-    name: "Pack Complet",
-    price: "À partir de 7 500 €",
-    sub: "Pour passer un cap",
-    items: [
-      "Stratégie + Identité visuelle",
-      "Kit de déploiement complet",
-      "Templates réseaux sociaux",
-      "Pitch Deck + supports de com",
-      "Site web conversion-ready",
-    ],
-    note: "Deux à trois experts mobilisés.",
-    featured: true,
-  },
-  {
-    name: "Pack Premium",
-    price: "Sur devis",
-    sub: "Lancement ou refonte totale",
-    items: [
-      "Stratégie complète",
-      "Identité visuelle premium",
-      "Kit de déploiement",
-      "Site web sur-mesure",
-      "Tous supports nécessaires",
-      "Suivi post-lancement",
-    ],
-    note: "Tous les profils à votre disposition.",
-    featured: false,
   },
 ];
 
@@ -393,52 +346,6 @@ export default function LpLancementDeMarque() {
         </div>
       </section>
 
-      {/* ── PRICING ──────────────────────────────────────────────────────── */}
-      <section className="py-24">
-        <div className="container-ds">
-          <h2 className="font-display text-center text-[clamp(2rem,3.5vw,2.75rem)] uppercase text-pink">
-            Le pack lancement : c&apos;est combien ?
-          </h2>
-          <p className="mt-4 text-center italic text-lg text-white/80">
-            Chaque projet est différent. Un appel de vingt minutes suffit à
-            cadrer votre besoin et vous donner une estimation honnête.
-          </p>
-          <div className="mt-16 grid gap-4 md:grid-cols-3">
-            {pricing.map((tier) => (
-              <div
-                key={tier.name}
-                className={`p-10 ${
-                  tier.featured
-                    ? "border-2 border-periwinkle bg-[#2a3154] md:-my-2"
-                    : "border border-pink/30 bg-[#2a3154]"
-                }`}
-              >
-                <h3 className="font-display text-2xl uppercase text-pink">
-                  {tier.name}
-                </h3>
-                <p className="mt-4 text-[22px] font-bold">{tier.price}</p>
-                <p className="mt-4 text-xs uppercase tracking-[3px] text-pink">
-                  {tier.sub}
-                </p>
-                <ul className="mt-6 list-disc space-y-1 pl-5 text-sm leading-relaxed text-white/90">
-                  {tier.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-                <p className="mt-5 text-sm font-bold text-pink">{tier.note}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-14 text-center">
-            <a
-              href={BOOKING_URL}
-              className="inline-block rounded-full border-2 border-pink px-10 py-4 text-sm font-bold uppercase tracking-[2px] text-pink transition-colors hover:bg-pink hover:text-ink-900"
-            >
-              Réserver un appel découverte
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* ── ON L'A DÉJÀ FAIT POUR EUX ────────────────────────────────────── */}
       <section className="py-24">
@@ -570,6 +477,35 @@ export default function LpLancementDeMarque() {
               </details>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── RÉSERVER UN APPEL DÉCOUVERTE ────────────────────────────────── */}
+      <section className="py-24 bg-[#1a2040]">
+        <div className="container-ds">
+          <h2 className="font-display text-center text-[clamp(2rem,3.5vw,2.75rem)] uppercase text-pink">
+            Réservez votre appel découverte.
+          </h2>
+          <p className="mt-4 text-center italic text-lg text-white/80">
+            Vingt minutes. Votre projet, vos contraintes, ce que vous voulez transmettre.
+          </p>
+          <div className="mt-12 overflow-hidden rounded-lg">
+            <iframe
+              src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3emkMuaHZrf1PBKpaMoPvjcAPxGy9zA6PStbmYvcNwgyvMePOVlNwoluSfFZc5aQSMPtGdsmpJ?gv=true"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              frameBorder={0}
+              scrolling="no"
+            />
+          </div>
+          <p className="mt-6 text-center text-sm text-white/60">
+            Si le calendrier ne s&apos;affiche pas,{" "}
+            <a href={BOOKING_URL} className="underline text-pink" target="_blank" rel="noopener noreferrer">
+              réservez directement ici
+            </a>
+            .
+          </p>
         </div>
       </section>
 

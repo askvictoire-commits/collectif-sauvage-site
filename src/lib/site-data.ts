@@ -6,7 +6,7 @@ export const nav = [
     children: [
       { label: "Stratégie", href: "/strategie" },
       { label: "Création", href: "/creation" },
-      { label: "SEO, IA & Acquisition", href: "/seo-ia-acquisition" },
+      { label: "SEO, GEO & Acquisition", href: "/seo-ia-acquisition" },
       { label: "Social Media", href: "/social-media" },
       { label: "UX / Webdesign", href: "/ux-webdesign" },
       { label: "Développement Web", href: "/developpementweb" },
