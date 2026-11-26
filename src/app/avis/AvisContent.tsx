@@ -10,8 +10,7 @@ const GOOGLE_REVIEW_URL =
 const STAR_PATH =
   "M15 2l3.9 8.3 9.1 1.1-6.7 6.2 1.8 9L15 22.1 6.9 26.6l1.8-9L2 11.4l9.1-1.1z";
 
-const MARQUEE_TEXT =
-  "Votre avis compte · Collectivement indépendants · ".repeat(8);
+const MARQUEE_ITEMS = Array.from({ length: 12 });
 
 function HelloLine() {
   const params = useSearchParams();
@@ -101,7 +100,6 @@ export default function AvisContent() {
 
             {/* Carte QR */}
             <div className="card-zone">
-              <div className="ellipse" aria-hidden="true" />
               <div className="card">
                 <div className="stars" aria-hidden="true">
                   {[0, 1, 2, 3, 4].map((i) => (
@@ -135,7 +133,22 @@ export default function AvisContent() {
 
         {/* Marquee */}
         <div className="marquee" aria-hidden="true">
-          <div className="marquee-inner">{MARQUEE_TEXT}</div>
+          <div className="marquee-inner">
+            {MARQUEE_ITEMS.map((_, i) => (
+              <span key={i} className="marquee-item">
+                <span className="marquee-word">Merci</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/shape-star.png" alt="" className="marquee-star" />
+              </span>
+            ))}
+            {MARQUEE_ITEMS.map((_, i) => (
+              <span key={`b${i}`} className="marquee-item">
+                <span className="marquee-word">Merci</span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/images/shape-star.png" alt="" className="marquee-star" />
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Comment ça marche */}

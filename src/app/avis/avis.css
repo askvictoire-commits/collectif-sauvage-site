@@ -94,18 +94,6 @@
   place-items: center;
   padding: 40px 0;
 }
-.avis .ellipse {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 118%;
-  height: 72%;
-  border: 1.5px solid var(--rose);
-  border-radius: 50%;
-  transform: rotate(-14deg);
-  opacity: .8;
-  pointer-events: none;
-}
 .avis .card {
   position: relative;
   background: var(--rose);
@@ -140,17 +128,32 @@
 
 /* ---------- Marquee ---------- */
 .avis .marquee {
-  background: var(--peri);
-  color: var(--navy);
   overflow: hidden;
   white-space: nowrap;
   padding: 18px 0;
 }
 .avis .marquee-inner {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  animation: avis-run 28s linear infinite;
+}
+.avis .marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+.avis .marquee-word {
   font-family: var(--display);
   font-size: clamp(28px, 4vw, 44px);
-  animation: avis-run 28s linear infinite;
+  color: var(--peri);
+  text-transform: uppercase;
+}
+.avis .marquee-star {
+  width: clamp(24px, 3vw, 36px);
+  height: auto;
+  flex-shrink: 0;
+  opacity: .85;
 }
 @keyframes avis-run { to { transform: translateX(-50%); } }
 
