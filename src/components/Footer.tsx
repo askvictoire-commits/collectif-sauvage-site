@@ -64,6 +64,14 @@ export default function Footer() {
                 {contact.phone}
               </a>
             </div>
+            <div>
+              <p className="font-display text-lg uppercase text-ink-900">
+                Votre avis
+              </p>
+              <Link href="/avis" className="mt-2 block text-sm hover:underline">
+                Laisser un avis Google
+              </Link>
+            </div>
           </div>
         </div>
       </div>
