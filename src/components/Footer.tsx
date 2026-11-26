@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { contact } from "@/lib/site-data";
 
 export default function Footer() {
@@ -7,11 +8,14 @@ export default function Footer() {
       <div className="container-ds py-16">
         <div className="flex flex-col justify-between gap-12 md:flex-row md:items-end">
           <div>
-            <Link
-              href="/"
-              className="font-display block text-3xl uppercase leading-tight tracking-tight md:text-5xl"
-            >
-              Collectif Sauvage
+            <Link href="/" className="inline-flex items-center">
+              <Image
+                src="/logo-blanc.svg"
+                alt="Collectif Sauvage"
+                width={280}
+                height={77}
+                className="h-14 w-auto md:h-20"
+              />
             </Link>
           </div>
 

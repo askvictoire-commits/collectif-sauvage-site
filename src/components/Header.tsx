@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { nav } from "@/lib/site-data";
@@ -24,9 +25,16 @@ export default function Header() {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
-          className="font-display text-xl uppercase tracking-tight md:text-2xl"
+          className="flex items-center"
         >
-          Collectif Sauvage
+          <Image
+            src="/logo-blanc.svg"
+            alt="Collectif Sauvage"
+            width={140}
+            height={39}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
