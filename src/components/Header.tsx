@@ -28,7 +28,7 @@ export default function Header() {
           className="flex items-center"
         >
           <Image
-            src="/logo-blanc.svg"
+            src="/logo-rose.svg"
             alt="Collectif Sauvage"
             width={140}
             height={39}
